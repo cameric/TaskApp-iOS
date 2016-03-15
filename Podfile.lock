@@ -1,0 +1,17 @@
+PODS:
+  - AVOSCloudDynamic (3.2.7)
+  - AVOSCloudIMDynamic (3.2.7):
+    - AVOSCloudDynamic
+  - WeiboSDK (3.1.3)
+
+DEPENDENCIES:
+  - AVOSCloudDynamic (~> 3.1)
+  - AVOSCloudIMDynamic (~> 3.1)
+  - WeiboSDK
+
+SPEC CHECKSUMS:
+  AVOSCloudDynamic: 1a64ed78c897be98d54d75fd4c8cff0a21e9eeb6
+  AVOSCloudIMDynamic: e008feb17cadb7c8638839827f14eb49639a400e
+  WeiboSDK: acb067053668102cf07d01aa7604350162c2e466
+
+COCOAPODS: 0.39.0
