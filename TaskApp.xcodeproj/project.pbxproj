@@ -14,8 +14,21 @@
 		0920DA4B1C96007A0032EB9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0920DA491C96007A0032EB9C /* LaunchScreen.storyboard */; };
 		0920DA561C96007B0032EB9C /* TaskAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920DA551C96007B0032EB9C /* TaskAppTests.swift */; };
 		0953E2331C9A6730006E6FF0 /* SearchResultModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953E2321C9A6730006E6FF0 /* SearchResultModelController.swift */; };
-		096436151C9B8C6600AB71CC /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096436141C9B8C6600AB71CC /* Person.swift */; };
-		096436171C9BA8FB00AB71CC /* PersonModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096436161C9BA8FB00AB71CC /* PersonModelController.swift */; };
+		096436151C9B8C6600AB71CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096436141C9B8C6600AB71CC /* User.swift */; };
+		096436171C9BA8FB00AB71CC /* UserModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096436161C9BA8FB00AB71CC /* UserModelController.swift */; };
+		096718341C9C7D0C0058CF1A /* TaskModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096718331C9C7D0C0058CF1A /* TaskModelController.swift */; };
+		096718361C9C7D250058CF1A /* JobModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096718351C9C7D250058CF1A /* JobModelController.swift */; };
+		096718381C9C7D400058CF1A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096718371C9C7D400058CF1A /* Task.swift */; };
+		0967183A1C9C7D460058CF1A /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096718391C9C7D460058CF1A /* Job.swift */; };
+		096718401C9C7DFF0058CF1A /* UserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967183F1C9C7DFF0058CF1A /* UserSearchViewController.swift */; };
+		096718421C9C7E0C0058CF1A /* TaskSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096718411C9C7E0C0058CF1A /* TaskSearchViewController.swift */; };
+		096718441C9C7E150058CF1A /* JobSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096718431C9C7E150058CF1A /* JobSearchViewController.swift */; };
+		096718461C9C8D860058CF1A /* SearchSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096718451C9C8D860058CF1A /* SearchSuggestion.swift */; };
+		096718481C9C8D930058CF1A /* SearchSuggestionModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096718471C9C8D930058CF1A /* SearchSuggestionModelController.swift */; };
+		0967184B1C9C928B0058CF1A /* SearchSuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967184A1C9C928B0058CF1A /* SearchSuggestionTableViewCell.swift */; };
+		0967184D1C9CAEEE0058CF1A /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967184C1C9CAEEE0058CF1A /* UserTableViewCell.swift */; };
+		0967184F1C9CAEF70058CF1A /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967184E1C9CAEF70058CF1A /* TaskTableViewCell.swift */; };
+		096718511C9CAF320058CF1A /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096718501C9CAF320058CF1A /* JobTableViewCell.swift */; };
 		099B05881C97794F00D3AE36 /* MainTabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099B05871C97794F00D3AE36 /* MainTabBarControllerDelegate.swift */; };
 		09D14BD31C96675C003E0791 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BD21C96675C003E0791 /* SearchViewController.swift */; };
 		09D14BD61C968C89003E0791 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D14BD81C968C89003E0791 /* Search.storyboard */; };
@@ -53,8 +66,21 @@
 		0920DA711C96030D0032EB9C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		0920DA721C96030D0032EB9C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		0953E2321C9A6730006E6FF0 /* SearchResultModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultModelController.swift; sourceTree = "<group>"; };
-		096436141C9B8C6600AB71CC /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		096436161C9BA8FB00AB71CC /* PersonModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonModelController.swift; sourceTree = "<group>"; };
+		096436141C9B8C6600AB71CC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		096436161C9BA8FB00AB71CC /* UserModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModelController.swift; sourceTree = "<group>"; };
+		096718331C9C7D0C0058CF1A /* TaskModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskModelController.swift; sourceTree = "<group>"; };
+		096718351C9C7D250058CF1A /* JobModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobModelController.swift; sourceTree = "<group>"; };
+		096718371C9C7D400058CF1A /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		096718391C9C7D460058CF1A /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		0967183F1C9C7DFF0058CF1A /* UserSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchViewController.swift; sourceTree = "<group>"; };
+		096718411C9C7E0C0058CF1A /* TaskSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchViewController.swift; sourceTree = "<group>"; };
+		096718431C9C7E150058CF1A /* JobSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchViewController.swift; sourceTree = "<group>"; };
+		096718451C9C8D860058CF1A /* SearchSuggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSuggestion.swift; sourceTree = "<group>"; };
+		096718471C9C8D930058CF1A /* SearchSuggestionModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSuggestionModelController.swift; sourceTree = "<group>"; };
+		0967184A1C9C928B0058CF1A /* SearchSuggestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSuggestionTableViewCell.swift; sourceTree = "<group>"; };
+		0967184C1C9CAEEE0058CF1A /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		0967184E1C9CAEF70058CF1A /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		096718501C9CAF320058CF1A /* JobTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		099B05871C97794F00D3AE36 /* MainTabBarControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerDelegate.swift; sourceTree = "<group>"; };
 		09D14BD21C96675C003E0791 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		09D14BD71C968C89003E0791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Search.storyboard; sourceTree = "<group>"; };
@@ -201,7 +227,10 @@
 		0953E2311C9A66BC006E6FF0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				096436141C9B8C6600AB71CC /* Person.swift */,
+				096718391C9C7D460058CF1A /* Job.swift */,
+				096718451C9C8D860058CF1A /* SearchSuggestion.swift */,
+				096718371C9C7D400058CF1A /* Task.swift */,
+				096436141C9B8C6600AB71CC /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,8 +238,11 @@
 		0964360E1C9B3A2000AB71CC /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
-				096436161C9BA8FB00AB71CC /* PersonModelController.swift */,
+				096718351C9C7D250058CF1A /* JobModelController.swift */,
 				0953E2321C9A6730006E6FF0 /* SearchResultModelController.swift */,
+				096718471C9C8D930058CF1A /* SearchSuggestionModelController.swift */,
+				096718331C9C7D0C0058CF1A /* TaskModelController.swift */,
+				096436161C9BA8FB00AB71CC /* UserModelController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -218,7 +250,10 @@
 		0964360F1C9B3A3500AB71CC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				096718431C9C7E150058CF1A /* JobSearchViewController.swift */,
 				09D14BD21C96675C003E0791 /* SearchViewController.swift */,
+				096718411C9C7E0C0058CF1A /* TaskSearchViewController.swift */,
+				0967183F1C9C7DFF0058CF1A /* UserSearchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -226,8 +261,20 @@
 		096436101C9B3A3B00AB71CC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				096718491C9C924E0058CF1A /* Table View Cells */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		096718491C9C924E0058CF1A /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				096718501C9CAF320058CF1A /* JobTableViewCell.swift */,
+				0967184A1C9C928B0058CF1A /* SearchSuggestionTableViewCell.swift */,
+				0967184E1C9CAEF70058CF1A /* TaskTableViewCell.swift */,
+				0967184C1C9CAEEE0058CF1A /* UserTableViewCell.swift */,
+			);
+			path = "Table View Cells";
 			sourceTree = "<group>";
 		};
 		099B05861C9778F500D3AE36 /* Main */ = {
@@ -416,16 +463,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				09D14BD31C96675C003E0791 /* SearchViewController.swift in Sources */,
+				0967184B1C9C928B0058CF1A /* SearchSuggestionTableViewCell.swift in Sources */,
+				0967184D1C9CAEEE0058CF1A /* UserTableViewCell.swift in Sources */,
+				096718401C9C7DFF0058CF1A /* UserSearchViewController.swift in Sources */,
+				096718361C9C7D250058CF1A /* JobModelController.swift in Sources */,
+				096718421C9C7E0C0058CF1A /* TaskSearchViewController.swift in Sources */,
 				091DEE8B1C989CFD00B53CEB /* Colors.swift in Sources */,
-				096436171C9BA8FB00AB71CC /* PersonModelController.swift in Sources */,
-				096436151C9B8C6600AB71CC /* Person.swift in Sources */,
+				096436171C9BA8FB00AB71CC /* UserModelController.swift in Sources */,
+				0967183A1C9C7D460058CF1A /* Job.swift in Sources */,
+				096436151C9B8C6600AB71CC /* User.swift in Sources */,
+				096718341C9C7D0C0058CF1A /* TaskModelController.swift in Sources */,
 				0953E2331C9A6730006E6FF0 /* SearchResultModelController.swift in Sources */,
 				09D14BE21C96917D003E0791 /* MessagingViewController.swift in Sources */,
+				0967184F1C9CAEF70058CF1A /* TaskTableViewCell.swift in Sources */,
 				09D14BE41C969185003E0791 /* ProfileViewController.swift in Sources */,
+				096718511C9CAF320058CF1A /* JobTableViewCell.swift in Sources */,
 				099B05881C97794F00D3AE36 /* MainTabBarControllerDelegate.swift in Sources */,
 				09D14BE61C96918F003E0791 /* SocialViewController.swift in Sources */,
 				0920DA3F1C96007A0032EB9C /* AppDelegate.swift in Sources */,
+				096718481C9C8D930058CF1A /* SearchSuggestionModelController.swift in Sources */,
+				096718381C9C7D400058CF1A /* Task.swift in Sources */,
+				096718461C9C8D860058CF1A /* SearchSuggestion.swift in Sources */,
 				09D14BE01C9690B7003E0791 /* MainTabBarController.swift in Sources */,
+				096718441C9C7E150058CF1A /* JobSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

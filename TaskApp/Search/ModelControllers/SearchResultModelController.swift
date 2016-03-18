@@ -23,13 +23,6 @@ protocol SearchResultsModelControllerProtocol {
     * @param count The number of additional results to load.
     */
     func loadMore(count: Int) // TODO: this should perhaps have a better name
-    
-    /*!
-    * @brief Load as many results as necessary to bring the total.
-    * @discussion If there are not enough results remaining to bring the total to `count`, as many will be loaded as possible.
-    * @param count The total number of desired results.
-    */
-    func loadUntilTotalCountIs(totalCount: Int)
 }
 
 protocol SearchResultsModelControllerDelegate {
