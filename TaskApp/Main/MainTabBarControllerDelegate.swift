@@ -8,11 +8,11 @@
 
 import UIKit
 
-class TabBarWithCenterButtonControllerDelegate: NSObject, UITabBarControllerDelegate {
+class MainTabBarControllerDelegate: NSObject, UITabBarControllerDelegate {
     static let unselectableTag = 1337
     
     @objc func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
-        if viewController.tabBarItem.tag == TabBarWithCenterButtonControllerDelegate.unselectableTag {
+        if viewController.tabBarItem.tag == MainTabBarControllerDelegate.unselectableTag {
             return false;
         }
         return true;

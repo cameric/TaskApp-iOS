@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar With Button Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" customClass="TabBarWithButtonController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="MainTabBarController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -16,8 +16,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <outlet property="buttonView" destination="SMN-cI-87X" id="KGh-Ck-lxf"/>
-                        <outlet property="delegate" destination="hUU-ov-ng3" id="hz8-CV-LxF"/>
+                        <outlet property="buttonView" destination="SMN-cI-87X" id="X4N-fD-vQF"/>
+                        <outlet property="delegate" destination="hUU-ov-ng3" id="Zlf-AI-rtW"/>
                         <segue destination="N6X-tD-37k" kind="relationship" relationship="viewControllers" id="93q-tf-3Uu"/>
                         <segue destination="vML-dL-1Y7" kind="relationship" relationship="viewControllers" id="6cn-fQ-zCl"/>
                         <segue destination="Wcu-qu-n3q" kind="relationship" relationship="viewControllers" id="ZkY-Y8-7wj"/>
@@ -25,7 +25,7 @@
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
-                <customObject id="hUU-ov-ng3" customClass="TabBarWithButtonControllerDelegate" customModule="TaskApp" customModuleProvider="target"/>
+                <customObject id="hUU-ov-ng3" customClass="MainTabBarControllerDelegate" customModule="TaskApp" customModuleProvider="target"/>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SMN-cI-87X">
                     <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabBarWithCenterButtonController: UITabBarController {
+class MainTabBarController: UITabBarController {
     
     @IBOutlet weak var buttonView: UIButton!
     
@@ -20,7 +20,7 @@ class TabBarWithCenterButtonController: UITabBarController {
         super.viewDidLoad()
         
         // Tag our fake view controller's tab bar item so that it can't be selected
-        dummyVC.tabBarItem = UITabBarItem(title: nil, image: nil, tag: TabBarWithCenterButtonControllerDelegate.unselectableTag)
+        dummyVC.tabBarItem = UITabBarItem(title: nil, image: nil, tag: MainTabBarControllerDelegate.unselectableTag)
         self.viewControllers?.insert(dummyVC, atIndex: self.tabBar.items!.count/2)
         
         // Insert the center button
