@@ -1,15 +1,14 @@
 //
-//  SearchResultModelController.swift
+//  SearchResultsModelController.swift
 //  TaskApp
 //
 //  Created by Spencer Michaels on 2016/3/16.
 //  Copyright © 2016年 Cameric. All rights reserved.
 //
 
-import Foundation
 import AVOSCloud
 
-protocol SearchResultsModelControllerProtocol {
+protocol SearchResultModelControllerProtocol {
     typealias ResultType: AVObject
     
     /*!
@@ -18,26 +17,26 @@ protocol SearchResultsModelControllerProtocol {
     var results: [ResultType] { get }
     
     /*!
-    * @brief Load up to `count` more results.
+    * @brief Load up to `desiredCount` more results.
     * @discussion If there are fewer than `count` results remaining to load, as many will be loaded as possible.
     * @param count The number of additional results to load.
     */
-    func loadMore(count: Int) // TODO: this should perhaps have a better name
+    func loadMore(desiredCount: Int) // TODO: this should perhaps have a better name
 }
 
-protocol SearchResultsModelControllerDelegate {
+protocol SearchResultModelControllerDelegate {
     /*!
      * @brief Called whenever the controller loads more than zero new results.
      */
-    func didLoadNewResults<ModelController: SearchResultsModelControllerProtocol>(controller: ModelController, newResultsCount: Int)
+    func didLoadNewResults<ModelController: SearchResultModelControllerProtocol>(controller: ModelController, newResultsCount: Int)
     
     /*!
     * @brief Called whenever all possible results have already been loaded for the given search criteria.
     */
-    func didLoadAllResultsForCriteria<ModelController: SearchResultsModelControllerProtocol>(controller: ModelController)
+    func didLoadAllResultsForCriteria<ModelController: SearchResultModelControllerProtocol>(controller: ModelController)
     
     /*!
     * @brief Called when the current search results may no longer match the given criteria (e.g. when the criteria are changed)
     */
-    func didInvalidateCurrentResults<ModelController: SearchResultsModelControllerProtocol>(controller: ModelController)
+    func didInvalidateCurrentResults<ModelController: SearchResultModelControllerProtocol>(controller: ModelController)
 }

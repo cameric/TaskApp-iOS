@@ -9,34 +9,65 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-    
-    @IBOutlet weak var searchSuggestionTable: UITableView!
+    // MARK: Properties
+    @IBOutlet weak var searchSuggestionTable: UITableView! {
+        didSet {
+            searchSuggestionTable.delegate = self
+            searchSuggestionTable.dataSource = searchSuggestions
+        }
+    }
     @IBOutlet weak var categoryBar: UISegmentedControl!
-    @IBOutlet weak var categoryPages: UIPageViewController!
+
+    weak var categoryPageController: UIPageViewController! {
+        didSet {
+            categoryPageController.dataSource = self
+        }
+    }
     
-    var searchBar: UISearchBar!
-    var searchSuggestions: SearchSuggestionModelController!
+    let categoryViewControllers = [
+        UIStoryboard(name: "Search", bundle: nil).instantiateViewControllerWithIdentifier("UserSearchViewController"),
+        UIStoryboard(name: "Search", bundle: nil).instantiateViewControllerWithIdentifier("TaskSearchViewController"),
+        UIStoryboard(name: "Search", bundle: nil).instantiateViewControllerWithIdentifier("JobSearchViewController")
+    ]
     
+    var searchBar: UISearchBar! {
+        didSet {
+            searchBar.delegate = self
+        }
+    }
+    
+    let searchSuggestions = SearchSuggestionModelController()
+    
+    // MARK: Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.searchBar = UISearchBar()
-        self.searchBar.delegate = self
-        self.navigationItem.titleView = self.searchBar
+        searchBar = UISearchBar()
+        navigationItem.titleView = searchBar
         
-        self.searchSuggestions = SearchSuggestionModelController()
-        self.searchSuggestions.loadMore(10)
+        searchSuggestions.loadMore(10)
         
-        self.searchSuggestionTable.delegate = self
-        self.searchSuggestionTable.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
-        self.searchSuggestionTable.dataSource = self.searchSuggestions
+        searchSuggestionTable.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if let firstCategoryVC = categoryViewControllers.first {
+            categoryPageController.setViewControllers([firstCategoryVC], direction: .Forward, animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "CategoryPageControllerEmbedSegue" {
+            categoryPageController = segue.destinationViewController as? UIPageViewController
+        }
+    }
 }
 
+// MARK: UISearchBarDelegate methods
 extension SearchViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         searchBar.setShowsCancelButton(true, animated: true)
@@ -48,6 +79,28 @@ extension SearchViewController: UISearchBarDelegate {
     }
 }
 
+// MARK: UITableViewDelegate methods
 extension SearchViewController: UITableViewDelegate {
     
+}
+
+// MARK: UIPageViewControllerDelegate methods
+extension SearchViewController: UIPageViewControllerDataSource {
+    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+        if let index = categoryViewControllers.indexOf(viewController) {
+            let nextIndex = (index + 1) % categoryViewControllers.count
+            return categoryViewControllers[nextIndex]
+        } else {
+            return nil
+        }
+    }
+    
+    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+        if let index = categoryViewControllers.indexOf(viewController) {
+            let prevIndex = max(0, (index - 1) % categoryViewControllers.count)
+            return categoryViewControllers[prevIndex]
+        } else {
+            return nil
+        }
+    }
 }

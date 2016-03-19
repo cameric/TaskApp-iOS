@@ -6,17 +6,16 @@
 //  Copyright © 2016年 Cameric. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 // TODO: does this NSOBject inheritance need to be here? It's for the tableviewdatasource
-class SearchSuggestionModelController : NSObject, SearchResultsModelControllerProtocol {
+class SearchSuggestionModelController : NSObject, SearchResultModelControllerProtocol {
     private(set) var results: [SearchSuggestion] = []
-    var delegate: SearchResultsModelControllerDelegate?
+    var delegate: SearchResultModelControllerDelegate?
     
-    func loadMore(count: Int) {
+    func loadMore(desiredCount: Int) {
         // Copy from the static array to fake a network query
-        self.results = SearchSuggestionModelController.suggestionsList
+        results = SearchSuggestionModelController.suggestionsList
     }
     
     // TODO: The network is complicated. Using this for now to fake a data source.
@@ -43,12 +42,12 @@ extension SearchSuggestionModelController : UITableViewDataSource {
     }
     
     @objc func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.results.count
+        return results.count
     }
     
     @objc func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("SearchSuggestionTableViewCell", forIndexPath: indexPath) as! SearchSuggestionTableViewCell
-        cell.titleLabel.text = self.results[indexPath.row].title
+        cell.titleLabel.text = results[indexPath.row].title
         return cell
     }
 }

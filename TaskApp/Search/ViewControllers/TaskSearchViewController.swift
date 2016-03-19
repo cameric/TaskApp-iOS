@@ -9,11 +9,13 @@
 import UIKit
 
 class TaskSearchViewController: UITableViewController {
+    
+    let tasks = TaskModelController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        tableView.dataSource = tasks
     }
 
     override func didReceiveMemoryWarning() {

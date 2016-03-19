@@ -8,15 +8,14 @@
 
 import UIKit
 
-class UserSearchViewController: UITableViewController {
-
-    override func viewDidLoad() {
+class UserSearchViewController: IncrementalSearchViewController<UserModelController> {
+    func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        source = UserModelController()
     }
 
-    override func didReceiveMemoryWarning() {
+    func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
