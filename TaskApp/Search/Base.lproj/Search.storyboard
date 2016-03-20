@@ -36,7 +36,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="StW-LE-0LW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="StW-LE-0LW">
                                 <rect key="frame" x="0.0" y="64" width="600" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -71,13 +71,52 @@
                                 </prototypes>
                             </tableView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tPP-zu-MbK">
-                                <rect key="frame" x="0.0" y="242" width="600" height="358"/>
+                                <rect key="frame" x="0.0" y="214" width="600" height="386"/>
                                 <connections>
-                                    <segue destination="Pl7-k0-Lay" kind="embed" identifier="CategoryPageControllerEmbedSegue" id="6yH-LP-nH1"/>
+                                    <segue destination="mJe-Kc-3HL" kind="embed" identifier="TabbedPageViewControllerEmbedSegue" id="SCu-M7-3Zs"/>
                                 </connections>
                             </containerView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DYI-Ro-Rnh">
-                                <rect key="frame" x="0.0" y="214" width="600" height="29"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pCq-QW-gyK" firstAttribute="top" secondItem="tPP-zu-MbK" secondAttribute="bottom" id="1gd-bv-hQ2"/>
+                            <constraint firstItem="tPP-zu-MbK" firstAttribute="top" secondItem="StW-LE-0LW" secondAttribute="bottom" id="4W3-w2-I1b"/>
+                            <constraint firstItem="tPP-zu-MbK" firstAttribute="width" secondItem="IhW-EF-cTu" secondAttribute="width" id="Fka-05-YPv"/>
+                            <constraint firstItem="StW-LE-0LW" firstAttribute="width" secondItem="IhW-EF-cTu" secondAttribute="width" id="b3x-hN-6QA"/>
+                            <constraint firstItem="tPP-zu-MbK" firstAttribute="centerX" secondItem="IhW-EF-cTu" secondAttribute="centerX" id="ela-GU-wqL"/>
+                            <constraint firstItem="StW-LE-0LW" firstAttribute="top" secondItem="5zW-TT-HRy" secondAttribute="bottom" id="wPh-eo-h51"/>
+                            <constraint firstItem="StW-LE-0LW" firstAttribute="centerX" secondItem="IhW-EF-cTu" secondAttribute="centerX" id="yHK-S2-j6k"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="STI-AO-t2K"/>
+                    <connections>
+                        <outlet property="searchSuggestionTable" destination="StW-LE-0LW" id="Hcx-xv-ENY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="47H-O6-pk2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1032" y="190"/>
+        </scene>
+        <!--Tabbed Page View Controller-->
+        <scene sceneID="1sj-IN-byb">
+            <objects>
+                <viewController id="mJe-Kc-3HL" customClass="TabbedPageViewController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z8E-b9-Jk9"/>
+                        <viewControllerLayoutGuide type="bottom" id="fM8-lq-LDK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dGR-jd-EHj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="386"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iV1-wS-MHt">
+                                <rect key="frame" x="0.0" y="28" width="600" height="358"/>
+                                <connections>
+                                    <segue destination="8Yd-tq-AGh" kind="embed" identifier="PageViewControllerEmbedSegue" id="L5c-Vy-7AC"/>
+                                </connections>
+                            </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="x4G-lq-ecS">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="29"/>
                                 <segments>
                                     <segment title="人才"/>
                                     <segment title="任务"/>
@@ -87,41 +126,36 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pCq-QW-gyK" firstAttribute="top" secondItem="tPP-zu-MbK" secondAttribute="bottom" id="1gd-bv-hQ2"/>
-                            <constraint firstItem="DYI-Ro-Rnh" firstAttribute="width" secondItem="IhW-EF-cTu" secondAttribute="width" id="Ai9-Cs-yTB"/>
-                            <constraint firstItem="tPP-zu-MbK" firstAttribute="width" secondItem="IhW-EF-cTu" secondAttribute="width" id="Fka-05-YPv"/>
-                            <constraint firstItem="tPP-zu-MbK" firstAttribute="top" secondItem="DYI-Ro-Rnh" secondAttribute="bottom" id="NVh-iQ-Bj1"/>
-                            <constraint firstItem="DYI-Ro-Rnh" firstAttribute="centerX" secondItem="IhW-EF-cTu" secondAttribute="centerX" id="WdO-y8-mey"/>
-                            <constraint firstItem="StW-LE-0LW" firstAttribute="width" secondItem="IhW-EF-cTu" secondAttribute="width" id="b3x-hN-6QA"/>
-                            <constraint firstItem="tPP-zu-MbK" firstAttribute="centerX" secondItem="IhW-EF-cTu" secondAttribute="centerX" id="ela-GU-wqL"/>
-                            <constraint firstItem="DYI-Ro-Rnh" firstAttribute="top" secondItem="StW-LE-0LW" secondAttribute="bottom" id="ffV-ac-c0f"/>
-                            <constraint firstItem="StW-LE-0LW" firstAttribute="top" secondItem="5zW-TT-HRy" secondAttribute="bottom" id="wPh-eo-h51"/>
-                            <constraint firstItem="StW-LE-0LW" firstAttribute="centerX" secondItem="IhW-EF-cTu" secondAttribute="centerX" id="yHK-S2-j6k"/>
+                            <constraint firstItem="iV1-wS-MHt" firstAttribute="centerX" secondItem="dGR-jd-EHj" secondAttribute="centerX" id="BWc-vw-uiJ"/>
+                            <constraint firstItem="x4G-lq-ecS" firstAttribute="top" secondItem="z8E-b9-Jk9" secondAttribute="bottom" id="ESg-Gn-rUO"/>
+                            <constraint firstItem="x4G-lq-ecS" firstAttribute="centerX" secondItem="dGR-jd-EHj" secondAttribute="centerX" id="Oqo-Qc-1n1"/>
+                            <constraint firstItem="x4G-lq-ecS" firstAttribute="width" secondItem="dGR-jd-EHj" secondAttribute="width" id="ZRY-rC-Bc3"/>
+                            <constraint firstItem="fM8-lq-LDK" firstAttribute="top" secondItem="iV1-wS-MHt" secondAttribute="bottom" id="dZQ-gz-ezH"/>
+                            <constraint firstItem="iV1-wS-MHt" firstAttribute="top" secondItem="x4G-lq-ecS" secondAttribute="bottom" id="gIN-2U-ZL3"/>
+                            <constraint firstItem="iV1-wS-MHt" firstAttribute="width" secondItem="dGR-jd-EHj" secondAttribute="width" id="qzb-AA-sj3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="STI-AO-t2K"/>
                     <connections>
-                        <outlet property="categoryBar" destination="DYI-Ro-Rnh" id="07K-xd-21t"/>
-                        <outlet property="searchSuggestionTable" destination="StW-LE-0LW" id="Hcx-xv-ENY"/>
+                        <outlet property="tabBar" destination="x4G-lq-ecS" id="t9Q-Kn-DhD"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="47H-O6-pk2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1032" y="190"/>
-        </scene>
-        <!--Page View Controller-->
-        <scene sceneID="Ac0-t6-ACe">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Pl7-k0-Lay" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Xi-fU-DiZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qeS-p9-M21" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1746" y="190"/>
         </scene>
-        <!--User Search View Controller-->
+        <!--Page View Controller-->
+        <scene sceneID="sY0-hg-MgP">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="8Yd-tq-AGh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IB3-5F-XTP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2462" y="190"/>
+        </scene>
+        <!--人才-->
         <scene sceneID="yGS-0j-eKZ">
             <objects>
-                <tableViewController storyboardIdentifier="UserSearchViewController" id="6tw-0q-2qK" customClass="UserSearchViewController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zhH-4o-vEu">
+                <tableViewController storyboardIdentifier="UserSearchViewController" title="人才" id="6tw-0q-2qK" customClass="UserSearchViewController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zhH-4o-vEu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -145,11 +179,11 @@
             </objects>
             <point key="canvasLocation" x="1746" y="876"/>
         </scene>
-        <!--Task Search View Controller-->
+        <!--任务-->
         <scene sceneID="CaO-Ae-ToU">
             <objects>
-                <tableViewController storyboardIdentifier="TaskSearchViewController" id="57m-iq-E3Q" customClass="TaskSearchViewController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="it5-FP-2Ce">
+                <tableViewController storyboardIdentifier="TaskSearchViewController" title="任务" id="57m-iq-E3Q" customClass="TaskSearchViewController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="it5-FP-2Ce">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -173,11 +207,11 @@
             </objects>
             <point key="canvasLocation" x="2432" y="876"/>
         </scene>
-        <!--Job Search View Controller-->
+        <!--工作-->
         <scene sceneID="yOf-4h-j3q">
             <objects>
-                <tableViewController storyboardIdentifier="JobSearchViewController" id="PPk-Aw-Ael" customClass="JobSearchViewController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" sectionHeaderHeight="28" sectionFooterHeight="28" id="RcK-qr-gcv">
+                <tableViewController storyboardIdentifier="JobSearchViewController" title="工作" id="PPk-Aw-Ael" customClass="JobSearchViewController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" sectionHeaderHeight="28" sectionFooterHeight="28" id="RcK-qr-gcv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

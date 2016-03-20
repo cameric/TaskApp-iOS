@@ -16,15 +16,11 @@ class SearchViewController: UIViewController {
             searchSuggestionTable.dataSource = searchSuggestions
         }
     }
-    @IBOutlet weak var categoryBar: UISegmentedControl!
-
-    weak var categoryPageController: UIPageViewController! {
-        didSet {
-            categoryPageController.dataSource = self
-        }
-    }
     
-    let categoryViewControllers = [
+    weak var tabbedPageViewController: TabbedPageViewController!
+    
+    let categorySearchViewControllers =
+    [
         UIStoryboard(name: "Search", bundle: nil).instantiateViewControllerWithIdentifier("UserSearchViewController"),
         UIStoryboard(name: "Search", bundle: nil).instantiateViewControllerWithIdentifier("TaskSearchViewController"),
         UIStoryboard(name: "Search", bundle: nil).instantiateViewControllerWithIdentifier("JobSearchViewController")
@@ -45,24 +41,22 @@ class SearchViewController: UIViewController {
         searchBar = UISearchBar()
         navigationItem.titleView = searchBar
         
-        searchSuggestions.loadMore(10)
-        
         searchSuggestionTable.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+        
+        // Add search category pages
+        categorySearchViewControllers.forEach({ (viewController: UIViewController) -> Void in
+            let title = (viewController.title != nil) ? viewController.title! : ""
+            tabbedPageViewController.addPage(viewController, title: title, animated: true)
+        })
     }
     
-    override func viewDidAppear(animated: Bool) {
-        if let firstCategoryVC = categoryViewControllers.first {
-            categoryPageController.setViewControllers([firstCategoryVC], direction: .Forward, animated: true, completion: nil)
-        }
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "CategoryPageControllerEmbedSegue" {
-            categoryPageController = segue.destinationViewController as? UIPageViewController
+        if segue.identifier == "TabbedPageViewControllerEmbedSegue" {
+            tabbedPageViewController = segue.destinationViewController as? TabbedPageViewController
         }
     }
 }
@@ -82,25 +76,4 @@ extension SearchViewController: UISearchBarDelegate {
 // MARK: UITableViewDelegate methods
 extension SearchViewController: UITableViewDelegate {
     
-}
-
-// MARK: UIPageViewControllerDelegate methods
-extension SearchViewController: UIPageViewControllerDataSource {
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        if let index = categoryViewControllers.indexOf(viewController) {
-            let nextIndex = (index + 1) % categoryViewControllers.count
-            return categoryViewControllers[nextIndex]
-        } else {
-            return nil
-        }
-    }
-    
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        if let index = categoryViewControllers.indexOf(viewController) {
-            let prevIndex = max(0, (index - 1) % categoryViewControllers.count)
-            return categoryViewControllers[prevIndex]
-        } else {
-            return nil
-        }
-    }
 }
