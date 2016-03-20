@@ -11,6 +11,8 @@ import AVOSCloud
 protocol SearchResultModelControllerProtocol {
     typealias ResultType: AVObject
     
+    var delegate: SearchResultModelControllerDelegate? { get set }
+    
     /*!
     * @brief The list of search results so far retrieved.
     */

@@ -14,6 +14,7 @@
 		0920DA4B1C96007A0032EB9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0920DA491C96007A0032EB9C /* LaunchScreen.storyboard */; };
 		0920DA561C96007B0032EB9C /* TaskAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920DA551C96007B0032EB9C /* TaskAppTests.swift */; };
 		0953E2331C9A6730006E6FF0 /* SearchResultModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953E2321C9A6730006E6FF0 /* SearchResultModelController.swift */; };
+		0960F8E61C9E5AA70051AA06 /* TabbedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960F8E51C9E5AA70051AA06 /* TabbedPageViewController.swift */; };
 		096436151C9B8C6600AB71CC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096436141C9B8C6600AB71CC /* UserModel.swift */; };
 		096436171C9BA8FB00AB71CC /* UserModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096436161C9BA8FB00AB71CC /* UserModelController.swift */; };
 		096718341C9C7D0C0058CF1A /* TaskModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096718331C9C7D0C0058CF1A /* TaskModelController.swift */; };
@@ -67,6 +68,7 @@
 		0920DA711C96030D0032EB9C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		0920DA721C96030D0032EB9C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		0953E2321C9A6730006E6FF0 /* SearchResultModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultModelController.swift; sourceTree = "<group>"; };
+		0960F8E51C9E5AA70051AA06 /* TabbedPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbedPageViewController.swift; sourceTree = "<group>"; };
 		096436141C9B8C6600AB71CC /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		096436161C9BA8FB00AB71CC /* UserModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModelController.swift; sourceTree = "<group>"; };
 		096718331C9C7D0C0058CF1A /* TaskModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskModelController.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				09F714031C9CF9DD0057C530 /* IncrementalLoadingSearchViewController.swift */,
 				096718431C9C7E150058CF1A /* JobSearchViewController.swift */,
 				09D14BD21C96675C003E0791 /* SearchViewController.swift */,
+				0960F8E51C9E5AA70051AA06 /* TabbedPageViewController.swift */,
 				096718411C9C7E0C0058CF1A /* TaskSearchViewController.swift */,
 				0967183F1C9C7DFF0058CF1A /* UserSearchViewController.swift */,
 			);
@@ -478,6 +481,7 @@
 				096436151C9B8C6600AB71CC /* UserModel.swift in Sources */,
 				096718341C9C7D0C0058CF1A /* TaskModelController.swift in Sources */,
 				0953E2331C9A6730006E6FF0 /* SearchResultModelController.swift in Sources */,
+				0960F8E61C9E5AA70051AA06 /* TabbedPageViewController.swift in Sources */,
 				09D14BE21C96917D003E0791 /* MessagingViewController.swift in Sources */,
 				0967184F1C9CAEF70058CF1A /* TaskTableViewCell.swift in Sources */,
 				09D14BE41C969185003E0791 /* ProfileViewController.swift in Sources */,

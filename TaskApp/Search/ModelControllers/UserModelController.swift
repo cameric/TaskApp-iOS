@@ -14,9 +14,10 @@ class UserModelController: NSObject, SearchResultModelControllerProtocol {
     var delegate: SearchResultModelControllerDelegate?
     
     func loadMore(desiredCount: Int) {
+        // TODO: params
         AVCloud.callFunctionInBackground("searchUsers", withParameters: nil) { (response: AnyObject!, error: NSError!) -> Void in
             if error != nil {
-                //delegate?.didFailToLoadNewResults(self, error)
+                //TODO: delegate?.didFailToLoadNewResults(self, error)
             } else {
                 if let resultsAsUsers = response as? [User] {
                     if resultsAsUsers.count > 0 {

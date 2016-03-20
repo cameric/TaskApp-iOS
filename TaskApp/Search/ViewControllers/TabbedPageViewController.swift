@@ -1,17 +1,19 @@
 //
-//  TaskSearchViewController.swift
+//  TabbedPageViewController.swift
 //  TaskApp
 //
-//  Created by Spencer Michaels on 2016/3/18.
+//  Created by Spencer Michaels on 2016/3/19.
 //  Copyright © 2016年 Cameric. All rights reserved.
 //
 
 import UIKit
 
-class TaskSearchViewController: IncrementalLoadingSearchViewController<TaskModelController> {
-    
+class TabbedPageViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

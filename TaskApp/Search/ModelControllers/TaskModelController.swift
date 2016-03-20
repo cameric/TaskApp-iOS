@@ -7,13 +7,30 @@
 //
 
 import UIKit
+import AVOSCloud
 
 class TaskModelController: NSObject, SearchResultModelControllerProtocol {
     var results: [Task] = []
     var delegate: SearchResultModelControllerDelegate?
     
     func loadMore(desiredCount: Int) {
-        
+        // TODO: params
+        AVCloud.callFunctionInBackground("searchTasks", withParameters: nil) { (response: AnyObject!, error: NSError!) -> Void in
+            if error != nil {
+                //TODO: delegate?.didFailToLoadNewResults(self, error)
+            } else {
+                if let resultsAsTasks = response as? [Task] {
+                    if resultsAsTasks.count > 0 {
+                        self.results.appendContentsOf(resultsAsTasks)
+                        self.delegate?.didLoadNewResults(self, newResultsCount: resultsAsTasks.count)
+                    }
+                    
+                    if resultsAsTasks.count < desiredCount {
+                        self.delegate?.didLoadAllResultsForCriteria(self)
+                    }
+                }
+            }
+        }
     }
 }
 

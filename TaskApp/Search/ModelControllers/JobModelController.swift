@@ -7,13 +7,30 @@
 //
 
 import UIKit
+import AVOSCloud
 
 class JobModelController: NSObject, SearchResultModelControllerProtocol {
     var results: [Job] = []
     var delegate: SearchResultModelControllerDelegate?
     
     func loadMore(desiredCount: Int) {
-        
+        // TODO: params
+        AVCloud.callFunctionInBackground("searchJobs", withParameters: nil) { (response: AnyObject!, error: NSError!) -> Void in
+            if error != nil {
+                //TODO: delegate?.didFailToLoadNewResults(self, error)
+            } else {
+                if let resultsAsJobs = response as? [Job] {
+                    if resultsAsJobs.count > 0 {
+                        self.results.appendContentsOf(resultsAsJobs)
+                        self.delegate?.didLoadNewResults(self, newResultsCount: resultsAsJobs.count)
+                    }
+                    
+                    if resultsAsJobs.count < desiredCount {
+                        self.delegate?.didLoadAllResultsForCriteria(self)
+                    }
+                }
+            }
+        }
     }
 }
 

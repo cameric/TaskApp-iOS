@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVOSCloud
 
 // TODO: does this NSOBject inheritance need to be here? It's for the tableviewdatasource
 class SearchSuggestionModelController : NSObject, SearchResultModelControllerProtocol {
@@ -14,26 +15,24 @@ class SearchSuggestionModelController : NSObject, SearchResultModelControllerPro
     var delegate: SearchResultModelControllerDelegate?
     
     func loadMore(desiredCount: Int) {
-        // Copy from the static array to fake a network query
-        results = SearchSuggestionModelController.suggestionsList
+        // TODO: params
+        AVCloud.callFunctionInBackground("getSearchSuggestionsForKeyword", withParameters: nil) { (response: AnyObject!, error: NSError!) -> Void in
+            if error != nil {
+                //TODO: delegate?.didFailToLoadNewResults(self, error)
+            } else {
+                if let resultsAsSearchSuggestions = response as? [SearchSuggestion] {
+                    if resultsAsSearchSuggestions.count > 0 {
+                        self.results.appendContentsOf(resultsAsSearchSuggestions)
+                        self.delegate?.didLoadNewResults(self, newResultsCount: resultsAsSearchSuggestions.count)
+                    }
+                    
+                    if resultsAsSearchSuggestions.count < desiredCount {
+                        self.delegate?.didLoadAllResultsForCriteria(self)
+                    }
+                }
+            }
+        }
     }
-    
-    // TODO: The network is complicated. Using this for now to fake a data source.
-    private static let suggestionsList: [SearchSuggestion] = [
-        SearchSuggestion(title: "陈星宇"),
-        SearchSuggestion(title: "张正涵"),
-        SearchSuggestion(title: "王喆沛"),
-        SearchSuggestion(title: "周维宇"),
-        SearchSuggestion(title: "蔡一清"),
-        SearchSuggestion(title: "王尊严"),
-        SearchSuggestion(title: "史珍香"),
-        SearchSuggestion(title: "Prof. Wang"),
-        SearchSuggestion(title: "Prof. Zhang"),
-        SearchSuggestion(title: "Spencer"),
-        SearchSuggestion(title: "Cam"),
-        SearchSuggestion(title: "Michael"),
-        SearchSuggestion(title: "William")
-    ]
 }
 
 extension SearchSuggestionModelController : UITableViewDataSource {

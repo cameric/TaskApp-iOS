@@ -8,19 +8,14 @@
 
 import UIKit
 
-class JobSearchViewController: UITableViewController {
+class JobSearchViewController: IncrementalLoadingSearchViewController<JobModelController> {
     
-    let jobs = JobModelController()
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tableView.dataSource = jobs
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
