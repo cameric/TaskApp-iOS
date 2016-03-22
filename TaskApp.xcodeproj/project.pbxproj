@@ -15,7 +15,6 @@
 		0920DA561C96007B0032EB9C /* TaskAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920DA551C96007B0032EB9C /* TaskAppTests.swift */; };
 		0953E2331C9A6730006E6FF0 /* SearchResultModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953E2321C9A6730006E6FF0 /* SearchResultModelController.swift */; };
 		0960F8E61C9E5AA70051AA06 /* TabbedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960F8E51C9E5AA70051AA06 /* TabbedPageViewController.swift */; };
-		096436151C9B8C6600AB71CC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096436141C9B8C6600AB71CC /* UserModel.swift */; };
 		096436171C9BA8FB00AB71CC /* UserModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096436161C9BA8FB00AB71CC /* UserModelController.swift */; };
 		096718341C9C7D0C0058CF1A /* TaskModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096718331C9C7D0C0058CF1A /* TaskModelController.swift */; };
 		096718361C9C7D250058CF1A /* JobModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096718351C9C7D250058CF1A /* JobModelController.swift */; };
@@ -41,6 +40,15 @@
 		09FAC6961C9607DA0041DE5E /* Social.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6981C9607DA0041DE5E /* Social.storyboard */; };
 		09FAC69F1C9607FD0041DE5E /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6A11C9607FD0041DE5E /* Messaging.storyboard */; };
 		09FAC6A81C96080A0041DE5E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6AA1C96080A0041DE5E /* Profile.storyboard */; };
+		25A9BFB61CA14E9E00634A63 /* ForgetPasswordModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFAB1CA14E9E00634A63 /* ForgetPasswordModelController.swift */; };
+		25A9BFB71CA14E9E00634A63 /* LoginModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFAC1CA14E9E00634A63 /* LoginModelController.swift */; };
+		25A9BFB81CA14E9E00634A63 /* SignupModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFAD1CA14E9E00634A63 /* SignupModelController.swift */; };
+		25A9BFB91CA14E9E00634A63 /* UserSystemModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFAE1CA14E9E00634A63 /* UserSystemModelController.swift */; };
+		25A9BFBA1CA14E9E00634A63 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB01CA14E9E00634A63 /* UserModel.swift */; };
+		25A9BFBB1CA14E9E00634A63 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25A9BFB11CA14E9E00634A63 /* User.storyboard */; };
+		25A9BFBC1CA14E9E00634A63 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB31CA14E9E00634A63 /* ForgetPasswordViewController.swift */; };
+		25A9BFBD1CA14E9E00634A63 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB41CA14E9E00634A63 /* LoginViewController.swift */; };
+		25A9BFBE1CA14E9E00634A63 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB51CA14E9E00634A63 /* SignupViewController.swift */; };
 		328415BB1CA12F3900FF8DF0 /* MessagingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328415BA1CA12F3900FF8DF0 /* MessagingTableViewController.swift */; };
 		328415BD1CA1329800FF8DF0 /* MessagingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328415BC1CA1329800FF8DF0 /* MessagingTableViewCell.swift */; };
 		328415BF1CA134DA00FF8DF0 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328415BE1CA134DA00FF8DF0 /* ConversationViewController.swift */; };
@@ -68,11 +76,10 @@
 		0920DA511C96007B0032EB9C /* TaskAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0920DA551C96007B0032EB9C /* TaskAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskAppTests.swift; sourceTree = "<group>"; };
 		0920DA571C96007B0032EB9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0920DA711C96030D0032EB9C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
-		0920DA721C96030D0032EB9C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		0920DA711C96030D0032EB9C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		0920DA721C96030D0032EB9C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		0953E2321C9A6730006E6FF0 /* SearchResultModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultModelController.swift; sourceTree = "<group>"; };
 		0960F8E51C9E5AA70051AA06 /* TabbedPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbedPageViewController.swift; sourceTree = "<group>"; };
-		096436141C9B8C6600AB71CC /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		096436161C9BA8FB00AB71CC /* UserModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModelController.swift; sourceTree = "<group>"; };
 		096718331C9C7D0C0058CF1A /* TaskModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskModelController.swift; sourceTree = "<group>"; };
 		096718351C9C7D250058CF1A /* JobModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobModelController.swift; sourceTree = "<group>"; };
@@ -90,32 +97,41 @@
 		099B05871C97794F00D3AE36 /* MainTabBarControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerDelegate.swift; sourceTree = "<group>"; };
 		09D14BD21C96675C003E0791 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		09D14BD71C968C89003E0791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Search.storyboard; sourceTree = "<group>"; };
-		09D14BDA1C968C8B003E0791 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Search.strings"; sourceTree = "<group>"; };
-		09D14BDC1C968C8C003E0791 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Search.strings"; sourceTree = "<group>"; };
-		09D14BDE1C968C8C003E0791 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Search.strings; sourceTree = "<group>"; };
+		09D14BDA1C968C8B003E0791 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Search.storyboard"; sourceTree = "<group>"; };
+		09D14BDC1C968C8C003E0791 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Search.storyboard"; sourceTree = "<group>"; };
+		09D14BDE1C968C8C003E0791 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Search.storyboard; sourceTree = "<group>"; };
 		09D14BDF1C9690B7003E0791 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		09D14BE11C96917D003E0791 /* MessagingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingViewController.swift; sourceTree = "<group>"; };
 		09D14BE31C969185003E0791 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		09D14BE51C96918F003E0791 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		09F714031C9CF9DD0057C530 /* IncrementalLoadingSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncrementalLoadingSearchViewController.swift; sourceTree = "<group>"; };
-		09FAC6921C96063D0041DE5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		09FAC6931C96063D0041DE5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		09FAC6941C9607CC0041DE5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		09FAC6951C9607D10041DE5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		09FAC6921C96063D0041DE5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		09FAC6931C96063D0041DE5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		09FAC6941C9607CC0041DE5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		09FAC6951C9607D10041DE5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		09FAC6971C9607DA0041DE5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Social.storyboard; sourceTree = "<group>"; };
-		09FAC69A1C9607DD0041DE5E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Social.strings"; sourceTree = "<group>"; };
-		09FAC69C1C9607DE0041DE5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Social.strings"; sourceTree = "<group>"; };
-		09FAC69E1C9607DF0041DE5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Social.strings; sourceTree = "<group>"; };
+		09FAC69A1C9607DD0041DE5E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Social.storyboard"; sourceTree = "<group>"; };
+		09FAC69C1C9607DE0041DE5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Social.storyboard"; sourceTree = "<group>"; };
+		09FAC69E1C9607DF0041DE5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Social.storyboard; sourceTree = "<group>"; };
 		09FAC6A01C9607FD0041DE5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Messaging.storyboard; sourceTree = "<group>"; };
-		09FAC6A31C9607FF0041DE5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Messaging.strings; sourceTree = "<group>"; };
-		09FAC6A51C9608000041DE5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Messaging.strings"; sourceTree = "<group>"; };
-		09FAC6A71C9608030041DE5E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Messaging.strings"; sourceTree = "<group>"; };
+		09FAC6A31C9607FF0041DE5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Messaging.storyboard; sourceTree = "<group>"; };
+		09FAC6A51C9608000041DE5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Messaging.storyboard"; sourceTree = "<group>"; };
+		09FAC6A71C9608030041DE5E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Messaging.storyboard"; sourceTree = "<group>"; };
 		09FAC6A91C96080A0041DE5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
-		09FAC6AC1C96080C0041DE5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Profile.strings"; sourceTree = "<group>"; };
-		09FAC6AE1C96080D0041DE5E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Profile.strings"; sourceTree = "<group>"; };
-		09FAC6B01C96080E0041DE5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Profile.strings; sourceTree = "<group>"; };
+		09FAC6AC1C96080C0041DE5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Profile.storyboard"; sourceTree = "<group>"; };
+		09FAC6AE1C96080D0041DE5E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Profile.storyboard"; sourceTree = "<group>"; };
+		09FAC6B01C96080E0041DE5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		0C9696BE7708DB434C37D16E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		1FE9C1485ADC66CA607AE068 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25A9BFAB1CA14E9E00634A63 /* ForgetPasswordModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPasswordModelController.swift; sourceTree = "<group>"; };
+		25A9BFAC1CA14E9E00634A63 /* LoginModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModelController.swift; sourceTree = "<group>"; };
+		25A9BFAD1CA14E9E00634A63 /* SignupModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupModelController.swift; sourceTree = "<group>"; };
+		25A9BFAE1CA14E9E00634A63 /* UserSystemModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSystemModelController.swift; sourceTree = "<group>"; };
+		25A9BFB01CA14E9E00634A63 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		25A9BFB11CA14E9E00634A63 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		25A9BFB31CA14E9E00634A63 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		25A9BFB41CA14E9E00634A63 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		25A9BFB51CA14E9E00634A63 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		328415BA1CA12F3900FF8DF0 /* MessagingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingTableViewController.swift; sourceTree = "<group>"; };
 		328415BC1CA1329800FF8DF0 /* MessagingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingTableViewCell.swift; sourceTree = "<group>"; };
 		328415BE1CA134DA00FF8DF0 /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +194,7 @@
 				0920DA631C9601950032EB9C /* Profile */,
 				0920DA661C9601C30032EB9C /* Search */,
 				0920DA611C9601890032EB9C /* Social */,
+				25A9BFA91CA14E9E00634A63 /* User */,
 				0920DA3E1C96007A0032EB9C /* AppDelegate.swift */,
 				0920DA471C96007A0032EB9C /* Assets.xcassets */,
 				0920DA4C1C96007A0032EB9C /* Info.plist */,
@@ -207,10 +224,10 @@
 		0920DA621C96018D0032EB9C /* Messaging */ = {
 			isa = PBXGroup;
 			children = (
-				328415B71CA1233400FF8DF0 /* Views */,
 				328415B61CA1231D00FF8DF0 /* ModelControllers */,
 				328415B51CA1231200FF8DF0 /* Models */,
 				328415B41CA1230600FF8DF0 /* ViewControllers */,
+				328415B71CA1233400FF8DF0 /* Views */,
 				09FAC6A11C9607FD0041DE5E /* Messaging.storyboard */,
 			);
 			path = Messaging;
@@ -243,7 +260,6 @@
 				096718391C9C7D460058CF1A /* JobModel.swift */,
 				096718451C9C8D860058CF1A /* SearchSuggestionModel.swift */,
 				096718371C9C7D400058CF1A /* TaskModel.swift */,
-				096436141C9B8C6600AB71CC /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -302,28 +318,68 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		25A9BFA91CA14E9E00634A63 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				25A9BFAA1CA14E9E00634A63 /* ModelControllers */,
+				25A9BFAF1CA14E9E00634A63 /* Models */,
+				25A9BFB21CA14E9E00634A63 /* ViewControllers */,
+				25A9BFB11CA14E9E00634A63 /* User.storyboard */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		25A9BFAA1CA14E9E00634A63 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				25A9BFAB1CA14E9E00634A63 /* ForgetPasswordModelController.swift */,
+				25A9BFAC1CA14E9E00634A63 /* LoginModelController.swift */,
+				25A9BFAD1CA14E9E00634A63 /* SignupModelController.swift */,
+				25A9BFAE1CA14E9E00634A63 /* UserSystemModelController.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		25A9BFAF1CA14E9E00634A63 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				25A9BFB01CA14E9E00634A63 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		25A9BFB21CA14E9E00634A63 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				25A9BFB31CA14E9E00634A63 /* ForgetPasswordViewController.swift */,
+				25A9BFB41CA14E9E00634A63 /* LoginViewController.swift */,
+				25A9BFB51CA14E9E00634A63 /* SignupViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		328415B41CA1230600FF8DF0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				09D14BE11C96917D003E0791 /* MessagingViewController.swift */,
-				328415BA1CA12F3900FF8DF0 /* MessagingTableViewController.swift */,
 				328415BE1CA134DA00FF8DF0 /* ConversationViewController.swift */,
+				328415BA1CA12F3900FF8DF0 /* MessagingTableViewController.swift */,
+				09D14BE11C96917D003E0791 /* MessagingViewController.swift */,
 			);
-			name = ViewControllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		328415B51CA1231200FF8DF0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		328415B61CA1231D00FF8DF0 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = ModelControllers;
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 		328415B71CA1233400FF8DF0 /* Views */ = {
@@ -331,7 +387,7 @@
 			children = (
 				328415BC1CA1329800FF8DF0 /* MessagingTableViewCell.swift */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7000E23BEB6BF2C79D1CEC47 /* Frameworks */ = {
@@ -442,6 +498,7 @@
 				0920DA481C96007A0032EB9C /* Assets.xcassets in Resources */,
 				0920DA461C96007A0032EB9C /* Main.storyboard in Resources */,
 				09D14BD61C968C89003E0791 /* Search.storyboard in Resources */,
+				25A9BFBB1CA14E9E00634A63 /* User.storyboard in Resources */,
 				09FAC6961C9607DA0041DE5E /* Social.storyboard in Resources */,
 				09FAC69F1C9607FD0041DE5E /* Messaging.storyboard in Resources */,
 			);
@@ -509,23 +566,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25A9BFBD1CA14E9E00634A63 /* LoginViewController.swift in Sources */,
 				09D14BD31C96675C003E0791 /* SearchViewController.swift in Sources */,
+				25A9BFB81CA14E9E00634A63 /* SignupModelController.swift in Sources */,
 				0967184B1C9C928B0058CF1A /* SearchSuggestionTableViewCell.swift in Sources */,
 				09F714041C9CF9DD0057C530 /* IncrementalLoadingSearchViewController.swift in Sources */,
+				25A9BFB91CA14E9E00634A63 /* UserSystemModelController.swift in Sources */,
 				0967184D1C9CAEEE0058CF1A /* UserTableViewCell.swift in Sources */,
 				328415BB1CA12F3900FF8DF0 /* MessagingTableViewController.swift in Sources */,
 				096718401C9C7DFF0058CF1A /* UserSearchViewController.swift in Sources */,
+				25A9BFBA1CA14E9E00634A63 /* UserModel.swift in Sources */,
 				096718361C9C7D250058CF1A /* JobModelController.swift in Sources */,
 				328415BF1CA134DA00FF8DF0 /* ConversationViewController.swift in Sources */,
 				096718421C9C7E0C0058CF1A /* TaskSearchViewController.swift in Sources */,
 				091DEE8B1C989CFD00B53CEB /* Colors.swift in Sources */,
+				25A9BFB71CA14E9E00634A63 /* LoginModelController.swift in Sources */,
 				096436171C9BA8FB00AB71CC /* UserModelController.swift in Sources */,
 				0967183A1C9C7D460058CF1A /* JobModel.swift in Sources */,
-				096436151C9B8C6600AB71CC /* UserModel.swift in Sources */,
 				096718341C9C7D0C0058CF1A /* TaskModelController.swift in Sources */,
 				0953E2331C9A6730006E6FF0 /* SearchResultModelController.swift in Sources */,
 				0960F8E61C9E5AA70051AA06 /* TabbedPageViewController.swift in Sources */,
 				09D14BE21C96917D003E0791 /* MessagingViewController.swift in Sources */,
+				25A9BFB61CA14E9E00634A63 /* ForgetPasswordModelController.swift in Sources */,
 				0967184F1C9CAEF70058CF1A /* TaskTableViewCell.swift in Sources */,
 				09D14BE41C969185003E0791 /* ProfileViewController.swift in Sources */,
 				096718511C9CAF320058CF1A /* JobTableViewCell.swift in Sources */,
@@ -536,8 +598,10 @@
 				096718381C9C7D400058CF1A /* TaskModel.swift in Sources */,
 				328415BD1CA1329800FF8DF0 /* MessagingTableViewCell.swift in Sources */,
 				096718461C9C8D860058CF1A /* SearchSuggestionModel.swift in Sources */,
+				25A9BFBC1CA14E9E00634A63 /* ForgetPasswordViewController.swift in Sources */,
 				09D14BE01C9690B7003E0791 /* MainTabBarController.swift in Sources */,
 				096718441C9C7E150058CF1A /* JobSearchViewController.swift in Sources */,
+				25A9BFBE1CA14E9E00634A63 /* SignupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

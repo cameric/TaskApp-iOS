@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "930ABCB85BD4DDE93E6DA4EB16C3C197DF7C2EBD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "930ABCB85BD4DDE93E6DA4EB16C3C197DF7C2EBD" : 0,
+    "1E9039B0DEE46C3595AC88E02DA29992FD126EB3" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F1340697-60E5-4D31-BEF1-4AD2A3249A68",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "930ABCB85BD4DDE93E6DA4EB16C3C197DF7C2EBD" : "TaskApp-iOS\/",
+    "1E9039B0DEE46C3595AC88E02DA29992FD126EB3" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TaskApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TaskApp.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zhzhang2012\/test-nodeci.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1E9039B0DEE46C3595AC88E02DA29992FD126EB3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/cameric\/TaskApp-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "930ABCB85BD4DDE93E6DA4EB16C3C197DF7C2EBD"
+    }
+  ]
+}
