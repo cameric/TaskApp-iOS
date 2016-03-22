@@ -10,6 +10,11 @@ import UIKit
 
 class MessagingTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var avatar: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var conversation: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +25,6 @@ class MessagingTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
 
 }
