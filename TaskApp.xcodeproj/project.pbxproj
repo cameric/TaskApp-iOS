@@ -42,6 +42,7 @@
 		09FAC69F1C9607FD0041DE5E /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6A11C9607FD0041DE5E /* Messaging.storyboard */; };
 		09FAC6A81C96080A0041DE5E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6AA1C96080A0041DE5E /* Profile.storyboard */; };
 		328415BB1CA12F3900FF8DF0 /* MessagingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328415BA1CA12F3900FF8DF0 /* MessagingTableViewController.swift */; };
+		328415BD1CA1329800FF8DF0 /* MessagingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328415BC1CA1329800FF8DF0 /* MessagingTableViewCell.swift */; };
 		4DE9D1D6BCFB81F3ED827B07 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE9C1485ADC66CA607AE068 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +116,7 @@
 		0C9696BE7708DB434C37D16E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		1FE9C1485ADC66CA607AE068 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		328415BA1CA12F3900FF8DF0 /* MessagingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingTableViewController.swift; sourceTree = "<group>"; };
+		328415BC1CA1329800FF8DF0 /* MessagingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingTableViewCell.swift; sourceTree = "<group>"; };
 		340B0D644437D22DEBEDD8BA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -324,6 +326,7 @@
 		328415B71CA1233400FF8DF0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				328415BC1CA1329800FF8DF0 /* MessagingTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				0920DA3F1C96007A0032EB9C /* AppDelegate.swift in Sources */,
 				096718481C9C8D930058CF1A /* SearchSuggestionModelController.swift in Sources */,
 				096718381C9C7D400058CF1A /* TaskModel.swift in Sources */,
+				328415BD1CA1329800FF8DF0 /* MessagingTableViewCell.swift in Sources */,
 				096718461C9C8D860058CF1A /* SearchSuggestionModel.swift in Sources */,
 				09D14BE01C9690B7003E0791 /* MainTabBarController.swift in Sources */,
 				096718441C9C7E150058CF1A /* JobSearchViewController.swift in Sources */,
