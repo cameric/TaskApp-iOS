@@ -24,7 +24,7 @@ class IncrementalLoadingSearchViewController<DataSource: SearchResultModelContro
     private var loadedAllResultsForCriteria: Bool = true
     
     /// Whether or not the source encountered an error on the last load attempt
-    private var errorOccurred: Bool = false
+    private var loadEncounteredError: Bool = false
     
     private let loadingCellTag = 4294967295
     private let errorCellTag = 4294967296
@@ -43,7 +43,7 @@ class IncrementalLoadingSearchViewController<DataSource: SearchResultModelContro
         still results to load or an error occurred while loading results.
      */
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if loadedAllResultsForCriteria || errorOccurred {
+        if loadedAllResultsForCriteria || loadEncounteredError {
             return source.results.count + 1
         } else {
             return source.results.count
@@ -60,7 +60,7 @@ class IncrementalLoadingSearchViewController<DataSource: SearchResultModelContro
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.row < source.results.count {
             return resultCellForRow(indexPath.row)
-        } else if errorOccurred {
+        } else if loadEncounteredError {
             return errorCell()
         } else {
             return loadingCell()
@@ -144,7 +144,7 @@ class IncrementalLoadingSearchViewController<DataSource: SearchResultModelContro
         
         if cell.tag == errorCellTag {
             // TODO: It may be necessary to manually reload the tableview here.
-            errorOccurred = false
+            loadEncounteredError = false
             source.loadMore(resultsPerLoad)
         }
     }

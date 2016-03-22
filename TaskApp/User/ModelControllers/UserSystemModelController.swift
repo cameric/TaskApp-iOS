@@ -9,7 +9,7 @@
 import AVOSCloud
 
 protocol UserSystemModelControllerProtocol {
-    typealias UserType: AVUser
+    associatedtype UserType: AVUser
     
     var delegate: UserSystemModelControllerDelegate? { get set }
     

@@ -9,7 +9,7 @@
 import AVOSCloud
 
 protocol SearchResultModelControllerProtocol {
-    typealias ResultType: AVObject
+    associatedtype ResultType: AVObject
     
     var delegate: SearchResultModelControllerDelegate? { get set }
     
