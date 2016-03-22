@@ -10,18 +10,21 @@ import UIKit
 import AVOSCloud
 import MBProgressHUD
 
-class ForgetPasswordViewController: UIViewController, UITextFieldDelegate {
+class ForgetPasswordViewController: UIViewController, UITextFieldDelegate, UserSystemModelControllerDelegate {
 
     @IBOutlet weak var inputEmail: UITextField!
     @IBOutlet weak var invalidInputLabel: UILabel!
     
     var showInfo: Bool = false
+    var forgetPasswdModelController = ForgetPasswdModelController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         inputEmail.delegate = self
+        forgetPasswdModelController.delegate = self
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,8 +34,7 @@ class ForgetPasswordViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: UITextFieldDelegate
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-//        return UserInterfaceServices.textFieldResignResponder(textField)
-        return true
+        return UserInterfaceServices.textFieldResignResponder(textField)
     }
     
     @IBAction func dismissKeyboardDidTapOutsideTextField(sender: UITapGestureRecognizer) {
@@ -62,18 +64,24 @@ class ForgetPasswordViewController: UIViewController, UITextFieldDelegate {
         loginNotification.mode = MBProgressHUDMode.Indeterminate
         loginNotification.labelText = "正在发送验证邮件..."
         
-        AVUser.requestPasswordResetForEmailInBackground(email, block:
-            { (succeeded: Bool, error: NSError!) -> Void in
-                // First hide notification
-                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
-                
-                if succeeded {
-                    self.showInfo = true
-                    self.invalidInputLabel.text = "邮件已发送！"
-                } else {
-                    self.showInfo = true
-                    self.invalidInputLabel.text = "\(error.localizedDescription) (\(error.code))"
-                }
-        })
+        forgetPasswdModelController.sendForgetPasswdEmail(email)
+    }
+    
+    // Called when the user verification email has been sent successfully
+    func didRetrieveCurrentUserInfo<ModelController : UserSystemModelControllerProtocol>(controller: ModelController) {
+        // First hide notification
+        MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+        
+        self.showInfo = true
+        self.invalidInputLabel.text = "邮件已发送！"
+    }
+    
+    // Called when error occurred when sending verification email
+    func didFailedLoadingUserInfo<ModelController : UserSystemModelControllerProtocol>(controller: ModelController, action: String, errorMsg: String) {
+        // First hide notification
+        MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+        
+        self.showInfo = true
+        self.invalidInputLabel.text = errorMsg
     }
 }

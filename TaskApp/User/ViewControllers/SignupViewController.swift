@@ -11,7 +11,7 @@ import AVOSCloud
 import UIKit
 import MBProgressHUD
 
-class SignupViewController: UIViewController, UITextFieldDelegate {
+class SignupViewController: UIViewController, UITextFieldDelegate, UserSystemModelControllerDelegate {
     
     // Properties
     @IBOutlet weak var inputName: UITextField!
@@ -21,6 +21,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var invalidInputLabel: UILabel!
     
     var showSignupInfo: Bool = false
+    var signupModelController = SignupModelController()
     
     // MARK: Default actions
     
@@ -30,13 +31,12 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         inputName.delegate = self
         inputEmail.delegate = self
         inputPwd.delegate = self
+        signupModelController.delegate = self
     }
     
     // MARK: UITextFieldDelegate
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-//        return UserInterfaceServices.textFieldResignResponder(textField)
-
-        return false
+        return UserInterfaceServices.textFieldResignResponder(textField)
     }
     
     @IBAction func dismissKeyboardDidTapOutsideTextField(sender: UITapGestureRecognizer) {
@@ -49,8 +49,8 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "signedupJumpToProfileSegue" {
             // Pass the logged in info to detailed profile view controller
-//            let targetViewController = segue.destinationViewController as! ProfileViewController
-//            targetViewController.loggedInUser = AVUser.currentUser()
+            let targetViewController = segue.destinationViewController as! ProfileViewController
+            targetViewController.currentUser = signupModelController.currentUser
         }
     }
     
@@ -83,31 +83,29 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        let newUser = AVUser()
-        newUser.setObject(name, forKey: "name")
-        newUser.username = username
-        newUser.email = username
-        newUser.password = pwd
-        
         // Set up loading view
         let loginNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         loginNotification.mode = MBProgressHUDMode.Indeterminate
         loginNotification.labelText = "注册中..."
         
-        newUser.signUpInBackgroundWithBlock(signupCallback)
+        // Call MC to register
+        signupModelController.signUp(username, name: name, email: username, passwd: pwd)
     }
-    
-    func signupCallback(succeeded: Bool, error: NSError!) {
+
+    // Called when the user has been successfully signed up
+    func didRetrieveCurrentUserInfo<ModelController : UserSystemModelControllerProtocol>(controller: ModelController) {
         // First hide notification
         MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
         
-        if succeeded {
-            self.performSegueWithIdentifier("signedupJumpToProfileSegue", sender: self)
-        } else {
-            self.showSignupInfo = true
-            self.invalidInputLabel.text = "\(error.localizedDescription) (\(error.code))"
-        }
+        self.performSegueWithIdentifier("signedupJumpToProfileSegue", sender: self)
     }
     
-    
+    // Called when error occurred during signup process
+    func didFailedLoadingUserInfo<ModelController : UserSystemModelControllerProtocol>(controller: ModelController, action: String, errorMsg: String) {
+        // First hide notification
+        MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+        
+        self.showSignupInfo = true
+        self.invalidInputLabel.text = errorMsg
+    }
 }

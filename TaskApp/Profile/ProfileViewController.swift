@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import AVOSCloud
 
 class ProfileViewController: UIViewController {
+    
+    var currentUser: AVUser?
 
     override func viewDidLoad() {
         super.viewDidLoad()

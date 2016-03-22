@@ -49,6 +49,7 @@
 		25A9BFBC1CA14E9E00634A63 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB31CA14E9E00634A63 /* ForgetPasswordViewController.swift */; };
 		25A9BFBD1CA14E9E00634A63 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB41CA14E9E00634A63 /* LoginViewController.swift */; };
 		25A9BFBE1CA14E9E00634A63 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB51CA14E9E00634A63 /* SignupViewController.swift */; };
+		25E920D11CA1C5D700C83063 /* UIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E920D01CA1C5D700C83063 /* UIServices.swift */; };
 		328415BB1CA12F3900FF8DF0 /* MessagingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328415BA1CA12F3900FF8DF0 /* MessagingTableViewController.swift */; };
 		328415BD1CA1329800FF8DF0 /* MessagingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328415BC1CA1329800FF8DF0 /* MessagingTableViewCell.swift */; };
 		328415BF1CA134DA00FF8DF0 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328415BE1CA134DA00FF8DF0 /* ConversationViewController.swift */; };
@@ -132,6 +133,7 @@
 		25A9BFB31CA14E9E00634A63 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		25A9BFB41CA14E9E00634A63 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		25A9BFB51CA14E9E00634A63 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		25E920D01CA1C5D700C83063 /* UIServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIServices.swift; sourceTree = "<group>"; };
 		328415BA1CA12F3900FF8DF0 /* MessagingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingTableViewController.swift; sourceTree = "<group>"; };
 		328415BC1CA1329800FF8DF0 /* MessagingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingTableViewCell.swift; sourceTree = "<group>"; };
 		328415BE1CA134DA00FF8DF0 /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				0920DA621C96018D0032EB9C /* Messaging */,
 				0920DA631C9601950032EB9C /* Profile */,
 				0920DA661C9601C30032EB9C /* Search */,
+				25E920CE1CA1C5A100C83063 /* Services */,
 				0920DA611C9601890032EB9C /* Social */,
 				25A9BFA91CA14E9E00634A63 /* User */,
 				0920DA3E1C96007A0032EB9C /* AppDelegate.swift */,
@@ -356,6 +359,14 @@
 				25A9BFB51CA14E9E00634A63 /* SignupViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		25E920CE1CA1C5A100C83063 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				25E920D01CA1C5D700C83063 /* UIServices.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		328415B41CA1230600FF8DF0 /* ViewControllers */ = {
@@ -585,6 +596,7 @@
 				0967183A1C9C7D460058CF1A /* JobModel.swift in Sources */,
 				096718341C9C7D0C0058CF1A /* TaskModelController.swift in Sources */,
 				0953E2331C9A6730006E6FF0 /* SearchResultModelController.swift in Sources */,
+				25E920D11CA1C5D700C83063 /* UIServices.swift in Sources */,
 				0960F8E61C9E5AA70051AA06 /* TabbedPageViewController.swift in Sources */,
 				09D14BE21C96917D003E0791 /* MessagingViewController.swift in Sources */,
 				25A9BFB61CA14E9E00634A63 /* ForgetPasswordModelController.swift in Sources */,
