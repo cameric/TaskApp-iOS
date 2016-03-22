@@ -41,6 +41,7 @@
 		09FAC6961C9607DA0041DE5E /* Social.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6981C9607DA0041DE5E /* Social.storyboard */; };
 		09FAC69F1C9607FD0041DE5E /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6A11C9607FD0041DE5E /* Messaging.storyboard */; };
 		09FAC6A81C96080A0041DE5E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6AA1C96080A0041DE5E /* Profile.storyboard */; };
+		328415BB1CA12F3900FF8DF0 /* MessagingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328415BA1CA12F3900FF8DF0 /* MessagingTableViewController.swift */; };
 		4DE9D1D6BCFB81F3ED827B07 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE9C1485ADC66CA607AE068 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +114,7 @@
 		09FAC6B01C96080E0041DE5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Profile.strings; sourceTree = "<group>"; };
 		0C9696BE7708DB434C37D16E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		1FE9C1485ADC66CA607AE068 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		328415BA1CA12F3900FF8DF0 /* MessagingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingTableViewController.swift; sourceTree = "<group>"; };
 		340B0D644437D22DEBEDD8BA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,8 +203,11 @@
 		0920DA621C96018D0032EB9C /* Messaging */ = {
 			isa = PBXGroup;
 			children = (
+				328415B71CA1233400FF8DF0 /* Views */,
+				328415B61CA1231D00FF8DF0 /* ModelControllers */,
+				328415B51CA1231200FF8DF0 /* Models */,
+				328415B41CA1230600FF8DF0 /* ViewControllers */,
 				09FAC6A11C9607FD0041DE5E /* Messaging.storyboard */,
-				09D14BE11C96917D003E0791 /* MessagingViewController.swift */,
 			);
 			path = Messaging;
 			sourceTree = "<group>";
@@ -291,6 +296,36 @@
 				099B05871C97794F00D3AE36 /* MainTabBarControllerDelegate.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		328415B41CA1230600FF8DF0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				09D14BE11C96917D003E0791 /* MessagingViewController.swift */,
+				328415BA1CA12F3900FF8DF0 /* MessagingTableViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		328415B51CA1231200FF8DF0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		328415B61CA1231D00FF8DF0 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ModelControllers;
+			sourceTree = "<group>";
+		};
+		328415B71CA1233400FF8DF0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		7000E23BEB6BF2C79D1CEC47 /* Frameworks */ = {
@@ -472,6 +507,7 @@
 				0967184B1C9C928B0058CF1A /* SearchSuggestionTableViewCell.swift in Sources */,
 				09F714041C9CF9DD0057C530 /* IncrementalLoadingSearchViewController.swift in Sources */,
 				0967184D1C9CAEEE0058CF1A /* UserTableViewCell.swift in Sources */,
+				328415BB1CA12F3900FF8DF0 /* MessagingTableViewController.swift in Sources */,
 				096718401C9C7DFF0058CF1A /* UserSearchViewController.swift in Sources */,
 				096718361C9C7D250058CF1A /* JobModelController.swift in Sources */,
 				096718421C9C7E0C0058CF1A /* TaskSearchViewController.swift in Sources */,
