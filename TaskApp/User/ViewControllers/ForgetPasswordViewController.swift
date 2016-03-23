@@ -16,7 +16,7 @@ class ForgetPasswordViewController: UIViewController, UITextFieldDelegate, UserS
     @IBOutlet weak var invalidInputLabel: UILabel!
     
     var showInfo: Bool = false
-    var forgetPasswdModelController = ForgetPasswdModelController()
+    var forgetPasswdModelController = LocalUserModelController()
     
     override func viewDidLoad() {
         super.viewDidLoad()

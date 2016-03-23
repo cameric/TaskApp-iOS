@@ -9,14 +9,12 @@
 import AVOSCloud
 
 protocol UserSystemModelControllerProtocol {
-    associatedtype UserType: AVUser
-    
     var delegate: UserSystemModelControllerDelegate? { get set }
     
     /*!
      * @brief the returned user info after a server-side query
      */
-    var currentUser: UserType? { get }
+    var currentUser: AVUser? { get }
 }
 
 protocol UserSystemModelControllerDelegate {

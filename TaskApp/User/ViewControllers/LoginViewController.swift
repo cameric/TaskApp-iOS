@@ -20,7 +20,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UserSystemMode
     @IBOutlet weak var loginButton: UIButton!
     
     var showLoginInfo = false
-    var loginModelController = LoginModelController()
+    var loginModelController = LocalUserModelController()
     
     override func viewDidLoad() {
         super.viewDidLoad()

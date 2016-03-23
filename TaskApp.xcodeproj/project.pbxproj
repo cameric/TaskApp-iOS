@@ -40,9 +40,6 @@
 		09FAC6961C9607DA0041DE5E /* Social.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6981C9607DA0041DE5E /* Social.storyboard */; };
 		09FAC69F1C9607FD0041DE5E /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6A11C9607FD0041DE5E /* Messaging.storyboard */; };
 		09FAC6A81C96080A0041DE5E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6AA1C96080A0041DE5E /* Profile.storyboard */; };
-		25A9BFB61CA14E9E00634A63 /* ForgetPasswordModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFAB1CA14E9E00634A63 /* ForgetPasswordModelController.swift */; };
-		25A9BFB71CA14E9E00634A63 /* LoginModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFAC1CA14E9E00634A63 /* LoginModelController.swift */; };
-		25A9BFB81CA14E9E00634A63 /* SignupModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFAD1CA14E9E00634A63 /* SignupModelController.swift */; };
 		25A9BFB91CA14E9E00634A63 /* UserSystemModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFAE1CA14E9E00634A63 /* UserSystemModelController.swift */; };
 		25A9BFBA1CA14E9E00634A63 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB01CA14E9E00634A63 /* UserModel.swift */; };
 		25A9BFBB1CA14E9E00634A63 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25A9BFB11CA14E9E00634A63 /* User.storyboard */; };
@@ -50,6 +47,7 @@
 		25A9BFBD1CA14E9E00634A63 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB41CA14E9E00634A63 /* LoginViewController.swift */; };
 		25A9BFBE1CA14E9E00634A63 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB51CA14E9E00634A63 /* SignupViewController.swift */; };
 		25E920D11CA1C5D700C83063 /* UIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E920D01CA1C5D700C83063 /* UIServices.swift */; };
+		25E920D31CA26F0300C83063 /* LocalUserModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E920D21CA26F0300C83063 /* LocalUserModelController.swift */; };
 		328415BB1CA12F3900FF8DF0 /* MessagingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328415BA1CA12F3900FF8DF0 /* MessagingTableViewController.swift */; };
 		328415BD1CA1329800FF8DF0 /* MessagingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328415BC1CA1329800FF8DF0 /* MessagingTableViewCell.swift */; };
 		328415BF1CA134DA00FF8DF0 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328415BE1CA134DA00FF8DF0 /* ConversationViewController.swift */; };
@@ -124,9 +122,6 @@
 		09FAC6B01C96080E0041DE5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		0C9696BE7708DB434C37D16E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		1FE9C1485ADC66CA607AE068 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		25A9BFAB1CA14E9E00634A63 /* ForgetPasswordModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPasswordModelController.swift; sourceTree = "<group>"; };
-		25A9BFAC1CA14E9E00634A63 /* LoginModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModelController.swift; sourceTree = "<group>"; };
-		25A9BFAD1CA14E9E00634A63 /* SignupModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupModelController.swift; sourceTree = "<group>"; };
 		25A9BFAE1CA14E9E00634A63 /* UserSystemModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSystemModelController.swift; sourceTree = "<group>"; };
 		25A9BFB01CA14E9E00634A63 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		25A9BFB11CA14E9E00634A63 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
@@ -134,6 +129,7 @@
 		25A9BFB41CA14E9E00634A63 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		25A9BFB51CA14E9E00634A63 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		25E920D01CA1C5D700C83063 /* UIServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIServices.swift; sourceTree = "<group>"; };
+		25E920D21CA26F0300C83063 /* LocalUserModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalUserModelController.swift; sourceTree = "<group>"; };
 		328415BA1CA12F3900FF8DF0 /* MessagingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingTableViewController.swift; sourceTree = "<group>"; };
 		328415BC1CA1329800FF8DF0 /* MessagingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingTableViewCell.swift; sourceTree = "<group>"; };
 		328415BE1CA134DA00FF8DF0 /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
@@ -335,10 +331,8 @@
 		25A9BFAA1CA14E9E00634A63 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
-				25A9BFAB1CA14E9E00634A63 /* ForgetPasswordModelController.swift */,
-				25A9BFAC1CA14E9E00634A63 /* LoginModelController.swift */,
-				25A9BFAD1CA14E9E00634A63 /* SignupModelController.swift */,
 				25A9BFAE1CA14E9E00634A63 /* UserSystemModelController.swift */,
+				25E920D21CA26F0300C83063 /* LocalUserModelController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -579,7 +573,6 @@
 			files = (
 				25A9BFBD1CA14E9E00634A63 /* LoginViewController.swift in Sources */,
 				09D14BD31C96675C003E0791 /* SearchViewController.swift in Sources */,
-				25A9BFB81CA14E9E00634A63 /* SignupModelController.swift in Sources */,
 				0967184B1C9C928B0058CF1A /* SearchSuggestionTableViewCell.swift in Sources */,
 				09F714041C9CF9DD0057C530 /* IncrementalLoadingSearchViewController.swift in Sources */,
 				25A9BFB91CA14E9E00634A63 /* UserSystemModelController.swift in Sources */,
@@ -587,11 +580,11 @@
 				328415BB1CA12F3900FF8DF0 /* MessagingTableViewController.swift in Sources */,
 				096718401C9C7DFF0058CF1A /* UserSearchViewController.swift in Sources */,
 				25A9BFBA1CA14E9E00634A63 /* UserModel.swift in Sources */,
+				25E920D31CA26F0300C83063 /* LocalUserModelController.swift in Sources */,
 				096718361C9C7D250058CF1A /* JobModelController.swift in Sources */,
 				328415BF1CA134DA00FF8DF0 /* ConversationViewController.swift in Sources */,
 				096718421C9C7E0C0058CF1A /* TaskSearchViewController.swift in Sources */,
 				091DEE8B1C989CFD00B53CEB /* Colors.swift in Sources */,
-				25A9BFB71CA14E9E00634A63 /* LoginModelController.swift in Sources */,
 				096436171C9BA8FB00AB71CC /* UserModelController.swift in Sources */,
 				0967183A1C9C7D460058CF1A /* JobModel.swift in Sources */,
 				096718341C9C7D0C0058CF1A /* TaskModelController.swift in Sources */,
@@ -599,7 +592,6 @@
 				25E920D11CA1C5D700C83063 /* UIServices.swift in Sources */,
 				0960F8E61C9E5AA70051AA06 /* TabbedPageViewController.swift in Sources */,
 				09D14BE21C96917D003E0791 /* MessagingViewController.swift in Sources */,
-				25A9BFB61CA14E9E00634A63 /* ForgetPasswordModelController.swift in Sources */,
 				0967184F1C9CAEF70058CF1A /* TaskTableViewCell.swift in Sources */,
 				09D14BE41C969185003E0791 /* ProfileViewController.swift in Sources */,
 				096718511C9CAF320058CF1A /* JobTableViewCell.swift in Sources */,

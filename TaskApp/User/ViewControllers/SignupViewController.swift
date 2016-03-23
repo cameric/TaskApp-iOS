@@ -21,7 +21,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate, UserSystemMod
     @IBOutlet weak var invalidInputLabel: UILabel!
     
     var showSignupInfo: Bool = false
-    var signupModelController = SignupModelController()
+    var signupModelController = LocalUserModelController()
     
     // MARK: Default actions
     
