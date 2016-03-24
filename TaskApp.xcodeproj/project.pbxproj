@@ -129,6 +129,9 @@
 		25E920D01CA1C5D700C83063 /* UIServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIServices.swift; sourceTree = "<group>"; };
 		25E920D21CA26F0300C83063 /* LocalUserModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalUserModelController.swift; sourceTree = "<group>"; };
 		25EBFBC21CA3D47E00CCE557 /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		25EBFBC81CA3E6EB00CCE557 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/Personal.storyboard"; sourceTree = "<group>"; };
+		25EBFBCB1CA3E70800CCE557 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Personal.storyboard"; sourceTree = "<group>"; };
+		25EBFBCE1CA3E70E00CCE557 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Personal.storyboard; sourceTree = "<group>"; };
 		328415BA1CA12F3900FF8DF0 /* MessagingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingTableViewController.swift; sourceTree = "<group>"; };
 		328415BC1CA1329800FF8DF0 /* MessagingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingTableViewCell.swift; sourceTree = "<group>"; };
 		328415BE1CA134DA00FF8DF0 /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
@@ -710,6 +713,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				09FAC6A91C96080A0041DE5E /* Base */,
+				25EBFBC81CA3E6EB00CCE557 /* zh-Hant */,
+				25EBFBCB1CA3E70800CCE557 /* zh-Hans */,
+				25EBFBCE1CA3E70E00CCE557 /* en */,
 			);
 			name = Personal.storyboard;
 			path = .;
