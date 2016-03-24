@@ -34,12 +34,12 @@
 		09D14BD61C968C89003E0791 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D14BD81C968C89003E0791 /* Search.storyboard */; };
 		09D14BE01C9690B7003E0791 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BDF1C9690B7003E0791 /* MainTabBarController.swift */; };
 		09D14BE21C96917D003E0791 /* MessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BE11C96917D003E0791 /* MessagingViewController.swift */; };
-		09D14BE41C969185003E0791 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BE31C969185003E0791 /* ProfileViewController.swift */; };
+		09D14BE41C969185003E0791 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BE31C969185003E0791 /* PersonalViewController.swift */; };
 		09D14BE61C96918F003E0791 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BE51C96918F003E0791 /* SocialViewController.swift */; };
 		09F714041C9CF9DD0057C530 /* IncrementalLoadingSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F714031C9CF9DD0057C530 /* IncrementalLoadingSearchViewController.swift */; };
 		09FAC6961C9607DA0041DE5E /* Social.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6981C9607DA0041DE5E /* Social.storyboard */; };
 		09FAC69F1C9607FD0041DE5E /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6A11C9607FD0041DE5E /* Messaging.storyboard */; };
-		09FAC6A81C96080A0041DE5E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6AA1C96080A0041DE5E /* Profile.storyboard */; };
+		09FAC6A81C96080A0041DE5E /* Personal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6AA1C96080A0041DE5E /* Personal.storyboard */; };
 		25A9BFB91CA14E9E00634A63 /* UserSystemModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFAE1CA14E9E00634A63 /* UserSystemModelController.swift */; };
 		25A9BFBA1CA14E9E00634A63 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB01CA14E9E00634A63 /* UserModel.swift */; };
 		25A9BFBB1CA14E9E00634A63 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25A9BFB11CA14E9E00634A63 /* User.storyboard */; };
@@ -102,7 +102,7 @@
 		09D14BDE1C968C8C003E0791 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Search.storyboard; sourceTree = "<group>"; };
 		09D14BDF1C9690B7003E0791 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		09D14BE11C96917D003E0791 /* MessagingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingViewController.swift; sourceTree = "<group>"; };
-		09D14BE31C969185003E0791 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		09D14BE31C969185003E0791 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		09D14BE51C96918F003E0791 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		09F714031C9CF9DD0057C530 /* IncrementalLoadingSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncrementalLoadingSearchViewController.swift; sourceTree = "<group>"; };
 		09FAC6921C96063D0041DE5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,10 +117,7 @@
 		09FAC6A31C9607FF0041DE5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Messaging.storyboard; sourceTree = "<group>"; };
 		09FAC6A51C9608000041DE5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Messaging.storyboard"; sourceTree = "<group>"; };
 		09FAC6A71C9608030041DE5E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Messaging.storyboard"; sourceTree = "<group>"; };
-		09FAC6A91C96080A0041DE5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
-		09FAC6AC1C96080C0041DE5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Profile.storyboard"; sourceTree = "<group>"; };
-		09FAC6AE1C96080D0041DE5E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Profile.storyboard"; sourceTree = "<group>"; };
-		09FAC6B01C96080E0041DE5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Profile.storyboard; sourceTree = "<group>"; };
+		09FAC6A91C96080A0041DE5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Personal.storyboard; sourceTree = "<group>"; };
 		0C9696BE7708DB434C37D16E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		1FE9C1485ADC66CA607AE068 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A9BFAE1CA14E9E00634A63 /* UserSystemModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSystemModelController.swift; sourceTree = "<group>"; };
@@ -192,7 +189,7 @@
 				091DEE871C989CD600B53CEB /* Constants */,
 				099B05861C9778F500D3AE36 /* Main */,
 				0920DA621C96018D0032EB9C /* Messaging */,
-				0920DA631C9601950032EB9C /* Profile */,
+				0920DA631C9601950032EB9C /* Personal */,
 				0920DA661C9601C30032EB9C /* Search */,
 				25E920CE1CA1C5A100C83063 /* Services */,
 				0920DA611C9601890032EB9C /* Social */,
@@ -235,13 +232,14 @@
 			path = Messaging;
 			sourceTree = "<group>";
 		};
-		0920DA631C9601950032EB9C /* Profile */ = {
+		0920DA631C9601950032EB9C /* Personal */ = {
 			isa = PBXGroup;
 			children = (
 				25EBFBC51CA3D74B00CCE557 /* ViewControllers */,
 				25EBFBC41CA3D74400CCE557 /* ModelControllers */,
-				09FAC6AA1C96080A0041DE5E /* Profile.storyboard */,
+				09FAC6AA1C96080A0041DE5E /* Personal.storyboard */,
 			);
+			name = Personal;
 			path = Profile;
 			sourceTree = "<group>";
 		};
@@ -377,7 +375,7 @@
 		25EBFBC51CA3D74B00CCE557 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				09D14BE31C969185003E0791 /* ProfileViewController.swift */,
+				09D14BE31C969185003E0791 /* PersonalViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -517,7 +515,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09FAC6A81C96080A0041DE5E /* Profile.storyboard in Resources */,
+				09FAC6A81C96080A0041DE5E /* Personal.storyboard in Resources */,
 				0920DA4B1C96007A0032EB9C /* LaunchScreen.storyboard in Resources */,
 				0920DA481C96007A0032EB9C /* Assets.xcassets in Resources */,
 				0920DA461C96007A0032EB9C /* Main.storyboard in Resources */,
@@ -612,7 +610,7 @@
 				0960F8E61C9E5AA70051AA06 /* TabbedPageViewController.swift in Sources */,
 				09D14BE21C96917D003E0791 /* MessagingViewController.swift in Sources */,
 				0967184F1C9CAEF70058CF1A /* TaskTableViewCell.swift in Sources */,
-				09D14BE41C969185003E0791 /* ProfileViewController.swift in Sources */,
+				09D14BE41C969185003E0791 /* PersonalViewController.swift in Sources */,
 				096718511C9CAF320058CF1A /* JobTableViewCell.swift in Sources */,
 				099B05881C97794F00D3AE36 /* MainTabBarControllerDelegate.swift in Sources */,
 				09D14BE61C96918F003E0791 /* SocialViewController.swift in Sources */,
@@ -708,15 +706,12 @@
 			path = .;
 			sourceTree = "<group>";
 		};
-		09FAC6AA1C96080A0041DE5E /* Profile.storyboard */ = {
+		09FAC6AA1C96080A0041DE5E /* Personal.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				09FAC6A91C96080A0041DE5E /* Base */,
-				09FAC6B01C96080E0041DE5E /* en */,
-				09FAC6AC1C96080C0041DE5E /* zh-Hans */,
-				09FAC6AE1C96080D0041DE5E /* zh-Hant */,
 			);
-			name = Profile.storyboard;
+			name = Personal.storyboard;
 			path = .;
 			sourceTree = "<group>";
 		};

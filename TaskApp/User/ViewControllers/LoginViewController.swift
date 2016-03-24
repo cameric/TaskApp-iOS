@@ -44,7 +44,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UserSystemMode
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "loggedInJumpToProfileSegue" {
             // Pass the logged in info to detailed profile view controller
-            let targetViewController = segue.destinationViewController as! ProfileViewController
+            let targetViewController = segue.destinationViewController as! PersonalViewController
             targetViewController.currentUser = loginModelController.currentUser
         }
     }

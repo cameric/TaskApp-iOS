@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="490" y="74"/>
         </scene>
-        <!--Profile-->
+        <!--Personal-->
         <scene sceneID="I76-IW-wL3">
             <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="bNb-vU-kyR" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Personal" id="bNb-vU-kyR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="用户" id="A8O-3A-RrP"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUI-4k-bQI" userLabel="First Responder" sceneMemberID="firstResponder"/>

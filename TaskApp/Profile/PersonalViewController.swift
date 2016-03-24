@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import AVOSCloud
 
-class ProfileViewController: UITableViewController {
+class PersonalViewController: UITableViewController {
     
     // MARK: Properties
     @IBOutlet weak var nameLabel: UILabel!
