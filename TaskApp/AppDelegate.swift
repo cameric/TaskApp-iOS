@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVOSCloud
+import AVOSCloudIM
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Bootstrap AVOSCloud library
+        AVOSCloud.setApplicationId(APIKeys.LeanEngine_AppId, clientKey: APIKeys.LeanEngine_AppKey)
+        AVAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
+        // DEV: Use the test server
+        AVCloud.setProductionMode(false)
+        
+        // Bootstrap Weibo SDK
+        //WeiboSDK.enableDebugMode(true)
+        //WeiboSDK.registerApp(GlobalAPIKeys.Weibo_AppKey)
+        
         return true
     }
 
