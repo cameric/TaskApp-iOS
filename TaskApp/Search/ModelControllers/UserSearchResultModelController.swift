@@ -1,5 +1,5 @@
 //
-//  UserModelController.swift
+//  UserSearchResultModelController.swift
 //  UserApp
 //
 //  Created by Spencer Michaels on 2016/3/17.
@@ -9,7 +9,7 @@
 import AVOSCloud
 import UIKit
 
-class UserModelController: NSObject, SearchResultModelControllerProtocol {
+class UserSearchResultModelController: NSObject, SearchResultModelControllerProtocol {
     var results: [User] = []
     var delegate: SearchResultModelControllerDelegate?
     
@@ -34,7 +34,7 @@ class UserModelController: NSObject, SearchResultModelControllerProtocol {
     }
 }
 
-extension UserModelController : UITableViewDataSource {
+extension UserSearchResultModelController : UITableViewDataSource {
     @objc func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }

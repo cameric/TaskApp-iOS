@@ -1,5 +1,5 @@
 //
-//  TaskModelController.swift
+//  TaskSearchResultModelController.swift
 //  TaskApp
 //
 //  Created by Spencer Michaels on 2016/3/18.
@@ -9,7 +9,7 @@
 import UIKit
 import AVOSCloud
 
-class TaskModelController: NSObject, SearchResultModelControllerProtocol {
+class TaskSearchResultModelController: NSObject, SearchResultModelControllerProtocol {
     var results: [Task] = []
     var delegate: SearchResultModelControllerDelegate?
     
@@ -34,7 +34,7 @@ class TaskModelController: NSObject, SearchResultModelControllerProtocol {
     }
 }
 
-extension TaskModelController : UITableViewDataSource {
+extension TaskSearchResultModelController : UITableViewDataSource {
     @objc func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
