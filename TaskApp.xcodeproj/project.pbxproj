@@ -34,7 +34,6 @@
 		09D14BD61C968C89003E0791 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D14BD81C968C89003E0791 /* Search.storyboard */; };
 		09D14BE01C9690B7003E0791 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BDF1C9690B7003E0791 /* MainTabBarController.swift */; };
 		09D14BE21C96917D003E0791 /* MessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BE11C96917D003E0791 /* MessagingViewController.swift */; };
-		09D14BE41C969185003E0791 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BE31C969185003E0791 /* PersonalViewController.swift */; };
 		09D14BE61C96918F003E0791 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BE51C96918F003E0791 /* SocialViewController.swift */; };
 		09F714041C9CF9DD0057C530 /* IncrementalLoadingSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F714031C9CF9DD0057C530 /* IncrementalLoadingSearchViewController.swift */; };
 		09FAC6961C9607DA0041DE5E /* Social.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6981C9607DA0041DE5E /* Social.storyboard */; };
@@ -49,6 +48,7 @@
 		25E920D11CA1C5D700C83063 /* UIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E920D01CA1C5D700C83063 /* UIServices.swift */; };
 		25E920D31CA26F0300C83063 /* LocalUserModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E920D21CA26F0300C83063 /* LocalUserModelController.swift */; };
 		25EBFBC31CA3D47E00CCE557 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EBFBC21CA3D47E00CCE557 /* APIKeys.swift */; };
+		25EBFBD01CA3F66D00CCE557 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EBFBCF1CA3F66D00CCE557 /* PersonalViewController.swift */; };
 		328415BB1CA12F3900FF8DF0 /* MessagingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328415BA1CA12F3900FF8DF0 /* MessagingTableViewController.swift */; };
 		328415BD1CA1329800FF8DF0 /* MessagingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328415BC1CA1329800FF8DF0 /* MessagingTableViewCell.swift */; };
 		328415BF1CA134DA00FF8DF0 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328415BE1CA134DA00FF8DF0 /* ConversationViewController.swift */; };
@@ -102,7 +102,6 @@
 		09D14BDE1C968C8C003E0791 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Search.storyboard; sourceTree = "<group>"; };
 		09D14BDF1C9690B7003E0791 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		09D14BE11C96917D003E0791 /* MessagingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingViewController.swift; sourceTree = "<group>"; };
-		09D14BE31C969185003E0791 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		09D14BE51C96918F003E0791 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		09F714031C9CF9DD0057C530 /* IncrementalLoadingSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncrementalLoadingSearchViewController.swift; sourceTree = "<group>"; };
 		09FAC6921C96063D0041DE5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -129,9 +128,7 @@
 		25E920D01CA1C5D700C83063 /* UIServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIServices.swift; sourceTree = "<group>"; };
 		25E920D21CA26F0300C83063 /* LocalUserModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalUserModelController.swift; sourceTree = "<group>"; };
 		25EBFBC21CA3D47E00CCE557 /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
-		25EBFBC81CA3E6EB00CCE557 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/Personal.storyboard"; sourceTree = "<group>"; };
-		25EBFBCB1CA3E70800CCE557 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Personal.storyboard"; sourceTree = "<group>"; };
-		25EBFBCE1CA3E70E00CCE557 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Personal.storyboard; sourceTree = "<group>"; };
+		25EBFBCF1CA3F66D00CCE557 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		328415BA1CA12F3900FF8DF0 /* MessagingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingTableViewController.swift; sourceTree = "<group>"; };
 		328415BC1CA1329800FF8DF0 /* MessagingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingTableViewCell.swift; sourceTree = "<group>"; };
 		328415BE1CA134DA00FF8DF0 /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
@@ -160,8 +157,8 @@
 		091DEE871C989CD600B53CEB /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				091DEE8A1C989CFD00B53CEB /* Colors.swift */,
 				25EBFBC21CA3D47E00CCE557 /* APIKeys.swift */,
+				091DEE8A1C989CFD00B53CEB /* Colors.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -238,12 +235,11 @@
 		0920DA631C9601950032EB9C /* Personal */ = {
 			isa = PBXGroup;
 			children = (
-				25EBFBC51CA3D74B00CCE557 /* ViewControllers */,
 				25EBFBC41CA3D74400CCE557 /* ModelControllers */,
+				25EBFBC51CA3D74B00CCE557 /* ViewControllers */,
 				09FAC6AA1C96080A0041DE5E /* Personal.storyboard */,
 			);
-			name = Personal;
-			path = Profile;
+			path = Personal;
 			sourceTree = "<group>";
 		};
 		0920DA661C9601C30032EB9C /* Search */ = {
@@ -336,8 +332,8 @@
 		25A9BFAA1CA14E9E00634A63 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
-				25A9BFAE1CA14E9E00634A63 /* UserSystemModelController.swift */,
 				25E920D21CA26F0300C83063 /* LocalUserModelController.swift */,
+				25A9BFAE1CA14E9E00634A63 /* UserSystemModelController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -372,15 +368,15 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = ModelControllers;
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 		25EBFBC51CA3D74B00CCE557 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				09D14BE31C969185003E0791 /* PersonalViewController.swift */,
+				25EBFBCF1CA3F66D00CCE557 /* PersonalViewController.swift */,
 			);
-			name = ViewControllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		328415B41CA1230600FF8DF0 /* ViewControllers */ = {
@@ -613,7 +609,7 @@
 				0960F8E61C9E5AA70051AA06 /* TabbedPageViewController.swift in Sources */,
 				09D14BE21C96917D003E0791 /* MessagingViewController.swift in Sources */,
 				0967184F1C9CAEF70058CF1A /* TaskTableViewCell.swift in Sources */,
-				09D14BE41C969185003E0791 /* PersonalViewController.swift in Sources */,
+				25EBFBD01CA3F66D00CCE557 /* PersonalViewController.swift in Sources */,
 				096718511C9CAF320058CF1A /* JobTableViewCell.swift in Sources */,
 				099B05881C97794F00D3AE36 /* MainTabBarControllerDelegate.swift in Sources */,
 				09D14BE61C96918F003E0791 /* SocialViewController.swift in Sources */,
@@ -713,9 +709,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				09FAC6A91C96080A0041DE5E /* Base */,
-				25EBFBC81CA3E6EB00CCE557 /* zh-Hant */,
-				25EBFBCB1CA3E70800CCE557 /* zh-Hans */,
-				25EBFBCE1CA3E70E00CCE557 /* en */,
 			);
 			name = Personal.storyboard;
 			path = .;
