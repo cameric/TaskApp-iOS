@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserSearchViewController: IncrementalLoadingSearchViewController<UserModelController> {
+class UserSearchViewController: IncrementalLoadingSearchViewController<UserSearchResultModelController> {
     
     override func viewDidLoad() {
         super.viewDidLoad()

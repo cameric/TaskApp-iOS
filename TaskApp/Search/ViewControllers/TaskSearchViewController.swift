@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TaskSearchViewController: IncrementalLoadingSearchViewController<TaskModelController> {
+class TaskSearchViewController: IncrementalLoadingSearchViewController<TaskSearchResultModelController> {
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JobSearchViewController: IncrementalLoadingSearchViewController<JobModelController> {
+class JobSearchViewController: IncrementalLoadingSearchViewController<JobSearchResultModelController> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
