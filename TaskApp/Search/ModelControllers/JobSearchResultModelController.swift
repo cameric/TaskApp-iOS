@@ -1,5 +1,5 @@
 //
-//  JobModelController.swift
+//  JobSearchResultModelController.swift
 //  TaskApp
 //
 //  Created by Spencer Michaels on 2016/3/18.
@@ -9,7 +9,7 @@
 import UIKit
 import AVOSCloud
 
-class JobModelController: NSObject, SearchResultModelControllerProtocol {
+class JobSearchResultModelController: NSObject, SearchResultModelControllerProtocol {
     var results: [Job] = []
     var delegate: SearchResultModelControllerDelegate?
     
@@ -34,7 +34,7 @@ class JobModelController: NSObject, SearchResultModelControllerProtocol {
     }
 }
 
-extension JobModelController : UITableViewDataSource {
+extension JobSearchResultModelController : UITableViewDataSource {
     @objc func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
