@@ -36,8 +36,6 @@ class PersonalViewController: UITableViewController {
                         return
                     }
                     self.accountImage.image = image
-                    UserInterfaceServices.cropRectangularUIImageToCircular(self.accountImage)
-                    self.accountImage.alpha = 1
                 })
             }
         } else {
