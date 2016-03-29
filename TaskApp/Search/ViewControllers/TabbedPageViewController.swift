@@ -12,7 +12,7 @@ class TabbedPageViewController: UIViewController {
     
     @IBOutlet weak var tabBar: UISegmentedControl! {
         didSet {
-            tabBar.addTarget(self, action: "tabBarSelectionChanged:", forControlEvents: .ValueChanged)
+            tabBar.addTarget(self, action: #selector(TabbedPageViewController.tabBarSelectionChanged(_:)), forControlEvents: .ValueChanged)
         }
     }
     weak var pageViewController: UIPageViewController! {

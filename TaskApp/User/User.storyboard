@@ -57,9 +57,6 @@
                                                 <state key="normal" title="新浪微博登录">
                                                     <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="weiboLogin:" destination="pq6-eD-h3y" eventType="touchUpInside" id="XXc-3H-w4s"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -153,20 +150,16 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="inputEmail" destination="4h5-u2-6Ax" id="EU9-Cr-8ae"/>
-                        <outlet property="inputPwd" destination="GSf-ES-eWp" id="XmD-Cc-kOW"/>
-                        <outlet property="invalidLoginInfo" destination="SmQ-Wh-aV9" id="Di2-9p-iZq"/>
-                        <outlet property="loginButton" destination="Vh9-0G-XMN" id="Jzf-FJ-WIA"/>
+                        <outlet property="emailField" destination="4h5-u2-6Ax" id="cpG-d7-6NT"/>
+                        <outlet property="loginButton" destination="Vh9-0G-XMN" id="VYW-TF-uuT"/>
+                        <outlet property="passwordField" destination="GSf-ES-eWp" id="QDY-Fr-Mh5"/>
+                        <outlet property="statusLabel" destination="SmQ-Wh-aV9" id="PcA-66-Yfn"/>
                         <segue destination="hYT-Ze-GZP" kind="unwind" identifier="loggedInJumpToProfileSegue" unwindAction="finishedLoggedIn:" id="WOQ-aA-hAl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdw-oR-Tfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="hYT-Ze-GZP" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="N16-3E-thw">
-                    <connections>
-                        <action selector="dismissKeyboardDidTapOutsideTextField:" destination="pq6-eD-h3y" id="t1R-xj-Ddl"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="N16-3E-thw"/>
             </objects>
             <point key="canvasLocation" x="2431" y="1626"/>
         </scene>
@@ -212,7 +205,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="kJi-Vh-aCO">
                                         <rect key="frame" x="0.0" y="210" width="560" height="31"/>
                                         <subviews>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G2S-jL-m0I">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="G2S-jL-m0I">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                 <color key="onTintColor" red="1" green="0.4549019608" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </switch>
@@ -271,11 +264,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="注册" id="F2R-T3-8rN"/>
                     <connections>
-                        <outlet property="acceptLicense" destination="G2S-jL-m0I" id="JLe-xW-dFm"/>
-                        <outlet property="inputEmail" destination="Q39-Th-nId" id="tAH-bF-h2M"/>
-                        <outlet property="inputName" destination="WWa-Cl-hqu" id="ohh-Ib-COK"/>
-                        <outlet property="inputPwd" destination="uC2-6C-IIa" id="ygH-dB-vOl"/>
-                        <outlet property="invalidInputLabel" destination="P5n-pT-qY9" id="mg1-KI-rpj"/>
+                        <outlet property="emailField" destination="Q39-Th-nId" id="Lkr-Sn-Mn5"/>
+                        <outlet property="licenseAcceptToggle" destination="G2S-jL-m0I" id="BTl-ms-sdd"/>
+                        <outlet property="nameField" destination="WWa-Cl-hqu" id="zqE-qA-Vk8"/>
+                        <outlet property="passwordField" destination="uC2-6C-IIa" id="qWp-I8-dqX"/>
+                        <outlet property="statusLabel" destination="P5n-pT-qY9" id="c0W-q1-qBD"/>
                         <segue destination="ZjR-0a-05P" kind="unwind" identifier="signedupJumpToProfileSegue" unwindAction="finishedLoggedIn:" id="iPL-M8-qNl"/>
                     </connections>
                 </viewController>
@@ -288,18 +281,14 @@
                         <navigationItem title="Title" id="e0h-gy-6w9"/>
                     </items>
                 </navigationBar>
-                <tapGestureRecognizer id="8z9-2w-dD5">
-                    <connections>
-                        <action selector="dismissKeyboardDidTapOutsideTextField:" destination="thV-FM-T3B" id="KnN-B7-vzK"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="8z9-2w-dD5"/>
             </objects>
             <point key="canvasLocation" x="2431" y="2410"/>
         </scene>
         <!--找回密码-->
         <scene sceneID="uKx-LR-bMq">
             <objects>
-                <viewController id="hyk-V1-mLu" customClass="ForgetPasswordViewController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hyk-V1-mLu" customClass="ForgotPasswordViewController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EbW-9T-ehe"/>
                         <viewControllerLayoutGuide type="bottom" id="AY4-6w-gaw"/>
@@ -338,7 +327,7 @@
                                 </state>
                                 <connections>
                                     <action selector="login:" destination="pq6-eD-h3y" eventType="touchUpInside" id="sWV-M8-ijV"/>
-                                    <action selector="sendForgetPasswordEmail:" destination="hyk-V1-mLu" eventType="touchUpInside" id="Zcc-pY-QOe"/>
+                                    <action selector="sendPasswordRecoveryEmail:" destination="hyk-V1-mLu" eventType="touchUpInside" id="xbZ-BT-b1X"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -355,22 +344,14 @@
                             <constraint firstItem="AEO-dj-uVO" firstAttribute="leading" secondItem="2UZ-LK-5ty" secondAttribute="leadingMargin" id="qDj-05-eVp"/>
                             <constraint firstItem="Oxp-JV-8Lv" firstAttribute="top" secondItem="g9w-zY-YWG" secondAttribute="bottom" constant="10" id="zRi-OI-HVT"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="O5G-6Y-1zp" appends="YES" id="iwa-Se-9wi"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="找回密码" id="i5W-0w-wib"/>
                     <connections>
-                        <outlet property="inputEmail" destination="g9w-zY-YWG" id="t3F-kS-j3n"/>
-                        <outlet property="invalidInputLabel" destination="Oxp-JV-8Lv" id="h7L-J1-A3E"/>
+                        <outlet property="emailField" destination="g9w-zY-YWG" id="LGH-Gg-Dsc"/>
+                        <outlet property="statusLabel" destination="Oxp-JV-8Lv" id="Yb5-s1-JCL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8D-06-52r" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="O5G-6Y-1zp">
-                    <connections>
-                        <action selector="dismissKeyboardDidTapOutsideTextField:" destination="hyk-V1-mLu" id="TKy-uz-mYP"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3200" y="1626"/>
         </scene>

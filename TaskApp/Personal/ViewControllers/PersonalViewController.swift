@@ -35,6 +35,7 @@ class PersonalViewController: UITableViewController {
                         print("Loading avatar error: \(error)")
                         return
                     }
+                    self.accountImage.alpha = 1.0
                     self.accountImage.image = image
                 })
             }
@@ -78,14 +79,6 @@ class PersonalViewController: UITableViewController {
             return 0
         } else {
             return super.tableView(tableView, numberOfRowsInSection: section)
-        }
-    }
-    
-    // MARK: Navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let id = segue.identifier where id == "ToProfileSegue" {
-            let targetViewController = segue.destinationViewController as! ProfileViewController
-            targetViewController.currentUser = self.currentUser
         }
     }
     

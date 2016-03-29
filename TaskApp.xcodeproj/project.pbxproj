@@ -16,6 +16,7 @@
 		0920DA561C96007B0032EB9C /* TaskAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920DA551C96007B0032EB9C /* TaskAppTests.swift */; };
 		0953E2331C9A6730006E6FF0 /* SearchResultModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953E2321C9A6730006E6FF0 /* SearchResultModelController.swift */; };
 		0960F8E61C9E5AA70051AA06 /* TabbedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960F8E51C9E5AA70051AA06 /* TabbedPageViewController.swift */; };
+		0965E12D1CAA4D49003866D0 /* MultiTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965E12C1CAA4D49003866D0 /* MultiTextFieldViewController.swift */; };
 		096718401C9C7DFF0058CF1A /* UserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967183F1C9C7DFF0058CF1A /* UserSearchViewController.swift */; };
 		096718421C9C7E0C0058CF1A /* TaskSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096718411C9C7E0C0058CF1A /* TaskSearchViewController.swift */; };
 		096718441C9C7E150058CF1A /* JobSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096718431C9C7E150058CF1A /* JobSearchViewController.swift */; };
@@ -43,14 +44,11 @@
 		251FED761CA688AF00B992BF /* SearchSuggestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED751CA688AF00B992BF /* SearchSuggestionModel.swift */; };
 		251FED781CA688B300B992BF /* UserSearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED771CA688B300B992BF /* UserSearchResultModel.swift */; };
 		251FED7A1CA688DC00B992BF /* TaskSearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED791CA688DC00B992BF /* TaskSearchResultModel.swift */; };
-		25A9BFB91CA14E9E00634A63 /* UserSystemModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFAE1CA14E9E00634A63 /* UserSystemModelController.swift */; };
 		25A9BFBA1CA14E9E00634A63 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB01CA14E9E00634A63 /* UserModel.swift */; };
 		25A9BFBB1CA14E9E00634A63 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25A9BFB11CA14E9E00634A63 /* User.storyboard */; };
-		25A9BFBC1CA14E9E00634A63 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB31CA14E9E00634A63 /* ForgetPasswordViewController.swift */; };
+		25A9BFBC1CA14E9E00634A63 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB31CA14E9E00634A63 /* ForgotPasswordViewController.swift */; };
 		25A9BFBD1CA14E9E00634A63 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB41CA14E9E00634A63 /* LoginViewController.swift */; };
 		25A9BFBE1CA14E9E00634A63 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB51CA14E9E00634A63 /* SignupViewController.swift */; };
-		25E920D11CA1C5D700C83063 /* UIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E920D01CA1C5D700C83063 /* UIServices.swift */; };
-		25E920D31CA26F0300C83063 /* LocalUserModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E920D21CA26F0300C83063 /* LocalUserModelController.swift */; };
 		25EBFBC31CA3D47E00CCE557 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EBFBC21CA3D47E00CCE557 /* APIKeys.swift */; };
 		25EBFBD01CA3F66D00CCE557 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EBFBCF1CA3F66D00CCE557 /* PersonalViewController.swift */; };
 		328415BB1CA12F3900FF8DF0 /* MessagingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328415BA1CA12F3900FF8DF0 /* MessagingTableViewController.swift */; };
@@ -85,6 +83,7 @@
 		0920DA721C96030D0032EB9C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		0953E2321C9A6730006E6FF0 /* SearchResultModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultModelController.swift; sourceTree = "<group>"; };
 		0960F8E51C9E5AA70051AA06 /* TabbedPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbedPageViewController.swift; sourceTree = "<group>"; };
+		0965E12C1CAA4D49003866D0 /* MultiTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiTextFieldViewController.swift; sourceTree = "<group>"; };
 		0967183F1C9C7DFF0058CF1A /* UserSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchViewController.swift; sourceTree = "<group>"; };
 		096718411C9C7E0C0058CF1A /* TaskSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchViewController.swift; sourceTree = "<group>"; };
 		096718431C9C7E150058CF1A /* JobSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchViewController.swift; sourceTree = "<group>"; };
@@ -127,14 +126,11 @@
 		251FED751CA688AF00B992BF /* SearchSuggestionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSuggestionModel.swift; sourceTree = "<group>"; };
 		251FED771CA688B300B992BF /* UserSearchResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchResultModel.swift; sourceTree = "<group>"; };
 		251FED791CA688DC00B992BF /* TaskSearchResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchResultModel.swift; sourceTree = "<group>"; };
-		25A9BFAE1CA14E9E00634A63 /* UserSystemModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSystemModelController.swift; sourceTree = "<group>"; };
 		25A9BFB01CA14E9E00634A63 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		25A9BFB11CA14E9E00634A63 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
-		25A9BFB31CA14E9E00634A63 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		25A9BFB31CA14E9E00634A63 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		25A9BFB41CA14E9E00634A63 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		25A9BFB51CA14E9E00634A63 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		25E920D01CA1C5D700C83063 /* UIServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIServices.swift; sourceTree = "<group>"; };
-		25E920D21CA26F0300C83063 /* LocalUserModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalUserModelController.swift; sourceTree = "<group>"; };
 		25EBFBC21CA3D47E00CCE557 /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		25EBFBCF1CA3F66D00CCE557 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		328415BA1CA12F3900FF8DF0 /* MessagingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingTableViewController.swift; sourceTree = "<group>"; };
@@ -209,7 +205,6 @@
 				0920DA631C9601950032EB9C /* Personal */,
 				251FED671CA684CE00B992BF /* Profile */,
 				0920DA661C9601C30032EB9C /* Search */,
-				25E920CE1CA1C5A100C83063 /* Services */,
 				0920DA611C9601890032EB9C /* Social */,
 				25A9BFA91CA14E9E00634A63 /* User */,
 				090F48681CA9DF010028E656 /* Views */,
@@ -358,21 +353,11 @@
 		25A9BFA91CA14E9E00634A63 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				25A9BFAA1CA14E9E00634A63 /* ModelControllers */,
 				25A9BFAF1CA14E9E00634A63 /* Models */,
 				25A9BFB21CA14E9E00634A63 /* ViewControllers */,
 				25A9BFB11CA14E9E00634A63 /* User.storyboard */,
 			);
 			path = User;
-			sourceTree = "<group>";
-		};
-		25A9BFAA1CA14E9E00634A63 /* ModelControllers */ = {
-			isa = PBXGroup;
-			children = (
-				25E920D21CA26F0300C83063 /* LocalUserModelController.swift */,
-				25A9BFAE1CA14E9E00634A63 /* UserSystemModelController.swift */,
-			);
-			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 		25A9BFAF1CA14E9E00634A63 /* Models */ = {
@@ -386,19 +371,12 @@
 		25A9BFB21CA14E9E00634A63 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				25A9BFB31CA14E9E00634A63 /* ForgetPasswordViewController.swift */,
+				25A9BFB31CA14E9E00634A63 /* ForgotPasswordViewController.swift */,
 				25A9BFB41CA14E9E00634A63 /* LoginViewController.swift */,
 				25A9BFB51CA14E9E00634A63 /* SignupViewController.swift */,
+				0965E12C1CAA4D49003866D0 /* MultiTextFieldViewController.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		25E920CE1CA1C5A100C83063 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				25E920D01CA1C5D700C83063 /* UIServices.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		25EBFBC41CA3D74400CCE557 /* ModelControllers */ = {
@@ -630,25 +608,23 @@
 				251FED6E1CA6887400B992BF /* JobSearchResultModelController.swift in Sources */,
 				0967184B1C9C928B0058CF1A /* SearchSuggestionTableViewCell.swift in Sources */,
 				09F714041C9CF9DD0057C530 /* IncrementalLoadingSearchViewController.swift in Sources */,
-				25A9BFB91CA14E9E00634A63 /* UserSystemModelController.swift in Sources */,
 				251FED741CA688AB00B992BF /* JobSearchResultModel.swift in Sources */,
 				0967184D1C9CAEEE0058CF1A /* UserTableViewCell.swift in Sources */,
 				251FED761CA688AF00B992BF /* SearchSuggestionModel.swift in Sources */,
 				328415BB1CA12F3900FF8DF0 /* MessagingTableViewController.swift in Sources */,
 				096718401C9C7DFF0058CF1A /* UserSearchViewController.swift in Sources */,
 				25A9BFBA1CA14E9E00634A63 /* UserModel.swift in Sources */,
-				25E920D31CA26F0300C83063 /* LocalUserModelController.swift in Sources */,
 				328415BF1CA134DA00FF8DF0 /* ConversationViewController.swift in Sources */,
 				096718421C9C7E0C0058CF1A /* TaskSearchViewController.swift in Sources */,
 				091DEE8B1C989CFD00B53CEB /* Colors.swift in Sources */,
 				0953E2331C9A6730006E6FF0 /* SearchResultModelController.swift in Sources */,
 				251FED701CA6887D00B992BF /* TaskSearchResultModelController.swift in Sources */,
-				25E920D11CA1C5D700C83063 /* UIServices.swift in Sources */,
 				0960F8E61C9E5AA70051AA06 /* TabbedPageViewController.swift in Sources */,
 				09D14BE21C96917D003E0791 /* MessagingViewController.swift in Sources */,
 				251FED7A1CA688DC00B992BF /* TaskSearchResultModel.swift in Sources */,
 				0967184F1C9CAEF70058CF1A /* TaskTableViewCell.swift in Sources */,
 				25EBFBD01CA3F66D00CCE557 /* PersonalViewController.swift in Sources */,
+				0965E12D1CAA4D49003866D0 /* MultiTextFieldViewController.swift in Sources */,
 				251FED721CA6888100B992BF /* UserSearchResultModelController.swift in Sources */,
 				096718511C9CAF320058CF1A /* JobTableViewCell.swift in Sources */,
 				099B05881C97794F00D3AE36 /* MainTabBarControllerDelegate.swift in Sources */,
@@ -658,7 +634,7 @@
 				096718481C9C8D930058CF1A /* SearchSuggestionModelController.swift in Sources */,
 				328415BD1CA1329800FF8DF0 /* MessagingTableViewCell.swift in Sources */,
 				25EBFBC31CA3D47E00CCE557 /* APIKeys.swift in Sources */,
-				25A9BFBC1CA14E9E00634A63 /* ForgetPasswordViewController.swift in Sources */,
+				25A9BFBC1CA14E9E00634A63 /* ForgotPasswordViewController.swift in Sources */,
 				09D14BE01C9690B7003E0791 /* MainTabBarController.swift in Sources */,
 				251FED6C1CA6856B00B992BF /* ProfileViewController.swift in Sources */,
 				096718441C9C7E150058CF1A /* JobSearchViewController.swift in Sources */,
