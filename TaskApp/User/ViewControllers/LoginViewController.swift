@@ -11,7 +11,7 @@ import Foundation
 import AVOSCloud
 import MBProgressHUD
 
-class LoginViewController: MultiTextFieldViewController {
+class LoginViewController: MultiTextFieldViewController, WeiboSDKDelegate {
     
     // MARK: Properties
     @IBOutlet weak var emailField: UITextField! {
@@ -60,6 +60,43 @@ class LoginViewController: MultiTextFieldViewController {
                 self.performSegueWithIdentifier("loggedInJumpToProfileSegue",
                                                 sender: self)
             }
+        }
+    }
+    
+    @IBAction func loginWeibo(sender: UIButton) {
+        self.statusLabel.text = "现在跳转至微博登录..."
+        
+        let request = WBAuthorizeRequest.request() as! WBAuthorizeRequest
+        request.redirectURI = APIKeys.Weibo_AppRedirectURI
+        request.scope = "all"
+        
+        WeiboSDK.sendRequest(request)
+    }
+    
+    func didReceiveWeiboRequest(request: WBBaseRequest!) {
+        // TODO: Ignore this, yes?
+    }
+    
+    func didReceiveWeiboResponse(response: WBBaseResponse!) {
+        guard let authorizeResponse = response as? WBAuthorizeResponse else {
+            // TODO: display an error?
+            return
+        }
+        
+        switch authorizeResponse.statusCode {
+        case .Success:
+            User.signUpInBackgroundWithWeiboUid(authorizeResponse.userID, accessToken: authorizeResponse.accessToken)
+            { (succeeded, error) in
+                if (error != nil) {
+                    self.statusLabel.text = "微博登录过程中出现错误"
+                } else {
+                    // TODO
+                }
+            }
+        case .AuthDeny:
+            self.statusLabel.text = "微博登录验证失败"
+        default:
+            self.statusLabel.text = "微博登录过程中出现错误"
         }
     }
     

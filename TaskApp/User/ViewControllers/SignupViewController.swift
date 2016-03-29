@@ -41,19 +41,19 @@ class SignupViewController: MultiTextFieldViewController {
     // MARK: Custom actions
     @IBAction func signup(sender: UIButton) {
         // User input check
-        guard let name = nameField!.text where !name.isEmpty else {
+        guard let name = nameField.text where !name.isEmpty else {
             self.statusLabel.text = "昵称不能为空"
             return
         }
-        guard let username = emailField!.text where !username.isEmpty else {
+        guard let username = emailField.text where !username.isEmpty else {
             self.statusLabel.text = "邮箱不能为空"
             return
         }
-        guard let password = passwordField!.text where !password.isEmpty else {
+        guard let password = passwordField.text where !password.isEmpty else {
             self.statusLabel.text = "密码不能为空"
             return
         }
-        guard licenseAcceptToggle!.on else {
+        guard licenseAcceptToggle.on else {
             self.statusLabel.text = "请同意平台协议"
             return
         }
