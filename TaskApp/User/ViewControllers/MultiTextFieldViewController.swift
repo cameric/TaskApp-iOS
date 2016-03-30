@@ -18,7 +18,6 @@ class MultiTextFieldViewController: UIViewController, UITextFieldDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
 
     // MARK: UITextFieldDelegate
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -37,7 +36,7 @@ class MultiTextFieldViewController: UIViewController, UITextFieldDelegate {
         // TODO: Is this the right check to make?
         // If the first touch was anywhere other than inside a whitelisted field, dismiss the keyboard
         
-        if whitelistedViews.contains({ (whitelisted: AnyObject) -> Bool in
+        if !whitelistedViews.contains({ (whitelisted: AnyObject) -> Bool in
             return (touches.first?.view) == (whitelisted as? UIView)
         }) {
             self.view.endEditing(true)

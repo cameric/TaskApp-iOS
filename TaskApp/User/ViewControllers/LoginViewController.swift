@@ -33,7 +33,6 @@ class LoginViewController: MultiTextFieldViewController, WeiboSDKDelegate {
     
     // MARK: Actions
     @IBAction func login(sender: UIButton) {
-        // User input check
         guard let username = emailField!.text where !username.isEmpty else {
             statusLabel.text = "邮箱不能为空" // TODO: internationalize
             return
@@ -68,18 +67,14 @@ class LoginViewController: MultiTextFieldViewController, WeiboSDKDelegate {
         
         let request = WBAuthorizeRequest.request() as! WBAuthorizeRequest
         request.redirectURI = APIKeys.Weibo_AppRedirectURI
-        request.scope = "all"
+        request.scope = "all" // TODO: Is this permissions? If so, it should as restrictive as possible.
         
         WeiboSDK.sendRequest(request)
     }
     
-    func didReceiveWeiboRequest(request: WBBaseRequest!) {
-        // TODO: Ignore this, yes?
-    }
-    
     func didReceiveWeiboResponse(response: WBBaseResponse!) {
         guard let authorizeResponse = response as? WBAuthorizeResponse else {
-            // TODO: display an error?
+            self.statusLabel.text = "微博登录过程中出现错误"
             return
         }
         
@@ -98,6 +93,10 @@ class LoginViewController: MultiTextFieldViewController, WeiboSDKDelegate {
         default:
             self.statusLabel.text = "微博登录过程中出现错误"
         }
+    }
+    
+    func didReceiveWeiboRequest(request: WBBaseRequest!) {
+        // TODO: Ignore this, yes?
     }
     
     @IBAction func cancelLogin(sender: UIBarButtonItem) {

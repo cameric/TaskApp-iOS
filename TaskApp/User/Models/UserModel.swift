@@ -9,9 +9,19 @@
 import AVOSCloud
 
 class User: AVUser {
-    @NSManaged var name: String!
+    @NSManaged var name: String?
+    @NSManaged var category: [String]?
+    @NSManaged var avatar: AVFile?
     
-    static func signUpInBackgroundWithUsername(
+    // NOTE: Required for AVCloud to associate this class with the _User class on the server
+    override class func parseClassName() -> String! {
+        return "_User"
+    }
+}
+
+// MARK: Static login/signup functions
+extension User {
+    class func signUpInBackgroundWithUsername(
         username: String, password: String,
         completion: (succeeded: Bool, error: NSError!) -> Void)
     {
@@ -23,7 +33,7 @@ class User: AVUser {
         newUser.signUpInBackgroundWithBlock(completion)
     }
     
-    static func signUpInBackgroundWithWeiboUid(
+    class func signUpInBackgroundWithWeiboUid(
         uid: String, accessToken: String,
         completion: (succeeded: Bool, error: NSError!) -> Void)
     {

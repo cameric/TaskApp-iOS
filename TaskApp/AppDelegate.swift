@@ -15,9 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // MARK: AVObject subclass registration
+        // This MUST be done once for every custom subclass of AVObject
+        User.registerSubclass()
         
         // Bootstrap AVOSCloud library
         AVOSCloud.setApplicationId(APIKeys.LeanEngine_AppId, clientKey: APIKeys.LeanEngine_AppKey)

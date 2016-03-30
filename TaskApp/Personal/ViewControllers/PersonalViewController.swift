@@ -18,26 +18,20 @@ class PersonalViewController: UITableViewController {
     @IBOutlet var personalTableView: UITableView!
     @IBOutlet weak var accountImage: UIImageView!
     
-    var currentUser: AVUser?
-    
     func toggleLogInButton() {
-        if let curUser = self.currentUser {
-            nameLabel.text = curUser.objectForKey("name") as? String
-            if let joinedCategory = curUser.objectForKey("category") as? [String] {
-                categoryLabel.text = joinedCategory.joinWithSeparator(", ")
+        if let curUser = User.currentUser() {
+            nameLabel.text = curUser.name
+            
+            if let category = curUser.category where !category.isEmpty {
+                categoryLabel.text = category.joinWithSeparator(", ")
             } else {
                 categoryLabel.text = ""
             }
-            if let avatar = curUser.objectForKey("avatar") as? AVFile {
-                avatar.getThumbnail(true, width: 80, height: 80, withBlock: {
-                    (image: UIImage!, error: NSError!) -> Void in
-                    if error != nil {
-                        print("Loading avatar error: \(error)")
-                        return
-                    }
-                    self.accountImage.alpha = 1.0
-                    self.accountImage.image = image
-                })
+            
+            User.currentUser()?.avatar?.getThumbnail(true, width: 80, height: 80)
+            { (image: UIImage!, error: NSError!) in
+                self.accountImage.alpha = 1.0
+                self.accountImage.image = image
             }
         } else {
             nameLabel.text = "点击登录"
@@ -50,9 +44,7 @@ class PersonalViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        if let curUser = AVUser.currentUser() {
-            self.currentUser = curUser
-        }
+
         self.personalTableView.contentInset = UIEdgeInsetsMake(-36, 0, 0, 0);
         self.personalTableView.reloadData()
         
@@ -61,21 +53,21 @@ class PersonalViewController: UITableViewController {
     
     // Override delegate functions to hide and show logout section properly
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 4 && self.currentUser == nil {
+        if section == 4 && User.currentUser() == nil {
             return 0
         } else {
             return super.tableView(tableView, heightForHeaderInSection: section)
         }
     }
     override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        if section == 4 && self.currentUser == nil {
+        if section == 4 && User.currentUser() == nil {
             return 0
         } else {
             return super.tableView(tableView, heightForFooterInSection: section)
         }
     }
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 4 && self.currentUser == nil {
+        if section == 4 && User.currentUser() == nil {
             return 0
         } else {
             return super.tableView(tableView, numberOfRowsInSection: section)
@@ -84,7 +76,7 @@ class PersonalViewController: UITableViewController {
     
     // MARK: Actions
     @IBAction func didTapLoginButton(sender: UITapGestureRecognizer) {
-        if self.currentUser != nil {
+        if User.currentUser() != nil {
             self.performSegueWithIdentifier("ToProfileSegue", sender: self)
         } else {
             self.performSegueWithIdentifier("ToUserModuleSegue", sender: self)
@@ -97,10 +89,8 @@ class PersonalViewController: UITableViewController {
     }
     
     @IBAction func logout(sender: UITapGestureRecognizer) {
-        self.currentUser = nil
         self.personalTableView.reloadData()
         toggleLogInButton()
-        // Clear local storage
         AVUser.logOut()
     }
 }

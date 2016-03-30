@@ -33,8 +33,8 @@
                                                         <constraint firstAttribute="width" constant="80" id="y4r-pU-eHn"/>
                                                     </constraints>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Tx-N1-yf8">
-                                                    <rect key="frame" x="108" y="24" width="85" height="51"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Tx-N1-yf8">
+                                                    <rect key="frame" x="108" y="24" width="85" height="52"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lh4-jl-OLM">
                                                             <rect key="frame" x="0.0" y="0.0" width="68" height="21"/>
@@ -45,8 +45,8 @@
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="或快速注册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wj-9C-xEe">
-                                                            <rect key="frame" x="0.0" y="31" width="85" height="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" text="或快速注册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wj-9C-xEe">
+                                                            <rect key="frame" x="0.0" y="31" width="85" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -57,8 +57,6 @@
                                             <constraints>
                                                 <constraint firstItem="9Tx-N1-yf8" firstAttribute="centerY" secondItem="qvA-Vx-5db" secondAttribute="centerY" id="1rQ-Hd-x4q"/>
                                                 <constraint firstItem="ECz-T4-1ls" firstAttribute="top" secondItem="qvA-Vx-5db" secondAttribute="topMargin" constant="2" id="U0s-gz-UwB"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="9Tx-N1-yf8" secondAttribute="bottom" constant="17" id="dgn-ob-tjs"/>
-                                                <constraint firstItem="9Tx-N1-yf8" firstAttribute="top" secondItem="qvA-Vx-5db" secondAttribute="topMargin" constant="16" id="gff-gE-rgi"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="ECz-T4-1ls" secondAttribute="leading" id="qp5-yH-frv"/>
                                                 <constraint firstItem="9Tx-N1-yf8" firstAttribute="leading" secondItem="ECz-T4-1ls" secondAttribute="trailing" constant="20" id="yMT-kn-ADj"/>
                                             </constraints>
@@ -333,13 +331,10 @@
             </objects>
             <point key="canvasLocation" x="1867.5" y="-676"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--账户-->
         <scene sceneID="XA6-0v-tvD">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ovd-TC-71V" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Contacts" id="tpc-gU-Vg0">
-                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
-                    </tabBarItem>
+                <navigationController title="账户" automaticallyAdjustsScrollViewInsets="NO" id="ovd-TC-71V" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XXL-66-fzi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -356,7 +351,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Contacts" width="38" height="38"/>
         <image name="md_ic_account_circle_48pt" width="48" height="48"/>
     </resources>
 </document>

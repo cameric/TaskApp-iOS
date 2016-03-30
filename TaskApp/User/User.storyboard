@@ -47,6 +47,9 @@
                                                 <state key="normal" title="微信登录">
                                                     <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="loginWeibo:" destination="pq6-eD-h3y" eventType="touchUpInside" id="eB6-bo-nFe"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXJ-Af-TAM">
                                                 <rect key="frame" x="0.0" y="180" width="560" height="60"/>
@@ -355,10 +358,10 @@
             </objects>
             <point key="canvasLocation" x="3200" y="1626"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--账户-->
         <scene sceneID="tc3-Ul-cCt">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2kR-X4-gT6" sceneMemberID="viewController">
+                <navigationController title="账户" automaticallyAdjustsScrollViewInsets="NO" id="2kR-X4-gT6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rTI-YE-7j7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
