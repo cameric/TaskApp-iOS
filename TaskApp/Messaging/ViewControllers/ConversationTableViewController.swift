@@ -1,14 +1,14 @@
 //
-//  MessagingTableViewController.swift
+//  ConversationTableViewController.swift
 //  TaskApp
 //
-//  Created by Cam on 3/22/16.
+//  Created by Cam on 3/31/16.
 //  Copyright © 2016 Cameric. All rights reserved.
 //
 
 import UIKit
 
-class MessagingTableViewController: UITableViewController {
+class ConversationTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,13 +38,12 @@ class MessagingTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("messagePreview", forIndexPath: indexPath)
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("conversation", forIndexPath: indexPath) as! ConversationTableViewCell
+        cell.avatar.image = UIImage(named: "default-avatar")
         // Configure the cell...
 
         return cell
     }
-
 
     /*
     // Override to support conditional editing of the table view.
