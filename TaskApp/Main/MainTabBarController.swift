@@ -20,13 +20,13 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         
         // Tag our fake view controller's tab bar item so that it can't be selected
-        dummyVC.tabBarItem = UITabBarItem(title: nil, image: nil, tag: MainTabBarControllerDelegate.unselectableTag)
-        self.viewControllers?.insert(dummyVC, atIndex: self.tabBar.items!.count/2)
+        //dummyVC.tabBarItem = UITabBarItem(title: nil, image: nil, tag: MainTabBarControllerDelegate.unselectableTag)
+        //self.viewControllers?.insert(dummyVC, atIndex: self.tabBar.items!.count/2)
         
         // Insert the center button
-        self.buttonView.center = self.tabBar.center
-        self.buttonView.center.y -= self.tabBar.frame.size.height/4
-        self.view.addSubview(buttonView)
+        //self.buttonView.center = self.tabBar.center
+        //self.buttonView.center.y -= self.tabBar.frame.size.height/4
+        //self.view.addSubview(buttonView)
     }
 
     override func didReceiveMemoryWarning() {

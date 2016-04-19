@@ -1,5 +1,5 @@
 //
-//  UserSearchResultModelController.swift
+//  UserSearchResultsModelController.swift
 //  UserApp
 //
 //  Created by Spencer Michaels on 2016/3/17.
@@ -9,9 +9,17 @@
 import AVOSCloud
 import UIKit
 
-class UserSearchResultModelController: NSObject, SearchResultModelControllerProtocol {
-    var results: [User] = []
-    var delegate: SearchResultModelControllerDelegate?
+class UserSearchResultsModelController: NSObject, QueryResultsTableViewDataSourceProtocol {
+    var delegate: QueryResultsModelControllerDelegate?
+    
+    var keyword: String = ""
+    
+    var results: [UserSearchResult] = []
+    var count: Int {
+        get {
+            return results.count
+        }
+    }
     
     func loadMore(desiredCount: Int) {
         // TODO: params
@@ -19,13 +27,13 @@ class UserSearchResultModelController: NSObject, SearchResultModelControllerProt
             if error != nil {
                 //TODO: delegate?.didFailToLoadNewResults(self, error)
             } else {
-                if let resultsAsUsers = response as? [User] {
-                    if resultsAsUsers.count > 0 {
-                        self.results.appendContentsOf(resultsAsUsers)
-                        self.delegate?.didLoadNewResults(self, newResultsCount: resultsAsUsers.count)
+                if let results = response as? [UserSearchResult] {
+                    if results.count > 0 {
+                        self.results.appendContentsOf(results)
+                        self.delegate?.didLoadNewResults(self, newResultsCount: results.count)
                     }
                     
-                    if resultsAsUsers.count < desiredCount {
+                    if results.count < desiredCount {
                         self.delegate?.didLoadAllResultsForCriteria(self)
                     }
                 }
@@ -34,7 +42,7 @@ class UserSearchResultModelController: NSObject, SearchResultModelControllerProt
     }
 }
 
-extension UserSearchResultModelController : UITableViewDataSource {
+extension UserSearchResultsModelController : UITableViewDataSource {
     @objc func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -44,7 +52,7 @@ extension UserSearchResultModelController : UITableViewDataSource {
     }
     
     @objc func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("UserTableViewCell", forIndexPath: indexPath) as! SearchSuggestionTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("UserSearchResultTableViewCell", forIndexPath: indexPath) as! UserSearchResultTableViewCell
         return cell
     }
 }

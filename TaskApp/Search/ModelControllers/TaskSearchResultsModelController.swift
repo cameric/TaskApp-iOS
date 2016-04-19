@@ -1,17 +1,25 @@
 //
-//  TaskSearchResultModelController.swift
+//  TaskSearchResultsModelController.swift
 //  TaskApp
 //
 //  Created by Spencer Michaels on 2016/3/18.
 //  Copyright © 2016年 Cameric. All rights reserved.
 //
 
-import UIKit
 import AVOSCloud
+import UIKit
 
-class TaskSearchResultModelController: NSObject, SearchResultModelControllerProtocol {
-    var results: [Task] = []
-    var delegate: SearchResultModelControllerDelegate?
+class TaskSearchResultsModelController: NSObject, QueryResultsTableViewDataSourceProtocol {
+    var delegate: QueryResultsModelControllerDelegate?
+    
+    var keyword: String = ""
+    
+    var results: [TaskSearchResult] = []
+    var count: Int {
+        get {
+            return results.count
+        }
+    }
     
     func loadMore(desiredCount: Int) {
         // TODO: params
@@ -19,13 +27,13 @@ class TaskSearchResultModelController: NSObject, SearchResultModelControllerProt
             if error != nil {
                 //TODO: delegate?.didFailToLoadNewResults(self, error)
             } else {
-                if let resultsAsTasks = response as? [Task] {
-                    if resultsAsTasks.count > 0 {
-                        self.results.appendContentsOf(resultsAsTasks)
-                        self.delegate?.didLoadNewResults(self, newResultsCount: resultsAsTasks.count)
+                if let results = response as? [TaskSearchResult] {
+                    if results.count > 0 {
+                        self.results.appendContentsOf(results)
+                        self.delegate?.didLoadNewResults(self, newResultsCount: results.count)
                     }
                     
-                    if resultsAsTasks.count < desiredCount {
+                    if results.count < desiredCount {
                         self.delegate?.didLoadAllResultsForCriteria(self)
                     }
                 }
@@ -34,7 +42,7 @@ class TaskSearchResultModelController: NSObject, SearchResultModelControllerProt
     }
 }
 
-extension TaskSearchResultModelController : UITableViewDataSource {
+extension TaskSearchResultsModelController : UITableViewDataSource {
     @objc func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -44,7 +52,7 @@ extension TaskSearchResultModelController : UITableViewDataSource {
     }
     
     @objc func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("TaskTableViewCell", forIndexPath: indexPath) as! SearchSuggestionTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("TaskSearchSuggestionTableViewCell", forIndexPath: indexPath) as! TaskSearchResultTableViewCell
         return cell
     }
 }

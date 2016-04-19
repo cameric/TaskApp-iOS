@@ -1,17 +1,26 @@
 //
-//  JobSearchResultModelController.swift
+//  JobQueryResultsModelController.swift
 //  TaskApp
 //
 //  Created by Spencer Michaels on 2016/3/18.
 //  Copyright © 2016年 Cameric. All rights reserved.
 //
 
-import UIKit
 import AVOSCloud
+import UIKit
 
-class JobSearchResultModelController: NSObject, SearchResultModelControllerProtocol {
-    var results: [Job] = []
-    var delegate: SearchResultModelControllerDelegate?
+class JobSearchResultsModelController: NSObject, QueryResultsTableViewDataSourceProtocol {
+    var delegate: QueryResultsModelControllerDelegate?
+    
+    var keyword: String = ""
+    
+    var count: Int {
+        get {
+            return results.count
+        }
+    }
+    
+    var results: [JobSearchResult] = []
     
     func loadMore(desiredCount: Int) {
         // TODO: params
@@ -19,13 +28,13 @@ class JobSearchResultModelController: NSObject, SearchResultModelControllerProto
             if error != nil {
                 //TODO: delegate?.didFailToLoadNewResults(self, error)
             } else {
-                if let resultsAsJobs = response as? [Job] {
-                    if resultsAsJobs.count > 0 {
-                        self.results.appendContentsOf(resultsAsJobs)
-                        self.delegate?.didLoadNewResults(self, newResultsCount: resultsAsJobs.count)
+                if let results = response as? [JobSearchResult] {
+                    if results.count > 0 {
+                        self.results.appendContentsOf(results)
+                        self.delegate?.didLoadNewResults(self, newResultsCount: results.count)
                     }
                     
-                    if resultsAsJobs.count < desiredCount {
+                    if results.count < desiredCount {
                         self.delegate?.didLoadAllResultsForCriteria(self)
                     }
                 }
@@ -34,7 +43,7 @@ class JobSearchResultModelController: NSObject, SearchResultModelControllerProto
     }
 }
 
-extension JobSearchResultModelController : UITableViewDataSource {
+extension JobSearchResultsModelController : UITableViewDataSource {
     @objc func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -44,7 +53,7 @@ extension JobSearchResultModelController : UITableViewDataSource {
     }
     
     @objc func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("JobTableViewCell", forIndexPath: indexPath) as! SearchSuggestionTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("JobSearchResultTableViewCell", forIndexPath: indexPath) as! JobSearchResultTableViewCell
         return cell
     }
 }

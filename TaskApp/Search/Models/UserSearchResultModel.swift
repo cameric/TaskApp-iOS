@@ -6,9 +6,7 @@
 //  Copyright © 2016年 Cameric. All rights reserved.
 //
 
-import UIKit
 import AVOSCloud
 
-class UserSearchResultModel: AVUser {
-
+class UserSearchResult: AVUser {
 }

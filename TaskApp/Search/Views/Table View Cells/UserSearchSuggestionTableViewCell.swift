@@ -1,14 +1,14 @@
 //
-//  JobTableViewCell.swift
+//  UserSearchSuggestionTableViewCell.swift
 //  TaskApp
 //
-//  Created by Spencer Michaels on 2016/3/18.
+//  Created by Spencer Michaels on 2016/4/19.
 //  Copyright © 2016年 Cameric. All rights reserved.
 //
 
 import UIKit
 
-class JobTableViewCell: UITableViewCell {
+class UserSearchSuggestionTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

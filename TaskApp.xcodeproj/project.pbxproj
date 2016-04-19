@@ -14,34 +14,38 @@
 		0920DA481C96007A0032EB9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0920DA471C96007A0032EB9C /* Assets.xcassets */; };
 		0920DA4B1C96007A0032EB9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0920DA491C96007A0032EB9C /* LaunchScreen.storyboard */; };
 		0920DA561C96007B0032EB9C /* TaskAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920DA551C96007B0032EB9C /* TaskAppTests.swift */; };
-		0953E2331C9A6730006E6FF0 /* SearchResultModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953E2321C9A6730006E6FF0 /* SearchResultModelController.swift */; };
+		0933A3631CC5D2A3001E9CB2 /* SearchDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0933A3621CC5D2A3001E9CB2 /* SearchDisplayViewController.swift */; };
+		0953E2331C9A6730006E6FF0 /* QueryResultsModelControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953E2321C9A6730006E6FF0 /* QueryResultsModelControllerProtocol.swift */; };
 		0960F8E61C9E5AA70051AA06 /* TabbedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960F8E51C9E5AA70051AA06 /* TabbedPageViewController.swift */; };
 		0965E12D1CAA4D49003866D0 /* MultiTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965E12C1CAA4D49003866D0 /* MultiTextFieldViewController.swift */; };
-		096718401C9C7DFF0058CF1A /* UserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967183F1C9C7DFF0058CF1A /* UserSearchViewController.swift */; };
-		096718421C9C7E0C0058CF1A /* TaskSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096718411C9C7E0C0058CF1A /* TaskSearchViewController.swift */; };
-		096718441C9C7E150058CF1A /* JobSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096718431C9C7E150058CF1A /* JobSearchViewController.swift */; };
-		096718481C9C8D930058CF1A /* SearchSuggestionModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096718471C9C8D930058CF1A /* SearchSuggestionModelController.swift */; };
-		0967184B1C9C928B0058CF1A /* SearchSuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967184A1C9C928B0058CF1A /* SearchSuggestionTableViewCell.swift */; };
-		0967184D1C9CAEEE0058CF1A /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967184C1C9CAEEE0058CF1A /* UserTableViewCell.swift */; };
-		0967184F1C9CAEF70058CF1A /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967184E1C9CAEF70058CF1A /* TaskTableViewCell.swift */; };
-		096718511C9CAF320058CF1A /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096718501C9CAF320058CF1A /* JobTableViewCell.swift */; };
+		0967184B1C9C928B0058CF1A /* JobSearchSuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967184A1C9C928B0058CF1A /* JobSearchSuggestionTableViewCell.swift */; };
 		099B05881C97794F00D3AE36 /* MainTabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099B05871C97794F00D3AE36 /* MainTabBarControllerDelegate.swift */; };
 		09D14BD31C96675C003E0791 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BD21C96675C003E0791 /* SearchViewController.swift */; };
 		09D14BD61C968C89003E0791 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D14BD81C968C89003E0791 /* Search.storyboard */; };
 		09D14BE01C9690B7003E0791 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BDF1C9690B7003E0791 /* MainTabBarController.swift */; };
 		09D14BE21C96917D003E0791 /* MessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BE11C96917D003E0791 /* MessagingViewController.swift */; };
 		09D14BE61C96918F003E0791 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BE51C96918F003E0791 /* SocialViewController.swift */; };
-		09F714041C9CF9DD0057C530 /* IncrementalLoadingSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F714031C9CF9DD0057C530 /* IncrementalLoadingSearchViewController.swift */; };
+		09DDC1951CC6C7BB00EA7C50 /* JobSearchDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC1941CC6C7BB00EA7C50 /* JobSearchDisplayViewController.swift */; };
+		09DDC1971CC6C7C700EA7C50 /* UserSearchDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC1961CC6C7C700EA7C50 /* UserSearchDisplayViewController.swift */; };
+		09DDC1991CC6C7CF00EA7C50 /* TaskSearchDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC1981CC6C7CF00EA7C50 /* TaskSearchDisplayViewController.swift */; };
+		09DDC19B1CC6D0DB00EA7C50 /* JobSearchSuggestionsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC19A1CC6D0DB00EA7C50 /* JobSearchSuggestionsModelController.swift */; };
+		09DDC19D1CC6D32B00EA7C50 /* JobSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC19C1CC6D32B00EA7C50 /* JobSearchResultTableViewCell.swift */; };
+		09DDC1A11CC6D40C00EA7C50 /* TaskSearchSuggestionsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC1A01CC6D40C00EA7C50 /* TaskSearchSuggestionsModelController.swift */; };
+		09DDC1A31CC6D41700EA7C50 /* UserSearchSuggestionsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC1A21CC6D41700EA7C50 /* UserSearchSuggestionsModelController.swift */; };
+		09DDC1A71CC6D53000EA7C50 /* TaskSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC1A61CC6D53000EA7C50 /* TaskSearchResultTableViewCell.swift */; };
+		09DDC1A91CC6D53700EA7C50 /* UserSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC1A81CC6D53700EA7C50 /* UserSearchResultTableViewCell.swift */; };
+		09DDC1AB1CC6D55000EA7C50 /* TaskSearchSuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC1AA1CC6D55000EA7C50 /* TaskSearchSuggestionTableViewCell.swift */; };
+		09DDC1AD1CC6D55800EA7C50 /* UserSearchSuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC1AC1CC6D55800EA7C50 /* UserSearchSuggestionTableViewCell.swift */; };
+		09F714041C9CF9DD0057C530 /* IncrementalLoadingSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F714031C9CF9DD0057C530 /* IncrementalLoadingSearchResultsViewController.swift */; };
 		09FAC6961C9607DA0041DE5E /* Social.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6981C9607DA0041DE5E /* Social.storyboard */; };
 		09FAC69F1C9607FD0041DE5E /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6A11C9607FD0041DE5E /* Messaging.storyboard */; };
 		09FAC6A81C96080A0041DE5E /* Personal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6AA1C96080A0041DE5E /* Personal.storyboard */; };
 		251FED6A1CA6852200B992BF /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251FED691CA6852200B992BF /* Profile.storyboard */; };
 		251FED6C1CA6856B00B992BF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED6B1CA6856B00B992BF /* ProfileViewController.swift */; };
-		251FED6E1CA6887400B992BF /* JobSearchResultModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED6D1CA6887400B992BF /* JobSearchResultModelController.swift */; };
-		251FED701CA6887D00B992BF /* TaskSearchResultModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED6F1CA6887D00B992BF /* TaskSearchResultModelController.swift */; };
-		251FED721CA6888100B992BF /* UserSearchResultModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED711CA6888100B992BF /* UserSearchResultModelController.swift */; };
+		251FED6E1CA6887400B992BF /* JobSearchResultsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED6D1CA6887400B992BF /* JobSearchResultsModelController.swift */; };
+		251FED701CA6887D00B992BF /* TaskSearchResultsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED6F1CA6887D00B992BF /* TaskSearchResultsModelController.swift */; };
+		251FED721CA6888100B992BF /* UserSearchResultsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED711CA6888100B992BF /* UserSearchResultsModelController.swift */; };
 		251FED741CA688AB00B992BF /* JobSearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED731CA688AB00B992BF /* JobSearchResultModel.swift */; };
-		251FED761CA688AF00B992BF /* SearchSuggestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED751CA688AF00B992BF /* SearchSuggestionModel.swift */; };
 		251FED781CA688B300B992BF /* UserSearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED771CA688B300B992BF /* UserSearchResultModel.swift */; };
 		251FED7A1CA688DC00B992BF /* TaskSearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED791CA688DC00B992BF /* TaskSearchResultModel.swift */; };
 		25A9BFBA1CA14E9E00634A63 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB01CA14E9E00634A63 /* UserModel.swift */; };
@@ -84,17 +88,11 @@
 		0920DA571C96007B0032EB9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0920DA711C96030D0032EB9C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		0920DA721C96030D0032EB9C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
-		0953E2321C9A6730006E6FF0 /* SearchResultModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultModelController.swift; sourceTree = "<group>"; };
+		0933A3621CC5D2A3001E9CB2 /* SearchDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDisplayViewController.swift; sourceTree = "<group>"; };
+		0953E2321C9A6730006E6FF0 /* QueryResultsModelControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryResultsModelControllerProtocol.swift; sourceTree = "<group>"; };
 		0960F8E51C9E5AA70051AA06 /* TabbedPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbedPageViewController.swift; sourceTree = "<group>"; };
 		0965E12C1CAA4D49003866D0 /* MultiTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiTextFieldViewController.swift; sourceTree = "<group>"; };
-		0967183F1C9C7DFF0058CF1A /* UserSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchViewController.swift; sourceTree = "<group>"; };
-		096718411C9C7E0C0058CF1A /* TaskSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchViewController.swift; sourceTree = "<group>"; };
-		096718431C9C7E150058CF1A /* JobSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchViewController.swift; sourceTree = "<group>"; };
-		096718471C9C8D930058CF1A /* SearchSuggestionModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSuggestionModelController.swift; sourceTree = "<group>"; };
-		0967184A1C9C928B0058CF1A /* SearchSuggestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSuggestionTableViewCell.swift; sourceTree = "<group>"; };
-		0967184C1C9CAEEE0058CF1A /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
-		0967184E1C9CAEF70058CF1A /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
-		096718501C9CAF320058CF1A /* JobTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
+		0967184A1C9C928B0058CF1A /* JobSearchSuggestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchSuggestionTableViewCell.swift; sourceTree = "<group>"; };
 		097D85A41CAAF9C100E22814 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		099B05871C97794F00D3AE36 /* MainTabBarControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerDelegate.swift; sourceTree = "<group>"; };
 		09D14BD21C96675C003E0791 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +103,18 @@
 		09D14BDF1C9690B7003E0791 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		09D14BE11C96917D003E0791 /* MessagingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingViewController.swift; sourceTree = "<group>"; };
 		09D14BE51C96918F003E0791 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
-		09F714031C9CF9DD0057C530 /* IncrementalLoadingSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncrementalLoadingSearchViewController.swift; sourceTree = "<group>"; };
+		09DDC1941CC6C7BB00EA7C50 /* JobSearchDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchDisplayViewController.swift; sourceTree = "<group>"; };
+		09DDC1961CC6C7C700EA7C50 /* UserSearchDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchDisplayViewController.swift; sourceTree = "<group>"; };
+		09DDC1981CC6C7CF00EA7C50 /* TaskSearchDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchDisplayViewController.swift; sourceTree = "<group>"; };
+		09DDC19A1CC6D0DB00EA7C50 /* JobSearchSuggestionsModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchSuggestionsModelController.swift; sourceTree = "<group>"; };
+		09DDC19C1CC6D32B00EA7C50 /* JobSearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		09DDC1A01CC6D40C00EA7C50 /* TaskSearchSuggestionsModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchSuggestionsModelController.swift; sourceTree = "<group>"; };
+		09DDC1A21CC6D41700EA7C50 /* UserSearchSuggestionsModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchSuggestionsModelController.swift; sourceTree = "<group>"; };
+		09DDC1A61CC6D53000EA7C50 /* TaskSearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		09DDC1A81CC6D53700EA7C50 /* UserSearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		09DDC1AA1CC6D55000EA7C50 /* TaskSearchSuggestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchSuggestionTableViewCell.swift; sourceTree = "<group>"; };
+		09DDC1AC1CC6D55800EA7C50 /* UserSearchSuggestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchSuggestionTableViewCell.swift; sourceTree = "<group>"; };
+		09F714031C9CF9DD0057C530 /* IncrementalLoadingSearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncrementalLoadingSearchResultsViewController.swift; sourceTree = "<group>"; };
 		09FAC6921C96063D0041DE5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09FAC6931C96063D0041DE5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09FAC6941C9607CC0041DE5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
@@ -123,11 +132,10 @@
 		1FE9C1485ADC66CA607AE068 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		251FED691CA6852200B992BF /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		251FED6B1CA6856B00B992BF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		251FED6D1CA6887400B992BF /* JobSearchResultModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchResultModelController.swift; sourceTree = "<group>"; };
-		251FED6F1CA6887D00B992BF /* TaskSearchResultModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchResultModelController.swift; sourceTree = "<group>"; };
-		251FED711CA6888100B992BF /* UserSearchResultModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchResultModelController.swift; sourceTree = "<group>"; };
+		251FED6D1CA6887400B992BF /* JobSearchResultsModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchResultsModelController.swift; sourceTree = "<group>"; };
+		251FED6F1CA6887D00B992BF /* TaskSearchResultsModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchResultsModelController.swift; sourceTree = "<group>"; };
+		251FED711CA6888100B992BF /* UserSearchResultsModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchResultsModelController.swift; sourceTree = "<group>"; };
 		251FED731CA688AB00B992BF /* JobSearchResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchResultModel.swift; sourceTree = "<group>"; };
-		251FED751CA688AF00B992BF /* SearchSuggestionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSuggestionModel.swift; sourceTree = "<group>"; };
 		251FED771CA688B300B992BF /* UserSearchResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchResultModel.swift; sourceTree = "<group>"; };
 		251FED791CA688DC00B992BF /* TaskSearchResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchResultModel.swift; sourceTree = "<group>"; };
 		25A9BFB01CA14E9E00634A63 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -278,10 +286,8 @@
 		0953E2311C9A66BC006E6FF0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				251FED731CA688AB00B992BF /* JobSearchResultModel.swift */,
-				251FED751CA688AF00B992BF /* SearchSuggestionModel.swift */,
-				251FED791CA688DC00B992BF /* TaskSearchResultModel.swift */,
-				251FED771CA688B300B992BF /* UserSearchResultModel.swift */,
+				09DDC19F1CC6D36A00EA7C50 /* Results */,
+				09DDC19E1CC6D36500EA7C50 /* Suggestions */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -289,11 +295,9 @@
 		0964360E1C9B3A2000AB71CC /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
-				251FED6D1CA6887400B992BF /* JobSearchResultModelController.swift */,
-				0953E2321C9A6730006E6FF0 /* SearchResultModelController.swift */,
-				096718471C9C8D930058CF1A /* SearchSuggestionModelController.swift */,
-				251FED6F1CA6887D00B992BF /* TaskSearchResultModelController.swift */,
-				251FED711CA6888100B992BF /* UserSearchResultModelController.swift */,
+				0953E2321C9A6730006E6FF0 /* QueryResultsModelControllerProtocol.swift */,
+				09DDC18B1CC6C32B00EA7C50 /* Suggestions */,
+				09DDC1891CC6C31300EA7C50 /* Results */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -301,12 +305,13 @@
 		0964360F1C9B3A3500AB71CC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				09F714031C9CF9DD0057C530 /* IncrementalLoadingSearchViewController.swift */,
-				096718431C9C7E150058CF1A /* JobSearchViewController.swift */,
+				09DDC18F1CC6C73600EA7C50 /* TaskSearchDisplay */,
+				09DDC18E1CC6C71F00EA7C50 /* UserSearchDisplay */,
+				09DDC18D1CC6C71800EA7C50 /* JobSearchDisplay */,
+				09F714031C9CF9DD0057C530 /* IncrementalLoadingSearchResultsViewController.swift */,
+				0933A3621CC5D2A3001E9CB2 /* SearchDisplayViewController.swift */,
 				09D14BD21C96675C003E0791 /* SearchViewController.swift */,
 				0960F8E51C9E5AA70051AA06 /* TabbedPageViewController.swift */,
-				096718411C9C7E0C0058CF1A /* TaskSearchViewController.swift */,
-				0967183F1C9C7DFF0058CF1A /* UserSearchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -322,10 +327,8 @@
 		096718491C9C924E0058CF1A /* Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
-				096718501C9CAF320058CF1A /* JobTableViewCell.swift */,
-				0967184A1C9C928B0058CF1A /* SearchSuggestionTableViewCell.swift */,
-				0967184E1C9CAEF70058CF1A /* TaskTableViewCell.swift */,
-				0967184C1C9CAEEE0058CF1A /* UserTableViewCell.swift */,
+				09DDC1A51CC6D4AC00EA7C50 /* Results */,
+				09DDC1A41CC6D4A800EA7C50 /* Suggestions */,
 			);
 			path = "Table View Cells";
 			sourceTree = "<group>";
@@ -338,6 +341,87 @@
 				099B05871C97794F00D3AE36 /* MainTabBarControllerDelegate.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		09DDC1891CC6C31300EA7C50 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				251FED6D1CA6887400B992BF /* JobSearchResultsModelController.swift */,
+				251FED6F1CA6887D00B992BF /* TaskSearchResultsModelController.swift */,
+				251FED711CA6888100B992BF /* UserSearchResultsModelController.swift */,
+			);
+			name = Results;
+			sourceTree = "<group>";
+		};
+		09DDC18B1CC6C32B00EA7C50 /* Suggestions */ = {
+			isa = PBXGroup;
+			children = (
+				09DDC19A1CC6D0DB00EA7C50 /* JobSearchSuggestionsModelController.swift */,
+				09DDC1A01CC6D40C00EA7C50 /* TaskSearchSuggestionsModelController.swift */,
+				09DDC1A21CC6D41700EA7C50 /* UserSearchSuggestionsModelController.swift */,
+			);
+			name = Suggestions;
+			sourceTree = "<group>";
+		};
+		09DDC18D1CC6C71800EA7C50 /* JobSearchDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				09DDC1941CC6C7BB00EA7C50 /* JobSearchDisplayViewController.swift */,
+			);
+			name = JobSearchDisplay;
+			sourceTree = "<group>";
+		};
+		09DDC18E1CC6C71F00EA7C50 /* UserSearchDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				09DDC1961CC6C7C700EA7C50 /* UserSearchDisplayViewController.swift */,
+			);
+			name = UserSearchDisplay;
+			sourceTree = "<group>";
+		};
+		09DDC18F1CC6C73600EA7C50 /* TaskSearchDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				09DDC1981CC6C7CF00EA7C50 /* TaskSearchDisplayViewController.swift */,
+			);
+			name = TaskSearchDisplay;
+			sourceTree = "<group>";
+		};
+		09DDC19E1CC6D36500EA7C50 /* Suggestions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Suggestions;
+			sourceTree = "<group>";
+		};
+		09DDC19F1CC6D36A00EA7C50 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				251FED731CA688AB00B992BF /* JobSearchResultModel.swift */,
+				251FED791CA688DC00B992BF /* TaskSearchResultModel.swift */,
+				251FED771CA688B300B992BF /* UserSearchResultModel.swift */,
+			);
+			name = Results;
+			sourceTree = "<group>";
+		};
+		09DDC1A41CC6D4A800EA7C50 /* Suggestions */ = {
+			isa = PBXGroup;
+			children = (
+				0967184A1C9C928B0058CF1A /* JobSearchSuggestionTableViewCell.swift */,
+				09DDC1AA1CC6D55000EA7C50 /* TaskSearchSuggestionTableViewCell.swift */,
+				09DDC1AC1CC6D55800EA7C50 /* UserSearchSuggestionTableViewCell.swift */,
+			);
+			name = Suggestions;
+			sourceTree = "<group>";
+		};
+		09DDC1A51CC6D4AC00EA7C50 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				09DDC19C1CC6D32B00EA7C50 /* JobSearchResultTableViewCell.swift */,
+				09DDC1A61CC6D53000EA7C50 /* TaskSearchResultTableViewCell.swift */,
+				09DDC1A81CC6D53700EA7C50 /* UserSearchResultTableViewCell.swift */,
+			);
+			name = Results;
 			sourceTree = "<group>";
 		};
 		251FED671CA684CE00B992BF /* Profile */ = {
@@ -606,43 +690,47 @@
 			buildActionMask = 2147483647;
 			files = (
 				25A9BFBD1CA14E9E00634A63 /* LoginViewController.swift in Sources */,
+				09DDC19B1CC6D0DB00EA7C50 /* JobSearchSuggestionsModelController.swift in Sources */,
+				09DDC1A11CC6D40C00EA7C50 /* TaskSearchSuggestionsModelController.swift in Sources */,
 				09D14BD31C96675C003E0791 /* SearchViewController.swift in Sources */,
-				251FED6E1CA6887400B992BF /* JobSearchResultModelController.swift in Sources */,
-				0967184B1C9C928B0058CF1A /* SearchSuggestionTableViewCell.swift in Sources */,
-				09F714041C9CF9DD0057C530 /* IncrementalLoadingSearchViewController.swift in Sources */,
+				251FED6E1CA6887400B992BF /* JobSearchResultsModelController.swift in Sources */,
+				0967184B1C9C928B0058CF1A /* JobSearchSuggestionTableViewCell.swift in Sources */,
+				09F714041C9CF9DD0057C530 /* IncrementalLoadingSearchResultsViewController.swift in Sources */,
 				251FED741CA688AB00B992BF /* JobSearchResultModel.swift in Sources */,
 				320F01C01CAD1D0500DF9287 /* ConversationTableViewController.swift in Sources */,
-				0967184D1C9CAEEE0058CF1A /* UserTableViewCell.swift in Sources */,
-				251FED761CA688AF00B992BF /* SearchSuggestionModel.swift in Sources */,
 				328415BB1CA12F3900FF8DF0 /* MessagingTableViewController.swift in Sources */,
-				096718401C9C7DFF0058CF1A /* UserSearchViewController.swift in Sources */,
 				25A9BFBA1CA14E9E00634A63 /* UserModel.swift in Sources */,
 				328415BF1CA134DA00FF8DF0 /* ConversationViewController.swift in Sources */,
-				096718421C9C7E0C0058CF1A /* TaskSearchViewController.swift in Sources */,
 				091DEE8B1C989CFD00B53CEB /* Colors.swift in Sources */,
-				0953E2331C9A6730006E6FF0 /* SearchResultModelController.swift in Sources */,
-				251FED701CA6887D00B992BF /* TaskSearchResultModelController.swift in Sources */,
+				09DDC1AB1CC6D55000EA7C50 /* TaskSearchSuggestionTableViewCell.swift in Sources */,
+				09DDC1AD1CC6D55800EA7C50 /* UserSearchSuggestionTableViewCell.swift in Sources */,
+				09DDC19D1CC6D32B00EA7C50 /* JobSearchResultTableViewCell.swift in Sources */,
+				0953E2331C9A6730006E6FF0 /* QueryResultsModelControllerProtocol.swift in Sources */,
+				251FED701CA6887D00B992BF /* TaskSearchResultsModelController.swift in Sources */,
 				0960F8E61C9E5AA70051AA06 /* TabbedPageViewController.swift in Sources */,
 				09D14BE21C96917D003E0791 /* MessagingViewController.swift in Sources */,
 				251FED7A1CA688DC00B992BF /* TaskSearchResultModel.swift in Sources */,
-				0967184F1C9CAEF70058CF1A /* TaskTableViewCell.swift in Sources */,
 				25EBFBD01CA3F66D00CCE557 /* PersonalViewController.swift in Sources */,
+				09DDC1971CC6C7C700EA7C50 /* UserSearchDisplayViewController.swift in Sources */,
+				09DDC1A71CC6D53000EA7C50 /* TaskSearchResultTableViewCell.swift in Sources */,
 				320F01C41CAD296300DF9287 /* ConversationTableViewCellConversationView.swift in Sources */,
+				09DDC1991CC6C7CF00EA7C50 /* TaskSearchDisplayViewController.swift in Sources */,
 				0965E12D1CAA4D49003866D0 /* MultiTextFieldViewController.swift in Sources */,
-				251FED721CA6888100B992BF /* UserSearchResultModelController.swift in Sources */,
-				096718511C9CAF320058CF1A /* JobTableViewCell.swift in Sources */,
+				251FED721CA6888100B992BF /* UserSearchResultsModelController.swift in Sources */,
+				09DDC1951CC6C7BB00EA7C50 /* JobSearchDisplayViewController.swift in Sources */,
+				09DDC1A31CC6D41700EA7C50 /* UserSearchSuggestionsModelController.swift in Sources */,
 				099B05881C97794F00D3AE36 /* MainTabBarControllerDelegate.swift in Sources */,
 				251FED781CA688B300B992BF /* UserSearchResultModel.swift in Sources */,
 				09D14BE61C96918F003E0791 /* SocialViewController.swift in Sources */,
 				0920DA3F1C96007A0032EB9C /* AppDelegate.swift in Sources */,
-				096718481C9C8D930058CF1A /* SearchSuggestionModelController.swift in Sources */,
 				328415BD1CA1329800FF8DF0 /* MessagingTableViewCell.swift in Sources */,
+				0933A3631CC5D2A3001E9CB2 /* SearchDisplayViewController.swift in Sources */,
 				25EBFBC31CA3D47E00CCE557 /* APIKeys.swift in Sources */,
 				25A9BFBC1CA14E9E00634A63 /* ForgotPasswordViewController.swift in Sources */,
 				09D14BE01C9690B7003E0791 /* MainTabBarController.swift in Sources */,
 				251FED6C1CA6856B00B992BF /* ProfileViewController.swift in Sources */,
 				320F01C21CAD1FE000DF9287 /* ConversationTableViewCell.swift in Sources */,
-				096718441C9C7E150058CF1A /* JobSearchViewController.swift in Sources */,
+				09DDC1A91CC6D53700EA7C50 /* UserSearchResultTableViewCell.swift in Sources */,
 				090F486A1CA9DF170028E656 /* CircularImageView.swift in Sources */,
 				25A9BFBE1CA14E9E00634A63 /* SignupViewController.swift in Sources */,
 			);

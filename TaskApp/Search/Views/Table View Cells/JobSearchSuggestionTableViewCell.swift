@@ -1,5 +1,5 @@
 //
-//  TaskTableViewCell.swift
+//  JobSearchSuggestionTableViewCell.swift
 //  TaskApp
 //
 //  Created by Spencer Michaels on 2016/3/18.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class TaskTableViewCell: UITableViewCell {
-
+class JobSearchSuggestionTableViewCell: UITableViewCell {
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

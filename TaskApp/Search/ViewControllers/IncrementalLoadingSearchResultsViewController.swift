@@ -8,9 +8,9 @@
 
 import UIKit
 
-class IncrementalLoadingSearchViewController<DataSource: SearchResultModelControllerProtocol>: UITableViewController, SearchResultModelControllerDelegate {
+class IncrementalLoadingTableViewController: UITableViewController, QueryResultsModelControllerDelegate {
     /// The data source for the table view.
-    var source: DataSource! {
+    var source: QueryResultsModelControllerProtocol! {
         didSet {
             source.delegate = self
             tableView.dataSource = self
@@ -44,9 +44,9 @@ class IncrementalLoadingSearchViewController<DataSource: SearchResultModelContro
      */
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if loadedAllResultsForCriteria || loadEncounteredError {
-            return source.results.count + 1
+            return source.count + 1
         } else {
-            return source.results.count
+            return source.count
         }
     }
     
@@ -58,7 +58,7 @@ class IncrementalLoadingSearchViewController<DataSource: SearchResultModelContro
         unless an error has occurred while loading results, in which case an error cell is returned.
      */
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if indexPath.row < source.results.count {
+        if indexPath.row < source.count {
             return resultCellForRow(indexPath.row)
         } else if loadEncounteredError {
             return errorCell()
@@ -149,19 +149,24 @@ class IncrementalLoadingSearchViewController<DataSource: SearchResultModelContro
         }
     }
     
-    /// Called when new search results are loaded.
-    func didLoadNewResults<ModelController : SearchResultModelControllerProtocol>(controller: ModelController, newResultsCount: Int) {
+    func didLoadNewResults(controller: QueryResultsModelControllerProtocol, newResultsCount: Int) {
         // Don't need to do anything here -- the table view updates automatically
     }
     
     /// Called when all available search results have been loaded.
-    func didLoadAllResultsForCriteria<ModelController : SearchResultModelControllerProtocol>(controller: ModelController) {
+    func didLoadAllResultsForCriteria(controller: QueryResultsModelControllerProtocol) {
         loadedAllResultsForCriteria = true
     }
     
     /// Called when the current search results are no longer valid.
-    func didInvalidateCurrentResults<ModelController : SearchResultModelControllerProtocol>(controller: ModelController) {
+    func didInvalidateCurrentResults(controller: QueryResultsModelControllerProtocol) {
         // TODO: How to handle quick, repeated criteria changes?
         loadedAllResultsForCriteria = false
+        loadEncounteredError = false
+    }
+    
+    /// Called when loading new results fails due to an error
+    func didFailToLoadNewResults(controller: QueryResultsModelControllerProtocol, error: NSError) {
+        loadEncounteredError = true
     }
 }

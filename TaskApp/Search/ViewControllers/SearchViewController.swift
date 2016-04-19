@@ -10,29 +10,26 @@ import UIKit
 
 class SearchViewController: UIViewController {
     // MARK: Properties
-    @IBOutlet weak var searchSuggestionTable: UITableView! {
-        didSet {
-            searchSuggestionTable.delegate = self
-            searchSuggestionTable.dataSource = searchSuggestions
-        }
-    }
-    
     weak var tabbedPageViewController: TabbedPageViewController!
     
-    let categorySearchViewControllers =
+    let SearchDisplayViewControllers: [SearchDisplayViewController] =
     [
-        UIStoryboard(name: "Search", bundle: nil).instantiateViewControllerWithIdentifier("UserSearchViewController"),
-        UIStoryboard(name: "Search", bundle: nil).instantiateViewControllerWithIdentifier("TaskSearchViewController"),
-        UIStoryboard(name: "Search", bundle: nil).instantiateViewControllerWithIdentifier("JobSearchViewController")
+        UIStoryboard(name: "Search", bundle: nil)
+            .instantiateViewControllerWithIdentifier("UserSearchDisplayViewController")
+            as! SearchDisplayViewController,
+        UIStoryboard(name: "Search", bundle: nil)
+            .instantiateViewControllerWithIdentifier("TaskSearchDisplayViewController")
+            as! SearchDisplayViewController,
+        UIStoryboard(name: "Search", bundle: nil)
+            .instantiateViewControllerWithIdentifier("JobSearchDisplayViewController")
+            as! SearchDisplayViewController
     ]
     
-    var searchBar: UISearchBar! {
+    private(set) var searchBar: UISearchBar! {
         didSet {
             searchBar.delegate = self
         }
     }
-    
-    let searchSuggestions = SearchSuggestionModelController()
     
     // MARK: Methods
     override func viewDidLoad() {
@@ -41,10 +38,8 @@ class SearchViewController: UIViewController {
         searchBar = UISearchBar()
         navigationItem.titleView = searchBar
         
-        searchSuggestionTable.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
-        
         // Add search category pages
-        categorySearchViewControllers.forEach({ (viewController: UIViewController) -> Void in
+        SearchDisplayViewControllers.forEach({ (viewController: UIViewController) -> Void in
             let title = (viewController.title != nil) ? viewController.title! : ""
             tabbedPageViewController.addPage(viewController, title: title, animated: true)
         })
@@ -70,10 +65,30 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         searchBar.setShowsCancelButton(false, animated: true)
+        displaySearchResults(false)
     }
-}
-
-// MARK: UITableViewDelegate methods
-extension SearchViewController: UITableViewDelegate {
     
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        displaySearchResults(true)
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        updateSearchKeyword(searchText)
+    }
+    
+    private func updateSearchKeyword(keyword: String) {
+        SearchDisplayViewControllers.forEach { (vc: UIViewController) in
+            if let searchDisplayViewController = vc as? SearchDisplayViewController {
+                searchDisplayViewController.keyword = keyword
+            }
+        }
+    }
+    
+    private func displaySearchResults(show: Bool) {
+        SearchDisplayViewControllers.forEach { (vc: UIViewController) in
+            if let searchDisplayViewController = vc as? SearchDisplayViewController {
+                searchDisplayViewController.showSearchResults = true
+            }
+        }
+    }
 }

@@ -1,5 +1,5 @@
 //
-//  Task.swift
+//  TaskSearchResultModel.swift
 //  TaskApp
 //
 //  Created by Spencer Michaels on 2016/3/18.
@@ -8,5 +8,5 @@
 
 import AVOSCloud
 
-class Task: AVObject, AVSubclassing {
+class TaskSearchResult: AVObject, AVSubclassing {
 }
