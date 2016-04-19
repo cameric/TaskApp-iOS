@@ -295,9 +295,9 @@
 		0964360E1C9B3A2000AB71CC /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0953E2321C9A6730006E6FF0 /* QueryResultsModelControllerProtocol.swift */,
-				09DDC18B1CC6C32B00EA7C50 /* Suggestions */,
 				09DDC1891CC6C31300EA7C50 /* Results */,
+				09DDC18B1CC6C32B00EA7C50 /* Suggestions */,
+				0953E2321C9A6730006E6FF0 /* QueryResultsModelControllerProtocol.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -305,9 +305,9 @@
 		0964360F1C9B3A3500AB71CC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				09DDC18D1CC6C71800EA7C50 /* JobSearchDisplay */,
 				09DDC18F1CC6C73600EA7C50 /* TaskSearchDisplay */,
 				09DDC18E1CC6C71F00EA7C50 /* UserSearchDisplay */,
-				09DDC18D1CC6C71800EA7C50 /* JobSearchDisplay */,
 				09F714031C9CF9DD0057C530 /* IncrementalLoadingSearchResultsViewController.swift */,
 				0933A3621CC5D2A3001E9CB2 /* SearchDisplayViewController.swift */,
 				09D14BD21C96675C003E0791 /* SearchViewController.swift */,
@@ -350,7 +350,7 @@
 				251FED6F1CA6887D00B992BF /* TaskSearchResultsModelController.swift */,
 				251FED711CA6888100B992BF /* UserSearchResultsModelController.swift */,
 			);
-			name = Results;
+			path = Results;
 			sourceTree = "<group>";
 		};
 		09DDC18B1CC6C32B00EA7C50 /* Suggestions */ = {
@@ -360,7 +360,7 @@
 				09DDC1A01CC6D40C00EA7C50 /* TaskSearchSuggestionsModelController.swift */,
 				09DDC1A21CC6D41700EA7C50 /* UserSearchSuggestionsModelController.swift */,
 			);
-			name = Suggestions;
+			path = Suggestions;
 			sourceTree = "<group>";
 		};
 		09DDC18D1CC6C71800EA7C50 /* JobSearchDisplay */ = {
@@ -368,7 +368,7 @@
 			children = (
 				09DDC1941CC6C7BB00EA7C50 /* JobSearchDisplayViewController.swift */,
 			);
-			name = JobSearchDisplay;
+			path = JobSearchDisplay;
 			sourceTree = "<group>";
 		};
 		09DDC18E1CC6C71F00EA7C50 /* UserSearchDisplay */ = {
@@ -376,7 +376,7 @@
 			children = (
 				09DDC1961CC6C7C700EA7C50 /* UserSearchDisplayViewController.swift */,
 			);
-			name = UserSearchDisplay;
+			path = UserSearchDisplay;
 			sourceTree = "<group>";
 		};
 		09DDC18F1CC6C73600EA7C50 /* TaskSearchDisplay */ = {
@@ -384,14 +384,14 @@
 			children = (
 				09DDC1981CC6C7CF00EA7C50 /* TaskSearchDisplayViewController.swift */,
 			);
-			name = TaskSearchDisplay;
+			path = TaskSearchDisplay;
 			sourceTree = "<group>";
 		};
 		09DDC19E1CC6D36500EA7C50 /* Suggestions */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Suggestions;
+			path = Suggestions;
 			sourceTree = "<group>";
 		};
 		09DDC19F1CC6D36A00EA7C50 /* Results */ = {
@@ -401,7 +401,7 @@
 				251FED791CA688DC00B992BF /* TaskSearchResultModel.swift */,
 				251FED771CA688B300B992BF /* UserSearchResultModel.swift */,
 			);
-			name = Results;
+			path = Results;
 			sourceTree = "<group>";
 		};
 		09DDC1A41CC6D4A800EA7C50 /* Suggestions */ = {
@@ -411,7 +411,7 @@
 				09DDC1AA1CC6D55000EA7C50 /* TaskSearchSuggestionTableViewCell.swift */,
 				09DDC1AC1CC6D55800EA7C50 /* UserSearchSuggestionTableViewCell.swift */,
 			);
-			name = Suggestions;
+			path = Suggestions;
 			sourceTree = "<group>";
 		};
 		09DDC1A51CC6D4AC00EA7C50 /* Results */ = {
@@ -421,7 +421,7 @@
 				09DDC1A61CC6D53000EA7C50 /* TaskSearchResultTableViewCell.swift */,
 				09DDC1A81CC6D53700EA7C50 /* UserSearchResultTableViewCell.swift */,
 			);
-			name = Results;
+			path = Results;
 			sourceTree = "<group>";
 		};
 		251FED671CA684CE00B992BF /* Profile */ = {
@@ -480,8 +480,8 @@
 		328415B41CA1230600FF8DF0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				328415BE1CA134DA00FF8DF0 /* ConversationViewController.swift */,
 				320F01BF1CAD1D0500DF9287 /* ConversationTableViewController.swift */,
+				328415BE1CA134DA00FF8DF0 /* ConversationViewController.swift */,
 				328415BA1CA12F3900FF8DF0 /* MessagingTableViewController.swift */,
 				09D14BE11C96917D003E0791 /* MessagingViewController.swift */,
 			);
@@ -505,9 +505,9 @@
 		328415B71CA1233400FF8DF0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				328415BC1CA1329800FF8DF0 /* MessagingTableViewCell.swift */,
 				320F01C11CAD1FE000DF9287 /* ConversationTableViewCell.swift */,
 				320F01C31CAD296300DF9287 /* ConversationTableViewCellConversationView.swift */,
+				328415BC1CA1329800FF8DF0 /* MessagingTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
