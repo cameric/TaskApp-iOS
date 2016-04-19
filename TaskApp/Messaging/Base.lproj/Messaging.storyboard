@@ -138,30 +138,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4BS-I6-ByJ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dhs-EX-bHo">
                                 <rect key="frame" x="0.0" y="448" width="600" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3x-Mw-SJO">
+                                        <rect key="frame" x="8" y="7" width="30" height="30"/>
+                                        <state key="normal" title="语音"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwV-sf-NC1">
+                                        <rect key="frame" x="562" y="7" width="30" height="30"/>
+                                        <state key="normal" title="图片"/>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="200" horizontalCompressionResistancePriority="700" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsc-YU-qLH">
+                                        <rect key="frame" x="46" y="7" width="508" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="n3H-wb-q10"/>
+                                    <constraint firstAttribute="trailing" secondItem="pwV-sf-NC1" secondAttribute="trailing" constant="8" id="B3p-Wc-no2"/>
+                                    <constraint firstItem="W3x-Mw-SJO" firstAttribute="leading" secondItem="Dhs-EX-bHo" secondAttribute="leading" constant="8" id="OaS-up-LP5"/>
+                                    <constraint firstItem="hsc-YU-qLH" firstAttribute="centerY" secondItem="Dhs-EX-bHo" secondAttribute="centerY" id="WO5-DQ-aiT"/>
+                                    <constraint firstItem="pwV-sf-NC1" firstAttribute="leading" secondItem="hsc-YU-qLH" secondAttribute="trailing" constant="8" id="YQ7-et-Y36"/>
+                                    <constraint firstItem="pwV-sf-NC1" firstAttribute="centerY" secondItem="Dhs-EX-bHo" secondAttribute="centerY" id="eXD-bX-mk9"/>
+                                    <constraint firstItem="W3x-Mw-SJO" firstAttribute="centerY" secondItem="Dhs-EX-bHo" secondAttribute="centerY" id="o4J-HH-Pt5"/>
+                                    <constraint firstAttribute="height" constant="44" id="ruy-vy-XWV"/>
+                                    <constraint firstItem="hsc-YU-qLH" firstAttribute="leading" secondItem="W3x-Mw-SJO" secondAttribute="trailing" constant="8" id="t0z-eZ-Elg"/>
                                 </constraints>
-                                <items>
-                                    <barButtonItem title="语音" id="EM2-3a-gdW"/>
-                                    <barButtonItem style="plain" id="8sB-gS-6eP">
-                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="500" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="lxT-XF-1Nm">
-                                            <rect key="frame" x="64" y="7" width="423" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
-                                    </barButtonItem>
-                                    <barButtonItem title="图片" id="nbu-qE-b60"/>
-                                </items>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="n3H-wb-q10"/>
-                                    </mask>
-                                </variation>
-                            </toolbar>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Wm-Wn-mF9">
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Wm-Wn-mF9">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="448"/>
                                 <connections>
                                     <segue destination="bx4-Jb-gvK" kind="embed" id="uuc-Bc-lsV"/>
@@ -170,20 +175,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rWo-GT-8ve" firstAttribute="top" secondItem="4BS-I6-ByJ" secondAttribute="bottom" id="26P-o1-Ruc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dhs-EX-bHo" secondAttribute="trailing" constant="-20" id="1KB-7a-KCA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8Wm-Wn-mF9" secondAttribute="trailing" constant="-20" id="68n-ul-2Ry"/>
                             <constraint firstItem="8Wm-Wn-mF9" firstAttribute="top" secondItem="bQn-9a-mog" secondAttribute="bottom" id="D9q-Qo-ETx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4BS-I6-ByJ" secondAttribute="trailing" constant="-20" id="K9F-6Z-ZLX"/>
+                            <constraint firstItem="rWo-GT-8ve" firstAttribute="top" secondItem="Dhs-EX-bHo" secondAttribute="bottom" id="Qx6-Lg-8m8"/>
                             <constraint firstItem="8Wm-Wn-mF9" firstAttribute="leading" secondItem="kda-2f-83a" secondAttribute="leadingMargin" constant="-20" id="fk9-NM-HYu"/>
-                            <constraint firstItem="4BS-I6-ByJ" firstAttribute="top" secondItem="8Wm-Wn-mF9" secondAttribute="bottom" id="oDr-Mk-clB"/>
-                            <constraint firstItem="4BS-I6-ByJ" firstAttribute="leading" secondItem="kda-2f-83a" secondAttribute="leadingMargin" constant="-20" id="x12-nt-b9O"/>
-                            <constraint firstItem="rWo-GT-8ve" firstAttribute="top" secondItem="4BS-I6-ByJ" secondAttribute="bottom" id="xM9-OA-3JX"/>
+                            <constraint firstItem="Dhs-EX-bHo" firstAttribute="leading" secondItem="kda-2f-83a" secondAttribute="leadingMargin" constant="-20" id="og9-kB-hHG"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="xM9-OA-3JX"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="GmK-SB-g2c"/>
                 </viewController>
