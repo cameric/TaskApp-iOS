@@ -9,28 +9,14 @@
 import UIKit
 
 class UserSearchDisplayViewController: SearchDisplayViewController {
-   class func initFromStoryboard() -> UserSearchDisplayViewController
-    {
-        let searchResultsViewController = UIStoryboard(name: "Search", bundle: nil)
-            .instantiateViewControllerWithIdentifier("UserSearchResultsViewController")
-            as! IncrementalLoadingTableViewController
-        searchResultsViewController.tableView.dataSource = UserSearchResultsModelController()
-        
-        let searchSuggestionsViewController = UIStoryboard(name: "Search", bundle: nil)
-            .instantiateViewControllerWithIdentifier("UserSearchSuggestionsViewController")
-            as! UITableViewController
-        searchSuggestionsViewController.tableView.dataSource = UserSearchSuggestionsModelController()
-
-        let userSearchDisplayViewController = SearchDisplayViewController.initFromStoryboard(
-            "Search", identifier: "UserSearchDisplayViewController",
-            searchResultsViewController: searchResultsViewController,
-            searchSuggestionsViewController: searchSuggestionsViewController)
-        
-        return userSearchDisplayViewController as! UserSearchDisplayViewController
-    }
+    let results = UserSearchResultsModelController()
+    let suggestions = UserSearchResultsModelController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchResultsViewController.tableView.dataSource = results
+        searchSuggestionsViewController.tableView.dataSource = suggestions
     }
 
     override func didReceiveMemoryWarning() {

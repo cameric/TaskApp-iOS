@@ -8,28 +8,13 @@
 
 import UIKit
 
-extension UIViewController {
-    class func initFromStoryboard(name: String, identifier: String) -> UIViewController
-    {
-        return UIStoryboard(name: name, bundle: nil).instantiateViewControllerWithIdentifier(identifier)
+class AttachSegue: UIStoryboardSegue {
+    override func perform() {
+        // Don't do anything
     }
 }
 
 class SearchDisplayViewController: UIViewController {
-    class func initFromStoryboard(
-        name: String, identifier: String,
-        searchResultsViewController: IncrementalLoadingTableViewController,
-        searchSuggestionsViewController: UITableViewController)
-        -> SearchDisplayViewController
-    {
-        let searchDisplayViewController =
-            UIViewController.initFromStoryboard(name, identifier: identifier) as! SearchDisplayViewController
-        searchDisplayViewController.searchResultsViewController = searchResultsViewController
-        searchDisplayViewController.searchSuggestionsViewController = searchSuggestionsViewController
-        
-        return searchDisplayViewController
-    }
-    
     @IBOutlet weak var tableContainerView: UIView!
     
     var keyword: String = ""
@@ -39,11 +24,22 @@ class SearchDisplayViewController: UIViewController {
         }
     }
     
-    private var searchResultsViewController: IncrementalLoadingTableViewController!
-    private var searchSuggestionsViewController: UITableViewController!
+    private(set) var searchResultsViewController: IncrementalLoadingTableViewController!
+    private(set) var searchSuggestionsViewController: UITableViewController!
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "SuggestionsEmbedSegue") {
+            searchSuggestionsViewController = segue.destinationViewController as! UITableViewController
+        } else if (segue.identifier == "ResultsAttachSegue") {
+            searchResultsViewController = segue.destinationViewController as! IncrementalLoadingTableViewController
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Immediately get the results view controller
+        performSegueWithIdentifier("ResultsAttachSegue", sender: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,5 +47,10 @@ class SearchDisplayViewController: UIViewController {
     }
     
     func updateContainedViewController() {
+        if (showSearchResults) {
+            searchSuggestionsViewController.presentViewController(searchResultsViewController, animated: true, completion: nil)
+        } else {
+            dismissViewControllerAnimated(true, completion: nil)
+        }
     }
 }

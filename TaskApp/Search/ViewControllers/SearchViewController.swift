@@ -14,9 +14,16 @@ class SearchViewController: UIViewController {
     
     let SearchDisplayViewControllers: [SearchDisplayViewController] =
     [
-        UserSearchDisplayViewController.initFromStoryboard(),
-        TaskSearchDisplayViewController.initFromStoryboard(),
-        JobSearchDisplayViewController.initFromStoryboard()
+    
+        UIStoryboard(name: "Search", bundle: nil)
+                .instantiateViewControllerWithIdentifier("UserSearchDisplayViewController")
+                as! UserSearchDisplayViewController,
+        UIStoryboard(name: "Search", bundle: nil)
+                .instantiateViewControllerWithIdentifier("TaskSearchDisplayViewController")
+                as! TaskSearchDisplayViewController,
+        UIStoryboard(name: "Search", bundle: nil)
+                .instantiateViewControllerWithIdentifier("JobSearchDisplayViewController")
+                as! JobSearchDisplayViewController,
     ]
     
     private(set) var searchBar: UISearchBar! {
@@ -81,7 +88,7 @@ extension SearchViewController: UISearchBarDelegate {
     private func displaySearchResults(show: Bool) {
         SearchDisplayViewControllers.forEach { (vc: UIViewController) in
             if let searchDisplayViewController = vc as? SearchDisplayViewController {
-                searchDisplayViewController.showSearchResults = true
+                searchDisplayViewController.showSearchResults = show
             }
         }
     }

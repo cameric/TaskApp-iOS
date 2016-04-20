@@ -9,28 +9,14 @@
 import UIKit
 
 class JobSearchDisplayViewController: SearchDisplayViewController {
-    class func initFromStoryboard() -> JobSearchDisplayViewController
-    {
-        let searchResultsViewController = UIStoryboard(name: "Search", bundle: nil)
-            .instantiateViewControllerWithIdentifier("JobSearchResultsViewController")
-            as! IncrementalLoadingTableViewController
-        searchResultsViewController.tableView.dataSource = JobSearchResultsModelController()
-        
-        let searchSuggestionsViewController = UIStoryboard(name: "Search", bundle: nil)
-            .instantiateViewControllerWithIdentifier("JobSearchSuggestionsViewController")
-            as! UITableViewController
-        searchSuggestionsViewController.tableView.dataSource = JobSearchSuggestionsModelController()
-
-        let jobSearchDisplayViewController = SearchDisplayViewController.initFromStoryboard(
-            "Search", identifier: "JobSearchDisplayViewController",
-            searchResultsViewController: searchResultsViewController,
-            searchSuggestionsViewController: searchSuggestionsViewController)
-        
-        return jobSearchDisplayViewController as! JobSearchDisplayViewController
-    }
+    let results = JobSearchResultsModelController()
+    let suggestions = JobSearchResultsModelController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchResultsViewController.tableView.dataSource = results
+        searchSuggestionsViewController.tableView.dataSource = suggestions
     }
     
     override func didReceiveMemoryWarning() {
