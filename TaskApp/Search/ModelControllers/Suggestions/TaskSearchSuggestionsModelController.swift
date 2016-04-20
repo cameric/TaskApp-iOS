@@ -13,7 +13,7 @@ class TaskSearchSuggestionsModelController: NSObject, QueryResultsTableViewDataS
     
     var keyword: String = ""
     
-    private(set) var count: Int = 20
+    private(set) var count: Int = 0
     
     func loadMore(desiredCount: Int) {
     }

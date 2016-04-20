@@ -8,35 +8,39 @@
 
 import UIKit
 
-class SearchDisplayViewController: UIViewController {
-    var keyword: String = "" {
-        didSet {
-            updateSearchParameters()
-            updateSearchDisplay()
-        }
+extension UIViewController {
+    class func initFromStoryboard(name: String, identifier: String) -> UIViewController
+    {
+        return UIStoryboard(name: name, bundle: nil).instantiateViewControllerWithIdentifier(identifier)
     }
+}
+
+class SearchDisplayViewController: UIViewController {
+    class func initFromStoryboard(
+        name: String, identifier: String,
+        searchResultsViewController: IncrementalLoadingTableViewController,
+        searchSuggestionsViewController: UITableViewController)
+        -> SearchDisplayViewController
+    {
+        let searchDisplayViewController =
+            UIViewController.initFromStoryboard(name, identifier: identifier) as! SearchDisplayViewController
+        searchDisplayViewController.searchResultsViewController = searchResultsViewController
+        searchDisplayViewController.searchSuggestionsViewController = searchSuggestionsViewController
+        
+        return searchDisplayViewController
+    }
+    
+    @IBOutlet weak var tableContainerView: UIView!
+    
+    var keyword: String = ""
     var showSearchResults: Bool = false {
         didSet {
-            updateSearchParameters()
-            updateSearchDisplay()
+            updateContainedViewController()
         }
     }
     
-    var searchSuggestions: QueryResultsTableViewDataSourceProtocol!
-    var searchResults: QueryResultsTableViewDataSourceProtocol!
-    
-    var searchResultsViewController: IncrementalLoadingTableViewController! {
-        didSet {
-            searchResultsViewController.tableView.dataSource = searchResults
-        }
-    }
-    var searchSuggestionsViewController: UITableViewController! {
-        didSet {
-            searchSuggestionsViewController.tableView.dataSource = searchSuggestions
-            // We want the search results VC to render over the main table view
-            searchSuggestionsViewController.definesPresentationContext = true
-        }
-    }
+    private var searchResultsViewController: IncrementalLoadingTableViewController!
+    private var searchSuggestionsViewController: UITableViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,21 +50,6 @@ class SearchDisplayViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    // Avoid needlessly updating the search parameters of a non-visible VC
-    private func updateSearchParameters() {
-        if (showSearchResults) {
-            searchResults.keyword = keyword
-        } else {
-            searchSuggestions.keyword = keyword
-        }
-    }
-    
-    private func updateSearchDisplay() {
-        if (showSearchResults && !keyword.isEmpty) {
-            searchSuggestionsViewController.presentViewController(
-                searchResultsViewController, animated: false, completion: nil)
-        } else {
-            searchSuggestionsViewController.dismissViewControllerAnimated(false, completion: nil)
-        }
+    func updateContainedViewController() {
     }
 }

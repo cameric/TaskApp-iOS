@@ -1,5 +1,5 @@
 //
-//  UserSearchResultModel.swift
+//  UserSearchResult.swift
 //  TaskApp
 //
 //  Created by Spencer Michaels on 2016/3/24.

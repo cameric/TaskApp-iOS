@@ -14,15 +14,9 @@ class SearchViewController: UIViewController {
     
     let SearchDisplayViewControllers: [SearchDisplayViewController] =
     [
-        UIStoryboard(name: "Search", bundle: nil)
-            .instantiateViewControllerWithIdentifier("UserSearchDisplayViewController")
-            as! SearchDisplayViewController,
-        UIStoryboard(name: "Search", bundle: nil)
-            .instantiateViewControllerWithIdentifier("TaskSearchDisplayViewController")
-            as! SearchDisplayViewController,
-        UIStoryboard(name: "Search", bundle: nil)
-            .instantiateViewControllerWithIdentifier("JobSearchDisplayViewController")
-            as! SearchDisplayViewController
+        UserSearchDisplayViewController.initFromStoryboard(),
+        TaskSearchDisplayViewController.initFromStoryboard(),
+        JobSearchDisplayViewController.initFromStoryboard()
     ]
     
     private(set) var searchBar: UISearchBar! {

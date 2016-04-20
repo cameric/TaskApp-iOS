@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		090F486A1CA9DF170028E656 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090F48691CA9DF170028E656 /* CircularImageView.swift */; };
 		091DEE8B1C989CFD00B53CEB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091DEE8A1C989CFD00B53CEB /* Colors.swift */; };
+		091F8DEA1CC6D6C8006AE04C /* JobSearchSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F8DE91CC6D6C8006AE04C /* JobSearchSuggestion.swift */; };
+		091F8DEC1CC6D6EB006AE04C /* TaskSearchSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F8DEB1CC6D6EB006AE04C /* TaskSearchSuggestion.swift */; };
+		091F8DEE1CC6D716006AE04C /* UserSearchSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F8DED1CC6D716006AE04C /* UserSearchSuggestion.swift */; };
 		0920DA3F1C96007A0032EB9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920DA3E1C96007A0032EB9C /* AppDelegate.swift */; };
 		0920DA461C96007A0032EB9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0920DA441C96007A0032EB9C /* Main.storyboard */; };
 		0920DA481C96007A0032EB9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0920DA471C96007A0032EB9C /* Assets.xcassets */; };
@@ -45,9 +48,9 @@
 		251FED6E1CA6887400B992BF /* JobSearchResultsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED6D1CA6887400B992BF /* JobSearchResultsModelController.swift */; };
 		251FED701CA6887D00B992BF /* TaskSearchResultsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED6F1CA6887D00B992BF /* TaskSearchResultsModelController.swift */; };
 		251FED721CA6888100B992BF /* UserSearchResultsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED711CA6888100B992BF /* UserSearchResultsModelController.swift */; };
-		251FED741CA688AB00B992BF /* JobSearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED731CA688AB00B992BF /* JobSearchResultModel.swift */; };
-		251FED781CA688B300B992BF /* UserSearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED771CA688B300B992BF /* UserSearchResultModel.swift */; };
-		251FED7A1CA688DC00B992BF /* TaskSearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED791CA688DC00B992BF /* TaskSearchResultModel.swift */; };
+		251FED741CA688AB00B992BF /* JobSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED731CA688AB00B992BF /* JobSearchResult.swift */; };
+		251FED781CA688B300B992BF /* UserSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED771CA688B300B992BF /* UserSearchResult.swift */; };
+		251FED7A1CA688DC00B992BF /* TaskSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED791CA688DC00B992BF /* TaskSearchResult.swift */; };
 		25A9BFBA1CA14E9E00634A63 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB01CA14E9E00634A63 /* UserModel.swift */; };
 		25A9BFBB1CA14E9E00634A63 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25A9BFB11CA14E9E00634A63 /* User.storyboard */; };
 		25A9BFBC1CA14E9E00634A63 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB31CA14E9E00634A63 /* ForgotPasswordViewController.swift */; };
@@ -77,6 +80,9 @@
 /* Begin PBXFileReference section */
 		090F48691CA9DF170028E656 /* CircularImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
 		091DEE8A1C989CFD00B53CEB /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		091F8DE91CC6D6C8006AE04C /* JobSearchSuggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchSuggestion.swift; sourceTree = "<group>"; };
+		091F8DEB1CC6D6EB006AE04C /* TaskSearchSuggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchSuggestion.swift; sourceTree = "<group>"; };
+		091F8DED1CC6D716006AE04C /* UserSearchSuggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchSuggestion.swift; sourceTree = "<group>"; };
 		0920DA3B1C96007A0032EB9C /* TaskApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0920DA3E1C96007A0032EB9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0920DA451C96007A0032EB9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -135,9 +141,9 @@
 		251FED6D1CA6887400B992BF /* JobSearchResultsModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchResultsModelController.swift; sourceTree = "<group>"; };
 		251FED6F1CA6887D00B992BF /* TaskSearchResultsModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchResultsModelController.swift; sourceTree = "<group>"; };
 		251FED711CA6888100B992BF /* UserSearchResultsModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchResultsModelController.swift; sourceTree = "<group>"; };
-		251FED731CA688AB00B992BF /* JobSearchResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchResultModel.swift; sourceTree = "<group>"; };
-		251FED771CA688B300B992BF /* UserSearchResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchResultModel.swift; sourceTree = "<group>"; };
-		251FED791CA688DC00B992BF /* TaskSearchResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchResultModel.swift; sourceTree = "<group>"; };
+		251FED731CA688AB00B992BF /* JobSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchResult.swift; sourceTree = "<group>"; };
+		251FED771CA688B300B992BF /* UserSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchResult.swift; sourceTree = "<group>"; };
+		251FED791CA688DC00B992BF /* TaskSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchResult.swift; sourceTree = "<group>"; };
 		25A9BFB01CA14E9E00634A63 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		25A9BFB11CA14E9E00634A63 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		25A9BFB31CA14E9E00634A63 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -390,6 +396,9 @@
 		09DDC19E1CC6D36500EA7C50 /* Suggestions */ = {
 			isa = PBXGroup;
 			children = (
+				091F8DE91CC6D6C8006AE04C /* JobSearchSuggestion.swift */,
+				091F8DEB1CC6D6EB006AE04C /* TaskSearchSuggestion.swift */,
+				091F8DED1CC6D716006AE04C /* UserSearchSuggestion.swift */,
 			);
 			path = Suggestions;
 			sourceTree = "<group>";
@@ -397,9 +406,9 @@
 		09DDC19F1CC6D36A00EA7C50 /* Results */ = {
 			isa = PBXGroup;
 			children = (
-				251FED731CA688AB00B992BF /* JobSearchResultModel.swift */,
-				251FED791CA688DC00B992BF /* TaskSearchResultModel.swift */,
-				251FED771CA688B300B992BF /* UserSearchResultModel.swift */,
+				251FED731CA688AB00B992BF /* JobSearchResult.swift */,
+				251FED791CA688DC00B992BF /* TaskSearchResult.swift */,
+				251FED771CA688B300B992BF /* UserSearchResult.swift */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -696,7 +705,7 @@
 				251FED6E1CA6887400B992BF /* JobSearchResultsModelController.swift in Sources */,
 				0967184B1C9C928B0058CF1A /* JobSearchSuggestionTableViewCell.swift in Sources */,
 				09F714041C9CF9DD0057C530 /* IncrementalLoadingSearchResultsViewController.swift in Sources */,
-				251FED741CA688AB00B992BF /* JobSearchResultModel.swift in Sources */,
+				251FED741CA688AB00B992BF /* JobSearchResult.swift in Sources */,
 				320F01C01CAD1D0500DF9287 /* ConversationTableViewController.swift in Sources */,
 				328415BB1CA12F3900FF8DF0 /* MessagingTableViewController.swift in Sources */,
 				25A9BFBA1CA14E9E00634A63 /* UserModel.swift in Sources */,
@@ -708,8 +717,9 @@
 				0953E2331C9A6730006E6FF0 /* QueryResultsModelControllerProtocol.swift in Sources */,
 				251FED701CA6887D00B992BF /* TaskSearchResultsModelController.swift in Sources */,
 				0960F8E61C9E5AA70051AA06 /* TabbedPageViewController.swift in Sources */,
+				091F8DEE1CC6D716006AE04C /* UserSearchSuggestion.swift in Sources */,
 				09D14BE21C96917D003E0791 /* MessagingViewController.swift in Sources */,
-				251FED7A1CA688DC00B992BF /* TaskSearchResultModel.swift in Sources */,
+				251FED7A1CA688DC00B992BF /* TaskSearchResult.swift in Sources */,
 				25EBFBD01CA3F66D00CCE557 /* PersonalViewController.swift in Sources */,
 				09DDC1971CC6C7C700EA7C50 /* UserSearchDisplayViewController.swift in Sources */,
 				09DDC1A71CC6D53000EA7C50 /* TaskSearchResultTableViewCell.swift in Sources */,
@@ -720,15 +730,17 @@
 				09DDC1951CC6C7BB00EA7C50 /* JobSearchDisplayViewController.swift in Sources */,
 				09DDC1A31CC6D41700EA7C50 /* UserSearchSuggestionsModelController.swift in Sources */,
 				099B05881C97794F00D3AE36 /* MainTabBarControllerDelegate.swift in Sources */,
-				251FED781CA688B300B992BF /* UserSearchResultModel.swift in Sources */,
+				251FED781CA688B300B992BF /* UserSearchResult.swift in Sources */,
 				09D14BE61C96918F003E0791 /* SocialViewController.swift in Sources */,
 				0920DA3F1C96007A0032EB9C /* AppDelegate.swift in Sources */,
 				328415BD1CA1329800FF8DF0 /* MessagingTableViewCell.swift in Sources */,
 				0933A3631CC5D2A3001E9CB2 /* SearchDisplayViewController.swift in Sources */,
+				091F8DEA1CC6D6C8006AE04C /* JobSearchSuggestion.swift in Sources */,
 				25EBFBC31CA3D47E00CCE557 /* APIKeys.swift in Sources */,
 				25A9BFBC1CA14E9E00634A63 /* ForgotPasswordViewController.swift in Sources */,
 				09D14BE01C9690B7003E0791 /* MainTabBarController.swift in Sources */,
 				251FED6C1CA6856B00B992BF /* ProfileViewController.swift in Sources */,
+				091F8DEC1CC6D6EB006AE04C /* TaskSearchSuggestion.swift in Sources */,
 				320F01C21CAD1FE000DF9287 /* ConversationTableViewCell.swift in Sources */,
 				09DDC1A91CC6D53700EA7C50 /* UserSearchResultTableViewCell.swift in Sources */,
 				090F486A1CA9DF170028E656 /* CircularImageView.swift in Sources */,

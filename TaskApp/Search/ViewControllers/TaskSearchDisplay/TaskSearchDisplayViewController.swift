@@ -9,18 +9,28 @@
 import UIKit
 
 class TaskSearchDisplayViewController: SearchDisplayViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        searchResults = TaskSearchResultsModelController()
-        searchResultsViewController = UIStoryboard(name: "Search", bundle: nil)
+   class func initFromStoryboard() -> TaskSearchDisplayViewController
+    {
+        let searchResultsViewController = UIStoryboard(name: "Search", bundle: nil)
             .instantiateViewControllerWithIdentifier("TaskSearchResultsViewController")
             as! IncrementalLoadingTableViewController
-    
-        searchSuggestions = TaskSearchSuggestionsModelController()
-        searchSuggestionsViewController = UIStoryboard(name: "Search", bundle: nil)
+        searchResultsViewController.tableView.dataSource = TaskSearchResultsModelController()
+        
+        let searchSuggestionsViewController = UIStoryboard(name: "Search", bundle: nil)
             .instantiateViewControllerWithIdentifier("TaskSearchSuggestionsViewController")
             as! UITableViewController
+        searchSuggestionsViewController.tableView.dataSource = TaskSearchSuggestionsModelController()
+
+        let taskSearchDisplayViewController = SearchDisplayViewController.initFromStoryboard(
+            "Search", identifier: "TaskSearchDisplayViewController",
+            searchResultsViewController: searchResultsViewController,
+            searchSuggestionsViewController: searchSuggestionsViewController)
+        
+        return taskSearchDisplayViewController as! TaskSearchDisplayViewController
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {

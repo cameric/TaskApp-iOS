@@ -1,5 +1,5 @@
 //
-//  JobSearchResultModel.swift
+//  TaskSearchResult.swift
 //  TaskApp
 //
 //  Created by Spencer Michaels on 2016/3/18.
@@ -8,5 +8,5 @@
 
 import AVOSCloud
 
-class JobSearchResult: AVObject, AVSubclassing {
+class TaskSearchResult: AVObject, AVSubclassing {
 }

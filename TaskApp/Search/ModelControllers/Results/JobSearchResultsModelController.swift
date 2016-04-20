@@ -49,7 +49,7 @@ extension JobSearchResultsModelController : UITableViewDataSource {
     }
     
     @objc func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return results.count
+        return count
     }
     
     @objc func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
