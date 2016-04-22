@@ -24,6 +24,9 @@
                                         <rect key="frame" x="271" y="35" width="59" height="30"/>
                                         <accessibility key="accessibilityConfiguration" label="SEARCH"/>
                                         <state key="normal" title="SEARCH"/>
+                                        <connections>
+                                            <segue destination="N2e-SK-zDQ" kind="show" id="QlF-ME-Avi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.69706108320000004" blue="0.0001922522367" alpha="1" colorSpace="calibratedRGB"/>
@@ -51,9 +54,6 @@
                             <constraint firstItem="WKT-qL-FJD" firstAttribute="top" secondItem="7Wo-Rh-QTn" secondAttribute="bottom" id="fze-W8-gAe"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <segue destination="N2e-SK-zDQ" kind="show" identifier="ShowSearchSegue" id="K0o-xN-9Jh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLI-yO-YY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
