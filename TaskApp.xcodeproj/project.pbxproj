@@ -9,50 +9,28 @@
 /* Begin PBXBuildFile section */
 		090F486A1CA9DF170028E656 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090F48691CA9DF170028E656 /* CircularImageView.swift */; };
 		091DEE8B1C989CFD00B53CEB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091DEE8A1C989CFD00B53CEB /* Colors.swift */; };
-		091F8DEA1CC6D6C8006AE04C /* JobSearchSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F8DE91CC6D6C8006AE04C /* JobSearchSuggestion.swift */; };
-		091F8DEC1CC6D6EB006AE04C /* TaskSearchSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F8DEB1CC6D6EB006AE04C /* TaskSearchSuggestion.swift */; };
-		091F8DEE1CC6D716006AE04C /* UserSearchSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091F8DED1CC6D716006AE04C /* UserSearchSuggestion.swift */; };
 		0920DA3F1C96007A0032EB9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920DA3E1C96007A0032EB9C /* AppDelegate.swift */; };
 		0920DA461C96007A0032EB9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0920DA441C96007A0032EB9C /* Main.storyboard */; };
 		0920DA481C96007A0032EB9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0920DA471C96007A0032EB9C /* Assets.xcassets */; };
 		0920DA4B1C96007A0032EB9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0920DA491C96007A0032EB9C /* LaunchScreen.storyboard */; };
 		0920DA561C96007B0032EB9C /* TaskAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920DA551C96007B0032EB9C /* TaskAppTests.swift */; };
-		0933A3631CC5D2A3001E9CB2 /* SearchDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0933A3621CC5D2A3001E9CB2 /* SearchDisplayViewController.swift */; };
-		0953E2331C9A6730006E6FF0 /* QueryResultsModelControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953E2321C9A6730006E6FF0 /* QueryResultsModelControllerProtocol.swift */; };
+		0953E2331C9A6730006E6FF0 /* IncrementalQueryTableViewDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953E2321C9A6730006E6FF0 /* IncrementalQueryTableViewDataSourceProtocol.swift */; };
 		0960F8E61C9E5AA70051AA06 /* TabbedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960F8E51C9E5AA70051AA06 /* TabbedPageViewController.swift */; };
 		0965E12D1CAA4D49003866D0 /* MultiTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965E12C1CAA4D49003866D0 /* MultiTextFieldViewController.swift */; };
-		0967184B1C9C928B0058CF1A /* JobSearchSuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967184A1C9C928B0058CF1A /* JobSearchSuggestionTableViewCell.swift */; };
 		099B05881C97794F00D3AE36 /* MainTabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099B05871C97794F00D3AE36 /* MainTabBarControllerDelegate.swift */; };
 		09D14BD31C96675C003E0791 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BD21C96675C003E0791 /* SearchViewController.swift */; };
 		09D14BD61C968C89003E0791 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D14BD81C968C89003E0791 /* Search.storyboard */; };
 		09D14BE01C9690B7003E0791 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BDF1C9690B7003E0791 /* MainTabBarController.swift */; };
 		09D14BE21C96917D003E0791 /* MessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BE11C96917D003E0791 /* MessagingViewController.swift */; };
 		09D14BE61C96918F003E0791 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BE51C96918F003E0791 /* SocialViewController.swift */; };
-		09DDC1951CC6C7BB00EA7C50 /* JobSearchDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC1941CC6C7BB00EA7C50 /* JobSearchDisplayViewController.swift */; };
-		09DDC1971CC6C7C700EA7C50 /* UserSearchDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC1961CC6C7C700EA7C50 /* UserSearchDisplayViewController.swift */; };
-		09DDC1991CC6C7CF00EA7C50 /* TaskSearchDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC1981CC6C7CF00EA7C50 /* TaskSearchDisplayViewController.swift */; };
-		09DDC19B1CC6D0DB00EA7C50 /* JobSearchSuggestionsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC19A1CC6D0DB00EA7C50 /* JobSearchSuggestionsModelController.swift */; };
-		09DDC19D1CC6D32B00EA7C50 /* JobSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC19C1CC6D32B00EA7C50 /* JobSearchResultTableViewCell.swift */; };
-		09DDC1A11CC6D40C00EA7C50 /* TaskSearchSuggestionsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC1A01CC6D40C00EA7C50 /* TaskSearchSuggestionsModelController.swift */; };
-		09DDC1A31CC6D41700EA7C50 /* UserSearchSuggestionsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC1A21CC6D41700EA7C50 /* UserSearchSuggestionsModelController.swift */; };
-		09DDC1A71CC6D53000EA7C50 /* TaskSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC1A61CC6D53000EA7C50 /* TaskSearchResultTableViewCell.swift */; };
-		09DDC1A91CC6D53700EA7C50 /* UserSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC1A81CC6D53700EA7C50 /* UserSearchResultTableViewCell.swift */; };
-		09DDC1AB1CC6D55000EA7C50 /* TaskSearchSuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC1AA1CC6D55000EA7C50 /* TaskSearchSuggestionTableViewCell.swift */; };
-		09DDC1AD1CC6D55800EA7C50 /* UserSearchSuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DDC1AC1CC6D55800EA7C50 /* UserSearchSuggestionTableViewCell.swift */; };
 		09F714041C9CF9DD0057C530 /* IncrementalLoadingSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F714031C9CF9DD0057C530 /* IncrementalLoadingSearchResultsViewController.swift */; };
 		09FAC6961C9607DA0041DE5E /* Social.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6981C9607DA0041DE5E /* Social.storyboard */; };
 		09FAC69F1C9607FD0041DE5E /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6A11C9607FD0041DE5E /* Messaging.storyboard */; };
 		09FAC6A81C96080A0041DE5E /* Personal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6AA1C96080A0041DE5E /* Personal.storyboard */; };
 		251FED6A1CA6852200B992BF /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251FED691CA6852200B992BF /* Profile.storyboard */; };
 		251FED6C1CA6856B00B992BF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED6B1CA6856B00B992BF /* ProfileViewController.swift */; };
-		251FED6E1CA6887400B992BF /* JobSearchResultsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED6D1CA6887400B992BF /* JobSearchResultsModelController.swift */; };
-		251FED701CA6887D00B992BF /* TaskSearchResultsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED6F1CA6887D00B992BF /* TaskSearchResultsModelController.swift */; };
-		251FED721CA6888100B992BF /* UserSearchResultsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED711CA6888100B992BF /* UserSearchResultsModelController.swift */; };
-		251FED741CA688AB00B992BF /* JobSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED731CA688AB00B992BF /* JobSearchResult.swift */; };
-		251FED781CA688B300B992BF /* UserSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED771CA688B300B992BF /* UserSearchResult.swift */; };
-		251FED7A1CA688DC00B992BF /* TaskSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FED791CA688DC00B992BF /* TaskSearchResult.swift */; };
 		25A9BFBA1CA14E9E00634A63 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB01CA14E9E00634A63 /* UserModel.swift */; };
-		25A9BFBB1CA14E9E00634A63 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25A9BFB11CA14E9E00634A63 /* User.storyboard */; };
+		25A9BFBB1CA14E9E00634A63 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25A9BFB11CA14E9E00634A63 /* Authentication.storyboard */; };
 		25A9BFBC1CA14E9E00634A63 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB31CA14E9E00634A63 /* ForgotPasswordViewController.swift */; };
 		25A9BFBD1CA14E9E00634A63 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB41CA14E9E00634A63 /* LoginViewController.swift */; };
 		25A9BFBE1CA14E9E00634A63 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A9BFB51CA14E9E00634A63 /* SignupViewController.swift */; };
@@ -80,9 +58,6 @@
 /* Begin PBXFileReference section */
 		090F48691CA9DF170028E656 /* CircularImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
 		091DEE8A1C989CFD00B53CEB /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		091F8DE91CC6D6C8006AE04C /* JobSearchSuggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchSuggestion.swift; sourceTree = "<group>"; };
-		091F8DEB1CC6D6EB006AE04C /* TaskSearchSuggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchSuggestion.swift; sourceTree = "<group>"; };
-		091F8DED1CC6D716006AE04C /* UserSearchSuggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchSuggestion.swift; sourceTree = "<group>"; };
 		0920DA3B1C96007A0032EB9C /* TaskApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0920DA3E1C96007A0032EB9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0920DA451C96007A0032EB9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,11 +69,9 @@
 		0920DA571C96007B0032EB9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0920DA711C96030D0032EB9C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		0920DA721C96030D0032EB9C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
-		0933A3621CC5D2A3001E9CB2 /* SearchDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDisplayViewController.swift; sourceTree = "<group>"; };
-		0953E2321C9A6730006E6FF0 /* QueryResultsModelControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryResultsModelControllerProtocol.swift; sourceTree = "<group>"; };
+		0953E2321C9A6730006E6FF0 /* IncrementalQueryTableViewDataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncrementalQueryTableViewDataSourceProtocol.swift; sourceTree = "<group>"; };
 		0960F8E51C9E5AA70051AA06 /* TabbedPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbedPageViewController.swift; sourceTree = "<group>"; };
 		0965E12C1CAA4D49003866D0 /* MultiTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiTextFieldViewController.swift; sourceTree = "<group>"; };
-		0967184A1C9C928B0058CF1A /* JobSearchSuggestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchSuggestionTableViewCell.swift; sourceTree = "<group>"; };
 		097D85A41CAAF9C100E22814 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		099B05871C97794F00D3AE36 /* MainTabBarControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerDelegate.swift; sourceTree = "<group>"; };
 		09D14BD21C96675C003E0791 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -109,17 +82,6 @@
 		09D14BDF1C9690B7003E0791 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		09D14BE11C96917D003E0791 /* MessagingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingViewController.swift; sourceTree = "<group>"; };
 		09D14BE51C96918F003E0791 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
-		09DDC1941CC6C7BB00EA7C50 /* JobSearchDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchDisplayViewController.swift; sourceTree = "<group>"; };
-		09DDC1961CC6C7C700EA7C50 /* UserSearchDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchDisplayViewController.swift; sourceTree = "<group>"; };
-		09DDC1981CC6C7CF00EA7C50 /* TaskSearchDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchDisplayViewController.swift; sourceTree = "<group>"; };
-		09DDC19A1CC6D0DB00EA7C50 /* JobSearchSuggestionsModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchSuggestionsModelController.swift; sourceTree = "<group>"; };
-		09DDC19C1CC6D32B00EA7C50 /* JobSearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchResultTableViewCell.swift; sourceTree = "<group>"; };
-		09DDC1A01CC6D40C00EA7C50 /* TaskSearchSuggestionsModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchSuggestionsModelController.swift; sourceTree = "<group>"; };
-		09DDC1A21CC6D41700EA7C50 /* UserSearchSuggestionsModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchSuggestionsModelController.swift; sourceTree = "<group>"; };
-		09DDC1A61CC6D53000EA7C50 /* TaskSearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchResultTableViewCell.swift; sourceTree = "<group>"; };
-		09DDC1A81CC6D53700EA7C50 /* UserSearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchResultTableViewCell.swift; sourceTree = "<group>"; };
-		09DDC1AA1CC6D55000EA7C50 /* TaskSearchSuggestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchSuggestionTableViewCell.swift; sourceTree = "<group>"; };
-		09DDC1AC1CC6D55800EA7C50 /* UserSearchSuggestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchSuggestionTableViewCell.swift; sourceTree = "<group>"; };
 		09F714031C9CF9DD0057C530 /* IncrementalLoadingSearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncrementalLoadingSearchResultsViewController.swift; sourceTree = "<group>"; };
 		09FAC6921C96063D0041DE5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09FAC6931C96063D0041DE5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -138,14 +100,8 @@
 		1FE9C1485ADC66CA607AE068 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		251FED691CA6852200B992BF /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		251FED6B1CA6856B00B992BF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		251FED6D1CA6887400B992BF /* JobSearchResultsModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchResultsModelController.swift; sourceTree = "<group>"; };
-		251FED6F1CA6887D00B992BF /* TaskSearchResultsModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchResultsModelController.swift; sourceTree = "<group>"; };
-		251FED711CA6888100B992BF /* UserSearchResultsModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchResultsModelController.swift; sourceTree = "<group>"; };
-		251FED731CA688AB00B992BF /* JobSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchResult.swift; sourceTree = "<group>"; };
-		251FED771CA688B300B992BF /* UserSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchResult.swift; sourceTree = "<group>"; };
-		251FED791CA688DC00B992BF /* TaskSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSearchResult.swift; sourceTree = "<group>"; };
 		25A9BFB01CA14E9E00634A63 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		25A9BFB11CA14E9E00634A63 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		25A9BFB11CA14E9E00634A63 /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		25A9BFB31CA14E9E00634A63 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		25A9BFB41CA14E9E00634A63 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		25A9BFB51CA14E9E00634A63 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -219,16 +175,10 @@
 		0920DA3D1C96007A0032EB9C /* TaskApp */ = {
 			isa = PBXGroup;
 			children = (
+				0932B5AC1CC9F5770091CB38 /* Common */,
 				091DEE871C989CD600B53CEB /* Constants */,
 				099B05861C9778F500D3AE36 /* Main */,
-				0920DA621C96018D0032EB9C /* Messaging */,
-				25A9BFAF1CA14E9E00634A63 /* Models */,
-				0920DA631C9601950032EB9C /* Personal */,
-				251FED671CA684CE00B992BF /* Profile */,
-				0920DA661C9601C30032EB9C /* Search */,
-				0920DA611C9601890032EB9C /* Social */,
-				25A9BFA91CA14E9E00634A63 /* User */,
-				090F48681CA9DF010028E656 /* Views */,
+				0932B5AB1CC9F5190091CB38 /* Tabs */,
 				0920DA3E1C96007A0032EB9C /* AppDelegate.swift */,
 				0920DA471C96007A0032EB9C /* Assets.xcassets */,
 				097D85A41CAAF9C100E22814 /* Bridging-Header.h */,
@@ -271,6 +221,7 @@
 		0920DA631C9601950032EB9C /* Personal */ = {
 			isa = PBXGroup;
 			children = (
+				25A9BFA91CA14E9E00634A63 /* Authentication */,
 				25EBFBC51CA3D74B00CCE557 /* ViewControllers */,
 				09FAC6AA1C96080A0041DE5E /* Personal.storyboard */,
 			);
@@ -280,8 +231,6 @@
 		0920DA661C9601C30032EB9C /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				0964360E1C9B3A2000AB71CC /* ModelControllers */,
-				0953E2311C9A66BC006E6FF0 /* Models */,
 				0964360F1C9B3A3500AB71CC /* ViewControllers */,
 				096436101C9B3A3B00AB71CC /* Views */,
 				09D14BD81C968C89003E0791 /* Search.storyboard */,
@@ -289,21 +238,50 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		0953E2311C9A66BC006E6FF0 /* Models */ = {
+		0932B5A91CC9F4900091CB38 /* IncrementalQuery */ = {
 			isa = PBXGroup;
 			children = (
-				09DDC19F1CC6D36A00EA7C50 /* Results */,
-				09DDC19E1CC6D36500EA7C50 /* Suggestions */,
+				0964360E1C9B3A2000AB71CC /* ModelControllers */,
+				0932B5AA1CC9F4A60091CB38 /* ViewControllers */,
 			);
-			path = Models;
+			path = IncrementalQuery;
+			sourceTree = "<group>";
+		};
+		0932B5AA1CC9F4A60091CB38 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				09F714031C9CF9DD0057C530 /* IncrementalLoadingSearchResultsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0932B5AB1CC9F5190091CB38 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				0920DA621C96018D0032EB9C /* Messaging */,
+				0920DA631C9601950032EB9C /* Personal */,
+				0920DA661C9601C30032EB9C /* Search */,
+				0920DA611C9601890032EB9C /* Social */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		0932B5AC1CC9F5770091CB38 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0932B5A91CC9F4900091CB38 /* IncrementalQuery */,
+				25A9BFAF1CA14E9E00634A63 /* Models */,
+				251FED671CA684CE00B992BF /* Profile */,
+				090F48681CA9DF010028E656 /* Views */,
+				0960F8E51C9E5AA70051AA06 /* TabbedPageViewController.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		0964360E1C9B3A2000AB71CC /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
-				09DDC1891CC6C31300EA7C50 /* Results */,
-				09DDC18B1CC6C32B00EA7C50 /* Suggestions */,
-				0953E2321C9A6730006E6FF0 /* QueryResultsModelControllerProtocol.swift */,
+				0953E2321C9A6730006E6FF0 /* IncrementalQueryTableViewDataSourceProtocol.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -311,13 +289,7 @@
 		0964360F1C9B3A3500AB71CC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				09DDC18D1CC6C71800EA7C50 /* JobSearchDisplay */,
-				09DDC18F1CC6C73600EA7C50 /* TaskSearchDisplay */,
-				09DDC18E1CC6C71F00EA7C50 /* UserSearchDisplay */,
-				09F714031C9CF9DD0057C530 /* IncrementalLoadingSearchResultsViewController.swift */,
-				0933A3621CC5D2A3001E9CB2 /* SearchDisplayViewController.swift */,
 				09D14BD21C96675C003E0791 /* SearchViewController.swift */,
-				0960F8E51C9E5AA70051AA06 /* TabbedPageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -333,8 +305,6 @@
 		096718491C9C924E0058CF1A /* Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
-				09DDC1A51CC6D4AC00EA7C50 /* Results */,
-				09DDC1A41CC6D4A800EA7C50 /* Suggestions */,
 			);
 			path = "Table View Cells";
 			sourceTree = "<group>";
@@ -347,90 +317,6 @@
 				099B05871C97794F00D3AE36 /* MainTabBarControllerDelegate.swift */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		09DDC1891CC6C31300EA7C50 /* Results */ = {
-			isa = PBXGroup;
-			children = (
-				251FED6D1CA6887400B992BF /* JobSearchResultsModelController.swift */,
-				251FED6F1CA6887D00B992BF /* TaskSearchResultsModelController.swift */,
-				251FED711CA6888100B992BF /* UserSearchResultsModelController.swift */,
-			);
-			path = Results;
-			sourceTree = "<group>";
-		};
-		09DDC18B1CC6C32B00EA7C50 /* Suggestions */ = {
-			isa = PBXGroup;
-			children = (
-				09DDC19A1CC6D0DB00EA7C50 /* JobSearchSuggestionsModelController.swift */,
-				09DDC1A01CC6D40C00EA7C50 /* TaskSearchSuggestionsModelController.swift */,
-				09DDC1A21CC6D41700EA7C50 /* UserSearchSuggestionsModelController.swift */,
-			);
-			path = Suggestions;
-			sourceTree = "<group>";
-		};
-		09DDC18D1CC6C71800EA7C50 /* JobSearchDisplay */ = {
-			isa = PBXGroup;
-			children = (
-				09DDC1941CC6C7BB00EA7C50 /* JobSearchDisplayViewController.swift */,
-			);
-			path = JobSearchDisplay;
-			sourceTree = "<group>";
-		};
-		09DDC18E1CC6C71F00EA7C50 /* UserSearchDisplay */ = {
-			isa = PBXGroup;
-			children = (
-				09DDC1961CC6C7C700EA7C50 /* UserSearchDisplayViewController.swift */,
-			);
-			path = UserSearchDisplay;
-			sourceTree = "<group>";
-		};
-		09DDC18F1CC6C73600EA7C50 /* TaskSearchDisplay */ = {
-			isa = PBXGroup;
-			children = (
-				09DDC1981CC6C7CF00EA7C50 /* TaskSearchDisplayViewController.swift */,
-			);
-			path = TaskSearchDisplay;
-			sourceTree = "<group>";
-		};
-		09DDC19E1CC6D36500EA7C50 /* Suggestions */ = {
-			isa = PBXGroup;
-			children = (
-				091F8DE91CC6D6C8006AE04C /* JobSearchSuggestion.swift */,
-				091F8DEB1CC6D6EB006AE04C /* TaskSearchSuggestion.swift */,
-				091F8DED1CC6D716006AE04C /* UserSearchSuggestion.swift */,
-			);
-			path = Suggestions;
-			sourceTree = "<group>";
-		};
-		09DDC19F1CC6D36A00EA7C50 /* Results */ = {
-			isa = PBXGroup;
-			children = (
-				251FED731CA688AB00B992BF /* JobSearchResult.swift */,
-				251FED791CA688DC00B992BF /* TaskSearchResult.swift */,
-				251FED771CA688B300B992BF /* UserSearchResult.swift */,
-			);
-			path = Results;
-			sourceTree = "<group>";
-		};
-		09DDC1A41CC6D4A800EA7C50 /* Suggestions */ = {
-			isa = PBXGroup;
-			children = (
-				0967184A1C9C928B0058CF1A /* JobSearchSuggestionTableViewCell.swift */,
-				09DDC1AA1CC6D55000EA7C50 /* TaskSearchSuggestionTableViewCell.swift */,
-				09DDC1AC1CC6D55800EA7C50 /* UserSearchSuggestionTableViewCell.swift */,
-			);
-			path = Suggestions;
-			sourceTree = "<group>";
-		};
-		09DDC1A51CC6D4AC00EA7C50 /* Results */ = {
-			isa = PBXGroup;
-			children = (
-				09DDC19C1CC6D32B00EA7C50 /* JobSearchResultTableViewCell.swift */,
-				09DDC1A61CC6D53000EA7C50 /* TaskSearchResultTableViewCell.swift */,
-				09DDC1A81CC6D53700EA7C50 /* UserSearchResultTableViewCell.swift */,
-			);
-			path = Results;
 			sourceTree = "<group>";
 		};
 		251FED671CA684CE00B992BF /* Profile */ = {
@@ -450,13 +336,13 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		25A9BFA91CA14E9E00634A63 /* User */ = {
+		25A9BFA91CA14E9E00634A63 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
 				25A9BFB21CA14E9E00634A63 /* ViewControllers */,
-				25A9BFB11CA14E9E00634A63 /* User.storyboard */,
+				25A9BFB11CA14E9E00634A63 /* Authentication.storyboard */,
 			);
-			path = User;
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		25A9BFAF1CA14E9E00634A63 /* Models */ = {
@@ -629,7 +515,7 @@
 				0920DA481C96007A0032EB9C /* Assets.xcassets in Resources */,
 				0920DA461C96007A0032EB9C /* Main.storyboard in Resources */,
 				09D14BD61C968C89003E0791 /* Search.storyboard in Resources */,
-				25A9BFBB1CA14E9E00634A63 /* User.storyboard in Resources */,
+				25A9BFBB1CA14E9E00634A63 /* Authentication.storyboard in Resources */,
 				251FED6A1CA6852200B992BF /* Profile.storyboard in Resources */,
 				09FAC6961C9607DA0041DE5E /* Social.storyboard in Resources */,
 				09FAC69F1C9607FD0041DE5E /* Messaging.storyboard in Resources */,
@@ -699,50 +585,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				25A9BFBD1CA14E9E00634A63 /* LoginViewController.swift in Sources */,
-				09DDC19B1CC6D0DB00EA7C50 /* JobSearchSuggestionsModelController.swift in Sources */,
-				09DDC1A11CC6D40C00EA7C50 /* TaskSearchSuggestionsModelController.swift in Sources */,
 				09D14BD31C96675C003E0791 /* SearchViewController.swift in Sources */,
-				251FED6E1CA6887400B992BF /* JobSearchResultsModelController.swift in Sources */,
-				0967184B1C9C928B0058CF1A /* JobSearchSuggestionTableViewCell.swift in Sources */,
 				09F714041C9CF9DD0057C530 /* IncrementalLoadingSearchResultsViewController.swift in Sources */,
-				251FED741CA688AB00B992BF /* JobSearchResult.swift in Sources */,
 				320F01C01CAD1D0500DF9287 /* ConversationTableViewController.swift in Sources */,
 				328415BB1CA12F3900FF8DF0 /* MessagingTableViewController.swift in Sources */,
 				25A9BFBA1CA14E9E00634A63 /* UserModel.swift in Sources */,
 				328415BF1CA134DA00FF8DF0 /* ConversationViewController.swift in Sources */,
 				091DEE8B1C989CFD00B53CEB /* Colors.swift in Sources */,
-				09DDC1AB1CC6D55000EA7C50 /* TaskSearchSuggestionTableViewCell.swift in Sources */,
-				09DDC1AD1CC6D55800EA7C50 /* UserSearchSuggestionTableViewCell.swift in Sources */,
-				09DDC19D1CC6D32B00EA7C50 /* JobSearchResultTableViewCell.swift in Sources */,
-				0953E2331C9A6730006E6FF0 /* QueryResultsModelControllerProtocol.swift in Sources */,
-				251FED701CA6887D00B992BF /* TaskSearchResultsModelController.swift in Sources */,
+				0953E2331C9A6730006E6FF0 /* IncrementalQueryTableViewDataSourceProtocol.swift in Sources */,
 				0960F8E61C9E5AA70051AA06 /* TabbedPageViewController.swift in Sources */,
-				091F8DEE1CC6D716006AE04C /* UserSearchSuggestion.swift in Sources */,
 				09D14BE21C96917D003E0791 /* MessagingViewController.swift in Sources */,
-				251FED7A1CA688DC00B992BF /* TaskSearchResult.swift in Sources */,
 				25EBFBD01CA3F66D00CCE557 /* PersonalViewController.swift in Sources */,
-				09DDC1971CC6C7C700EA7C50 /* UserSearchDisplayViewController.swift in Sources */,
-				09DDC1A71CC6D53000EA7C50 /* TaskSearchResultTableViewCell.swift in Sources */,
 				320F01C41CAD296300DF9287 /* ConversationTableViewCellConversationView.swift in Sources */,
-				09DDC1991CC6C7CF00EA7C50 /* TaskSearchDisplayViewController.swift in Sources */,
 				0965E12D1CAA4D49003866D0 /* MultiTextFieldViewController.swift in Sources */,
-				251FED721CA6888100B992BF /* UserSearchResultsModelController.swift in Sources */,
-				09DDC1951CC6C7BB00EA7C50 /* JobSearchDisplayViewController.swift in Sources */,
-				09DDC1A31CC6D41700EA7C50 /* UserSearchSuggestionsModelController.swift in Sources */,
 				099B05881C97794F00D3AE36 /* MainTabBarControllerDelegate.swift in Sources */,
-				251FED781CA688B300B992BF /* UserSearchResult.swift in Sources */,
 				09D14BE61C96918F003E0791 /* SocialViewController.swift in Sources */,
 				0920DA3F1C96007A0032EB9C /* AppDelegate.swift in Sources */,
 				328415BD1CA1329800FF8DF0 /* MessagingTableViewCell.swift in Sources */,
-				0933A3631CC5D2A3001E9CB2 /* SearchDisplayViewController.swift in Sources */,
-				091F8DEA1CC6D6C8006AE04C /* JobSearchSuggestion.swift in Sources */,
 				25EBFBC31CA3D47E00CCE557 /* APIKeys.swift in Sources */,
 				25A9BFBC1CA14E9E00634A63 /* ForgotPasswordViewController.swift in Sources */,
 				09D14BE01C9690B7003E0791 /* MainTabBarController.swift in Sources */,
 				251FED6C1CA6856B00B992BF /* ProfileViewController.swift in Sources */,
-				091F8DEC1CC6D6EB006AE04C /* TaskSearchSuggestion.swift in Sources */,
 				320F01C21CAD1FE000DF9287 /* ConversationTableViewCell.swift in Sources */,
-				09DDC1A91CC6D53700EA7C50 /* UserSearchResultTableViewCell.swift in Sources */,
 				090F486A1CA9DF170028E656 /* CircularImageView.swift in Sources */,
 				25A9BFBE1CA14E9E00634A63 /* SignupViewController.swift in Sources */,
 			);

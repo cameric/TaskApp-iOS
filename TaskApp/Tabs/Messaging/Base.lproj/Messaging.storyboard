@@ -62,7 +62,7 @@
         <scene sceneID="9uY-mw-Tiu">
             <objects>
                 <tableViewController id="Xgd-zh-bbf" customClass="MessagingTableViewController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" id="eJU-oT-AYN">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" id="eJU-oT-AYN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -166,7 +166,7 @@
                                     <constraint firstItem="hsc-YU-qLH" firstAttribute="leading" secondItem="W3x-Mw-SJO" secondAttribute="trailing" constant="8" id="t0z-eZ-Elg"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Wm-Wn-mF9">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Wm-Wn-mF9">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="448"/>
                                 <connections>
                                     <segue destination="bx4-Jb-gvK" kind="embed" id="uuc-Bc-lsV"/>
@@ -180,6 +180,7 @@
                             <constraint firstItem="8Wm-Wn-mF9" firstAttribute="top" secondItem="bQn-9a-mog" secondAttribute="bottom" id="D9q-Qo-ETx"/>
                             <constraint firstItem="rWo-GT-8ve" firstAttribute="top" secondItem="Dhs-EX-bHo" secondAttribute="bottom" id="Qx6-Lg-8m8"/>
                             <constraint firstItem="8Wm-Wn-mF9" firstAttribute="leading" secondItem="kda-2f-83a" secondAttribute="leadingMargin" constant="-20" id="fk9-NM-HYu"/>
+                            <constraint firstItem="Dhs-EX-bHo" firstAttribute="top" secondItem="8Wm-Wn-mF9" secondAttribute="bottom" id="jey-j2-9gP"/>
                             <constraint firstItem="Dhs-EX-bHo" firstAttribute="leading" secondItem="kda-2f-83a" secondAttribute="leadingMargin" constant="-20" id="og9-kB-hHG"/>
                         </constraints>
                     </view>
