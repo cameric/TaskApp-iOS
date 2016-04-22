@@ -139,6 +139,10 @@ class IncrementalLoadingTableViewController: UITableViewController, IncrementalQ
         }
     }
     
+    /**
+        Called when a cell is selected. If the cell is the error cell, selecting it
+        retries loading search results.
+     */
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath)
         

@@ -13,9 +13,7 @@ class SearchViewController: UIViewController {
     weak var tabbedPageViewController: TabbedPageViewController!
     
     @IBOutlet private var searchBar: UISearchBar! {
-        didSet {
-            searchBar.delegate = self
-        }
+        didSet { searchBar.delegate = self }
     }
     
     override func viewDidLoad() {
@@ -42,11 +40,5 @@ extension SearchViewController: UISearchBarDelegate {
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-    }
-    
-    private func updateSearchKeyword(keyword: String) {
-    }
-    
-    private func displaySearchResults(show: Bool) {
     }
 }
