@@ -50,7 +50,7 @@ class LoginViewController: MultiTextFieldViewController, WeiboSDKDelegate {
         User.logInWithUsernameInBackground(username, password: password) { (user: AVUser!, error: NSError!) in
             MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
             if (error != nil) {
-                self.statusLabel.text = "发生错误" // TODO: internationalize
+                self.statusLabel.text = "\(error.localizedDescription)" // TODO: internationalize
             } else {
                 self.statusLabel.text = "登陆成功"
                 
