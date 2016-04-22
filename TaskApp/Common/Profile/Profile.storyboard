@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Profile View Controller-->
@@ -42,7 +43,7 @@
         <!--View Controller-->
         <scene sceneID="ZGe-WE-d2j">
             <objects>
-                <viewController id="gnN-0i-DzC" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="gnN-0i-DzC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QcV-HO-lgB"/>
                         <viewControllerLayoutGuide type="bottom" id="oTq-yx-kw9"/>
@@ -51,22 +52,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z3W-Uk-DzZ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="284"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3W-Uk-DzZ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FIS-9e-o9N">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="284"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-default-bg" translatesAutoresizingMaskIntoConstraints="NO" id="PwQ-bp-8ee">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="969"/>
                                     </imageView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="PwQ-bp-8ee" firstAttribute="top" secondItem="Z3W-Uk-DzZ" secondAttribute="top" id="4Qp-JR-0OQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="PwQ-bp-8ee" secondAttribute="bottom" id="FeY-YF-g5c"/>
+                                    <constraint firstItem="PwQ-bp-8ee" firstAttribute="width" secondItem="Z3W-Uk-DzZ" secondAttribute="width" id="L5Z-R0-X61"/>
+                                    <constraint firstItem="PwQ-bp-8ee" firstAttribute="leading" secondItem="Z3W-Uk-DzZ" secondAttribute="leading" id="O1F-7A-cEt"/>
+                                    <constraint firstAttribute="trailing" secondItem="PwQ-bp-8ee" secondAttribute="trailing" id="zyb-Mp-Swo"/>
+                                </constraints>
                             </scrollView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5sV-Sm-Ebk">
-                                <rect key="frame" x="186" y="346" width="240" height="128"/>
-                                <connections>
-                                    <segue destination="PGD-nO-gY3" kind="embed" id="Fdo-mI-Fuk"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oTq-yx-kw9" firstAttribute="top" secondItem="Z3W-Uk-DzZ" secondAttribute="bottom" id="6pi-1o-hWC"/>
+                            <constraint firstItem="Z3W-Uk-DzZ" firstAttribute="top" secondItem="QcV-HO-lgB" secondAttribute="bottom" id="JLN-nn-TE5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z3W-Uk-DzZ" secondAttribute="trailing" constant="-20" id="TdO-S4-iBN"/>
+                            <constraint firstItem="Z3W-Uk-DzZ" firstAttribute="leading" secondItem="z7X-BS-MDY" secondAttribute="leadingMargin" constant="-20" id="baJ-ga-ASY"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFT-ZU-nY8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -78,15 +86,15 @@
             <objects>
                 <tableViewController id="PGD-nO-gY3" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1nA-vb-n2S">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yT7-kr-nXv">
-                                <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yT7-kr-nXv" id="No4-jb-3Mu">
-                                    <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -99,7 +107,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uw3-On-4Jd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1920" y="733"/>
+            <point key="canvasLocation" x="1920" y="931"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vq6-Z6-1B8">
@@ -120,4 +128,7 @@
             <point key="canvasLocation" x="287" y="125"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="profile-default-bg" width="750" height="969"/>
+    </resources>
 </document>
