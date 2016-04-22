@@ -1,5 +1,5 @@
 //
-//  ConversationTableViewCellConversationView.swift
+//  MessageView.swift
 //  TaskApp
 //
 //  Created by Cam on 3/31/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConversationTableViewCellConversationView: UIView {
+class MessageView: UIView {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
