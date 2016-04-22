@@ -16,7 +16,7 @@
 		0920DA481C96007A0032EB9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0920DA471C96007A0032EB9C /* Assets.xcassets */; };
 		0920DA4B1C96007A0032EB9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0920DA491C96007A0032EB9C /* LaunchScreen.storyboard */; };
 		0920DA561C96007B0032EB9C /* TaskAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920DA551C96007B0032EB9C /* TaskAppTests.swift */; };
-		0953E2331C9A6730006E6FF0 /* IncrementalQueryTableViewDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953E2321C9A6730006E6FF0 /* IncrementalQueryTableViewDataSourceProtocol.swift */; };
+		0953E2331C9A6730006E6FF0 /* IncrementalQueryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953E2321C9A6730006E6FF0 /* IncrementalQueryProtocol.swift */; };
 		0960F8E61C9E5AA70051AA06 /* TabbedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960F8E51C9E5AA70051AA06 /* TabbedPageViewController.swift */; };
 		0965E12D1CAA4D49003866D0 /* MultiTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965E12C1CAA4D49003866D0 /* MultiTextFieldViewController.swift */; };
 		09D14BD31C96675C003E0791 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BD21C96675C003E0791 /* SearchViewController.swift */; };
@@ -71,7 +71,7 @@
 		0920DA571C96007B0032EB9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0920DA711C96030D0032EB9C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		0920DA721C96030D0032EB9C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
-		0953E2321C9A6730006E6FF0 /* IncrementalQueryTableViewDataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncrementalQueryTableViewDataSourceProtocol.swift; sourceTree = "<group>"; };
+		0953E2321C9A6730006E6FF0 /* IncrementalQueryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncrementalQueryProtocol.swift; sourceTree = "<group>"; };
 		0960F8E51C9E5AA70051AA06 /* TabbedPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbedPageViewController.swift; sourceTree = "<group>"; };
 		0965E12C1CAA4D49003866D0 /* MultiTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiTextFieldViewController.swift; sourceTree = "<group>"; };
 		097D85A41CAAF9C100E22814 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
@@ -319,7 +319,7 @@
 		0964360E1C9B3A2000AB71CC /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0953E2321C9A6730006E6FF0 /* IncrementalQueryTableViewDataSourceProtocol.swift */,
+				0953E2321C9A6730006E6FF0 /* IncrementalQueryProtocol.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -335,16 +335,8 @@
 		096436101C9B3A3B00AB71CC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				096718491C9C924E0058CF1A /* Table View Cells */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		096718491C9C924E0058CF1A /* Table View Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Table View Cells";
 			sourceTree = "<group>";
 		};
 		251FED671CA684CE00B992BF /* Profile */ = {
@@ -618,7 +610,7 @@
 				09033C9F1CC9F96F00C644F4 /* ConversationPreviewModelController.swift in Sources */,
 				328415BF1CA134DA00FF8DF0 /* ConversationViewController.swift in Sources */,
 				091DEE8B1C989CFD00B53CEB /* Colors.swift in Sources */,
-				0953E2331C9A6730006E6FF0 /* IncrementalQueryTableViewDataSourceProtocol.swift in Sources */,
+				0953E2331C9A6730006E6FF0 /* IncrementalQueryProtocol.swift in Sources */,
 				0960F8E61C9E5AA70051AA06 /* TabbedPageViewController.swift in Sources */,
 				09D14BE21C96917D003E0791 /* MessagingViewController.swift in Sources */,
 				25EBFBD01CA3F66D00CCE557 /* PersonalViewController.swift in Sources */,
