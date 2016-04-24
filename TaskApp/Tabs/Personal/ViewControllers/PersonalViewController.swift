@@ -44,7 +44,8 @@ class PersonalViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        
+        self.navigationController!.navigationBar.topItem!.title = "我的"
         self.personalTableView.contentInset = UIEdgeInsetsMake(-36, 0, 0, 0);
         self.personalTableView.reloadData()
         
@@ -75,6 +76,13 @@ class PersonalViewController: UITableViewController {
     }
     
     // MARK: Actions
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ToProfileSegue" {
+            let profileVC = segue.destinationViewController as! ProfileContainerViewController
+            profileVC.userForProfile = User.currentUser()
+        }
+    }
+    
     @IBAction func didTapLoginButton(sender: UITapGestureRecognizer) {
         if User.currentUser() != nil {
             self.performSegueWithIdentifier("ToProfileSegue", sender: self)
