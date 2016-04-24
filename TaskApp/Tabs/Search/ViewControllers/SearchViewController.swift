@@ -26,6 +26,11 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        searchBar.showsCancelButton = true
+        searchBar.becomeFirstResponder()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

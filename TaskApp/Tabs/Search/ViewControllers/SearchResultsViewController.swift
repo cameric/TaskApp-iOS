@@ -26,6 +26,8 @@ class SearchResultsViewController: UIViewController {
     // MARK: UIViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchBar.text = keyword
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,7 +44,7 @@ class SearchResultsViewController: UIViewController {
     @IBAction func searchBarOverlayButtonPressed(sender: UIButton) {
         if (sender == searchBarOverlayButton) {
             // Close self
-            presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+            presentingViewController?.dismissViewControllerAnimated(false, completion: nil)
         }
     }
 }

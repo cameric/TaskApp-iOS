@@ -43,6 +43,10 @@ class IncrementalLoadingTableViewController: UITableViewController, IncrementalQ
         still results to load or an error occurred while loading results.
      */
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard source != nil else {
+            return 0
+        }
+        
         if loadedAllResultsForCriteria || loadEncounteredError {
             return source.count + 1
         } else {

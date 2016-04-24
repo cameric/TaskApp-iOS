@@ -8,6 +8,6 @@
 
 import UIKit
 
-class MessageModelController: IncrementalQueryTableViewDataSourceProtocol {
+/*class MessageModelController: IncrementalQueryTableViewDataSourceProtocol {
 
-}
+}*/

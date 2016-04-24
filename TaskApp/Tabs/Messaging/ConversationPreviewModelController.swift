@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ConversationPreviewModelController: IncrementalQueryTableViewDataSourceProtocol {
+/*class ConversationPreviewModelController: IncrementalQueryTableViewDataSourceProtocol {
 
-}
+}*/

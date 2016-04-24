@@ -1,0 +1,24 @@
+
+/* Class = "UIViewController"; title = "发现"; ObjectID = "MZo-qs-8zv"; */
+"MZo-qs-8zv.title" = "发现";
+
+/* Class = "UISegmentedControl"; bdx-kZ-QWb.segmentTitles[0] = "First"; ObjectID = "bdx-kZ-QWb"; */
+"bdx-kZ-QWb.segmentTitles[0]" = "First";
+
+/* Class = "UISegmentedControl"; bdx-kZ-QWb.segmentTitles[1] = "Second"; ObjectID = "bdx-kZ-QWb"; */
+"bdx-kZ-QWb.segmentTitles[1]" = "Second";
+
+/* Class = "UISegmentedControl"; bdx-kZ-QWb.segmentTitles[2] = "Third"; ObjectID = "bdx-kZ-QWb"; */
+"bdx-kZ-QWb.segmentTitles[2]" = "Third";
+
+/* Class = "UISegmentedControl"; bdx-kZ-QWb.segmentTitles[3] = "Fourth"; ObjectID = "bdx-kZ-QWb"; */
+"bdx-kZ-QWb.segmentTitles[3]" = "Fourth";
+
+/* Class = "UISegmentedControl"; bdx-kZ-QWb.segmentTitles[4] = "Fifth"; ObjectID = "bdx-kZ-QWb"; */
+"bdx-kZ-QWb.segmentTitles[4]" = "Fifth";
+
+/* Class = "UIButton"; accessibilityLabel = "SEARCH"; ObjectID = "nmG-tu-iYQ"; */
+"nmG-tu-iYQ.accessibilityLabel" = "SEARCH";
+
+/* Class = "UIButton"; normalTitle = "SEARCH"; ObjectID = "nmG-tu-iYQ"; */
+"nmG-tu-iYQ.normalTitle" = "SEARCH";

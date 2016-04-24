@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "我的任务"; ObjectID = "8kt-ds-Ngp"; */
+"8kt-ds-Ngp.text" = "我的任务";
+
+/* Class = "UILabel"; text = "我的发布"; ObjectID = "8sd-aG-mqk"; */
+"8sd-aG-mqk.text" = "我的发布";
+
+/* Class = "UILabel"; text = "或快速注册"; ObjectID = "9Wj-9C-xEe"; */
+"9Wj-9C-xEe.text" = "或快速注册";
+
+/* Class = "UILabel"; text = "设置"; ObjectID = "c9c-tt-Tov"; */
+"c9c-tt-Tov.text" = "设置";
+
+/* Class = "UINavigationItem"; title = "我的"; ObjectID = "iLN-Hs-CpF"; */
+"iLN-Hs-CpF.title" = "我的";
+
+/* Class = "UILabel"; text = "点击登录"; ObjectID = "lh4-jl-OLM"; */
+"lh4-jl-OLM.text" = "点击登录";
+
+/* Class = "UINavigationController"; title = "账户"; ObjectID = "ovd-TC-71V"; */
+"ovd-TC-71V.title" = "账户";
+
+/* Class = "UILabel"; text = "我的收藏"; ObjectID = "pjb-qa-d8a"; */
+"pjb-qa-d8a.text" = "我的收藏";
+
+/* Class = "UILabel"; text = "退出登录"; ObjectID = "q3c-N4-DiA"; */
+"q3c-N4-DiA.text" = "退出登录";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "t0A-og-eIx"; */
+"t0A-og-eIx.title" = " ";
+
+/* Class = "UITableViewController"; title = "我的"; ObjectID = "ywd-OF-Fys"; */
+"ywd-OF-Fys.title" = "我的";

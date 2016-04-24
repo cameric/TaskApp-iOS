@@ -1,0 +1,15 @@
+
+/* Class = "UITabBarItem"; title = "社交"; ObjectID = "3Vg-pL-oha"; */
+"3Vg-pL-oha.title" = "社交";
+
+/* Class = "UITabBarItem"; title = "用户"; ObjectID = "A8O-3A-RrP"; */
+"A8O-3A-RrP.title" = "用户";
+
+/* Class = "UITabBarItem"; title = "发现"; ObjectID = "DPU-gF-Obi"; */
+"DPU-gF-Obi.title" = "发现";
+
+/* Class = "UIButton"; normalTitle = "发布任务"; ObjectID = "SMN-cI-87X"; */
+"SMN-cI-87X.normalTitle" = "发布任务";
+
+/* Class = "UITabBarItem"; title = "消息"; ObjectID = "UDb-94-1zu"; */
+"UDb-94-1zu.title" = "消息";

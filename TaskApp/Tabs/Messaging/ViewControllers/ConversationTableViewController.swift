@@ -38,8 +38,8 @@ class ConversationTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("conversation", forIndexPath: indexPath) as! ConversationTableViewCell
-        cell.avatar.image = UIImage(named: "default-avatar")
+        let cell = tableView.dequeueReusableCellWithIdentifier("conversation", forIndexPath: indexPath) //as! ConversationTableViewCell
+        //cell.avatar.image = UIImage(named: "default-avatar")
         // Configure the cell...
 
         return cell
