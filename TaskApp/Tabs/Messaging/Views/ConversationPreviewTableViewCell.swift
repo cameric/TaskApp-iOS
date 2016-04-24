@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConversationTableViewCell: UITableViewCell {
+class ConversationPreviewTableViewCell: UITableViewCell {
 
     @IBOutlet weak var avatar: UIImageView!
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IncrementalLoadingTableViewController: UITableViewController, IncrementalQueryModelControllerDelegate {
+class IncrementalLoadingTableViewController: UITableViewController, IncrementalQueryDelegate {
     /// The data source for the table view.
     var source: IncrementalQueryTableViewDataSourceProtocol! {
         didSet {
@@ -43,12 +43,11 @@ class IncrementalLoadingTableViewController: UITableViewController, IncrementalQ
         still results to load or an error occurred while loading results.
      */
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if loadedAllResultsForCriteria || loadEncounteredError {
-//            return source.count + 1
-//        } else {
-//            return source.count
-//        }
-        return 0
+        if loadedAllResultsForCriteria || loadEncounteredError {
+            return source.count + 1
+        } else {
+            return source.count
+        }
     }
     
     /**
@@ -59,15 +58,13 @@ class IncrementalLoadingTableViewController: UITableViewController, IncrementalQ
         unless an error has occurred while loading results, in which case an error cell is returned.
      */
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        if indexPath.row < source.count {
-//            return resultCellForRow(indexPath.row)
-//        } else if loadEncounteredError {
-//            return errorCell()
-//        } else {
-//            return loadingCell()
-//        }
-        
-        return loadingCell()
+        if indexPath.row < source.count {
+            return resultCellForRow(indexPath.row)
+        } else if loadEncounteredError {
+            return errorCell()
+        } else {
+            return loadingCell()
+        }
     }
     
     /**
@@ -142,6 +139,10 @@ class IncrementalLoadingTableViewController: UITableViewController, IncrementalQ
         }
     }
     
+    /**
+        Called when a cell is selected. If the cell is the error cell, selecting it
+        retries loading search results.
+     */
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath)
         
@@ -152,24 +153,24 @@ class IncrementalLoadingTableViewController: UITableViewController, IncrementalQ
         }
     }
     
-    func didLoadNewResults(controller: IncrementalQueryModelControllerProtocol, newResultsCount: Int) {
+    func didLoadNewResults(controller: IncrementalQueryProtocol, newResultsCount: Int) {
         // Don't need to do anything here -- the table view updates automatically
     }
     
     /// Called when all available search results have been loaded.
-    func didLoadAllResultsForCriteria(controller: IncrementalQueryModelControllerProtocol) {
+    func didLoadAllResultsForCriteria(controller: IncrementalQueryProtocol) {
         loadedAllResultsForCriteria = true
     }
     
     /// Called when the current search results are no longer valid.
-    func didInvalidateCurrentResults(controller: IncrementalQueryModelControllerProtocol) {
+    func didInvalidateCurrentResults(controller: IncrementalQueryProtocol) {
         // TODO: How to handle quick, repeated criteria changes?
         loadedAllResultsForCriteria = false
         loadEncounteredError = false
     }
     
     /// Called when loading new results fails due to an error
-    func didFailToLoadNewResults(controller: IncrementalQueryModelControllerProtocol, error: NSError) {
+    func didFailToLoadNewResults(controller: IncrementalQueryProtocol, error: NSError) {
         loadEncounteredError = true
     }
 }

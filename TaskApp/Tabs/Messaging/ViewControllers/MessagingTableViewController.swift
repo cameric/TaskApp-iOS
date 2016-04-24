@@ -38,7 +38,7 @@ class MessagingTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("messagePreview", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("MessagePreview", forIndexPath: indexPath)
 
         // Configure the cell...
 

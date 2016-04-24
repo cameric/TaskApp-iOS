@@ -1,5 +1,5 @@
 //
-//  UserModel.swift
+//  User.swift
 //  TaskApp
 //
 //  Created by Tony Zhang on 3/22/16.
