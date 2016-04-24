@@ -18,7 +18,8 @@ class ProfileViewController : UIViewController {
         }
     }
     @IBOutlet weak var profileContentView: UIView!
-    var profileContentTableViewOffset: CGPoint?
+    var userForProfile: User?
+    var profileNavControl: UINavigationController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,8 @@ class ProfileViewController : UIViewController {
         if segue.identifier == "ProfileContentLoadSegue" {
             let profileContentVC = segue.destinationViewController as! ProfileContentViewController
             profileContentVC.parentBackgroundScrollView = self.backgroundScrollView
+            profileContentVC.userForProfile = self.userForProfile
+            profileContentVC.profileNavControl = self.profileNavControl
         }
     }
     
@@ -38,7 +41,6 @@ class ProfileViewController : UIViewController {
         let widthScale = size.width / profileBackgroundImageView.bounds.width
         let minScale = widthScale
         
-        print("min scale \(minScale)")
         backgroundScrollView.minimumZoomScale = minScale
         backgroundScrollView.zoomScale = minScale
     }

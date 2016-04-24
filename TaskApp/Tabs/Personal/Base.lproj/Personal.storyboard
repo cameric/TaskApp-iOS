@@ -226,7 +226,9 @@
                             </tableViewSection>
                         </sections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="我的" id="iLN-Hs-CpF"/>
+                    <navigationItem key="navigationItem" title="我的" id="iLN-Hs-CpF">
+                        <barButtonItem key="backBarButtonItem" title=" " id="t0A-og-eIx"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
