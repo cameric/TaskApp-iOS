@@ -10,10 +10,11 @@ import UIKit
 
 class HomeViewController: UIViewController {
     // MARK: Properties
-    var suggestionsDataSource: IncrementalQueryTableViewDataSourceProtocol!
+    // TODO:
+    var feedDataSource: IncrementalQueryTableViewDataSourceProtocol!
     
     var suggestionsTableViewController: IncrementalLoadingTableViewController! {
-        didSet { suggestionsTableViewController.tableView.dataSource = suggestionsDataSource }
+        didSet { suggestionsTableViewController.tableView.dataSource = feedDataSource }
     }
     
     // MARK: UIViewController methods
@@ -26,7 +27,7 @@ class HomeViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "EmbedHomeSuggestionsTableSegue") {
+        if (segue.identifier == "EmbedFeedTableSegue") {
             suggestionsTableViewController = segue.destinationViewController as! IncrementalLoadingTableViewController
         }
     }

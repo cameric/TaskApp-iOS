@@ -9,10 +9,12 @@
 import UIKit
 
 class SearchResultsViewController: UIViewController {
-    
     // MARK: Properties
-    @IBOutlet var searchBar: UISearchBar!
+    @IBOutlet private var searchBar: UISearchBar!
     
+    var keyword: String = ""
+    
+    // TODO:
     var resultsDataSource: IncrementalQueryTableViewDataSourceProtocol! = nil
     
     private var resultsTableViewController: UITableViewController! {
@@ -36,6 +38,7 @@ class SearchResultsViewController: UIViewController {
         }
     }
     
+    // MARK: UIButton related
     @IBAction func searchBarOverlayButtonPressed(sender: UIButton) {
         if (sender == searchBarOverlayButton) {
             // Close self

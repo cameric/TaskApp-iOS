@@ -10,7 +10,7 @@ import UIKit
 
 class SearchViewController: UIViewController {
     // MARK: Properties
-    @IBOutlet var searchBar: UISearchBar! {
+    @IBOutlet private var searchBar: UISearchBar! {
         didSet { searchBar.delegate = self }
     }
     
@@ -35,7 +35,9 @@ class SearchViewController: UIViewController {
             suggestionsTableViewController = segue.destinationViewController as! UITableViewController
         } else if (segue.identifier == "ShowSearchResultsSegue") {
             let searchResultsViewController = segue.destinationViewController as! SearchResultsViewController
-            searchResultsViewController.searchBar.text = searchBar.text
+            
+            // Set the search results page to display the search text
+            searchResultsViewController.keyword = (searchBar.text != nil) ? searchBar.text! : ""
         }
     }
 }
@@ -55,9 +57,14 @@ extension SearchViewController: UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        guard let keyword = searchBar.text where !keyword.isEmpty else {
+            return
+        }
+        
         performSegueWithIdentifier("ShowSearchResultsSegue", sender: self)
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        // Update search results
     }
 }

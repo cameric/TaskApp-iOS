@@ -36,7 +36,7 @@
                                     <constraint firstItem="nmG-tu-iYQ" firstAttribute="centerY" secondItem="WKT-qL-FJD" secondAttribute="centerY" id="Nc1-VO-jzp"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FIG-hc-7dc" userLabel="Suggestions Table Container">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FIG-hc-7dc" userLabel="Feed Table Container">
                                 <rect key="frame" x="0.0" y="120" width="600" height="480"/>
                                 <connections>
                                     <segue destination="QRC-is-Dbj" kind="embed" identifier="EmbedHomeSuggestionsTableSegue" id="oLz-wR-hK8"/>
@@ -59,11 +59,11 @@
             </objects>
             <point key="canvasLocation" x="1630" y="1113"/>
         </scene>
-        <!--Home Suggestions Table-->
+        <!--Feed Table-->
         <scene sceneID="txb-r7-HGL">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZU7-8g-ieU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="QRC-is-Dbj" userLabel="Home Suggestions Table" customClass="IncrementalLoadingTableViewController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="QRC-is-Dbj" userLabel="Feed Table" customClass="IncrementalLoadingTableViewController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="L2T-i7-bpq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,6 +218,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="5eC-Fa-tTQ" id="G89-Da-W5E"/>
                         <outlet property="searchBarOverlayButton" destination="CXa-aN-6FS" id="6l4-JO-RxK"/>
                     </connections>
                 </viewController>
