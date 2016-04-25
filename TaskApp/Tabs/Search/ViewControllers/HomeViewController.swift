@@ -20,18 +20,23 @@ class HomeViewController: UIViewController {
         }
     }
     
-    var searchHeaderInitialHeight: CGFloat = 0
+    var searchHeaderInitialHeight: CGFloat!
     @IBOutlet var searchHeaderHeightConstraint: NSLayoutConstraint!
     
     // MARK: UIViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchHeaderInitialHeight = searchHeaderHeightConstraint.constant
+        if (searchHeaderInitialHeight == nil) {
+            searchHeaderInitialHeight = searchHeaderHeightConstraint.constant
+        }
     }
     
-    override func viewWillAppear(animated: Bool) {
-        updateHeaderConstraints()
+    override func viewDidAppear(animated: Bool) {
+        UIView.animateWithDuration(0.15) {
+            self.updateHeaderConstraints()
+            self.view.layoutIfNeeded()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,6 +64,7 @@ class HomeViewController: UIViewController {
             self.view.layoutIfNeeded()
         }) { (completed: Bool) in
             if completed {
+                // Re-enable table view interaction and show the search interface
                 self.suggestionsTableViewController.tableView.userInteractionEnabled = true
                 self.performSegueWithIdentifier("ShowSearchSegue", sender: self)
             }
