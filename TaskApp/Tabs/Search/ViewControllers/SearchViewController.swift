@@ -11,14 +11,19 @@ import UIKit
 class SearchViewController: UIViewController {
     // MARK: Properties
     @IBOutlet private var searchBar: UISearchBar! {
-        didSet { searchBar.delegate = self }
+        didSet {
+            searchBar.delegate = self
+            searchBar.backgroundImage = UIImage() // White background
+        }
     }
     
     // TODO:
     var suggestionsDataSource: UITableViewDataSource! = nil
     
     private var suggestionsTableViewController: UITableViewController! {
-        didSet { suggestionsTableViewController.tableView.dataSource = suggestionsDataSource }
+        didSet {
+            suggestionsTableViewController.tableView.dataSource = suggestionsDataSource
+        }
     }
     
     // MARK: UIViewController methods
@@ -27,7 +32,8 @@ class SearchViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        // TODO: How do I animate this?
+        // TODO: Is this the right way to animate search bar selection? It's a bit stuttery
+        searchBar.setShowsCancelButton(true, animated: true)
         searchBar.becomeFirstResponder()
     }
     
@@ -50,12 +56,10 @@ class SearchViewController: UIViewController {
 // MARK: UISearchBarDelegate methods
 extension SearchViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
-        searchBar.setShowsCancelButton(true, animated: true)
     }
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        searchBar.setShowsCancelButton(false, animated: true)
         
         // Close self
         navigationController?.popViewControllerAnimated(false)

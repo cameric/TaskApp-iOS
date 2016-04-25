@@ -10,7 +10,11 @@ import UIKit
 
 class SearchResultsViewController: UIViewController {
     // MARK: Properties
-    @IBOutlet private var searchBar: UISearchBar!
+    @IBOutlet private var searchBar: UISearchBar! {
+        didSet {
+            searchBar.backgroundImage = UIImage() // White background
+        }
+    }
     
     var keyword: String = ""
     

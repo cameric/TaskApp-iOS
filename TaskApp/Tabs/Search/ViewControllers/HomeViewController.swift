@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var searchHeaderHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet var searchBar: UISearchBar!
+    @IBOutlet var header: UIView!
     
     // MARK: UIViewController methods
     override func viewDidLoad() {
@@ -84,14 +85,15 @@ extension HomeViewController: UITableViewDelegate {
     }
 }
 
-// TODO: Fade animations, directly from http://netsplit.com/custom-ios-segues-transitions-and-animations-the-right-way
+// TODO: Fade segue, directly from http://netsplit.com/custom-ios-segues-transitions-and-animations-the-right-way
 class FadeInAnimator: NSObject, UIViewControllerAnimatedTransitioning {
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?)
+        -> NSTimeInterval
+    {
         return 0.15
     }
     
-    func animateTransition(
-        transitionContext: UIViewControllerContextTransitioning) {
+    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView()
         //let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
         let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
@@ -109,17 +111,14 @@ class FadeInAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     }
 }
 
-class FadeInNavigationControllerDelegate: NSObject,
-UINavigationControllerDelegate {
-    
+class FadeInNavigationControllerDelegate: NSObject, UINavigationControllerDelegate {
     func navigationController(
         navigationController: UINavigationController,
-        animationControllerForOperation operation:
-        UINavigationControllerOperation,
-                                        fromViewController fromVC: UIViewController,
-                                                           toViewController toVC: UIViewController
-        ) -> UIViewControllerAnimatedTransitioning? {
-        
+        animationControllerForOperation operation: UINavigationControllerOperation,
+        fromViewController fromVC: UIViewController,
+        toViewController toVC: UIViewController)
+        -> UIViewControllerAnimatedTransitioning?
+    {
         return FadeInAnimator()
     }
 }
