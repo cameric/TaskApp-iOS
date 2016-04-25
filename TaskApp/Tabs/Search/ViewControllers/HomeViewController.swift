@@ -14,12 +14,24 @@ class HomeViewController: UIViewController {
     var feedDataSource: IncrementalQueryTableViewDataSourceProtocol!
     
     var suggestionsTableViewController: IncrementalLoadingTableViewController! {
-        didSet { suggestionsTableViewController.tableView.dataSource = feedDataSource }
+        didSet {
+            suggestionsTableViewController.tableView.dataSource = feedDataSource
+            suggestionsTableViewController.tableView.delegate = self
+        }
     }
+    
+    var searchHeaderInitialHeight: CGFloat = 0
+    @IBOutlet var searchHeaderHeightConstraint: NSLayoutConstraint!
     
     // MARK: UIViewController methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchHeaderInitialHeight = searchHeaderHeightConstraint.constant
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        updateHeaderConstraints()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,5 +42,32 @@ class HomeViewController: UIViewController {
         if (segue.identifier == "EmbedFeedTableSegue") {
             suggestionsTableViewController = segue.destinationViewController as! IncrementalLoadingTableViewController
         }
+    }
+    
+    func updateHeaderConstraints() {
+        let yOffset = suggestionsTableViewController.tableView.contentOffset.y
+        searchHeaderHeightConstraint.constant = searchHeaderInitialHeight - yOffset
+    }
+    
+    @IBAction func searchButtonTapped(sender: UIButton) {
+        // Shrink the search bar to the top and prevent scrolling temporarily to ensure no
+        // weirdness happens during the animation
+        searchHeaderHeightConstraint.constant = -1000
+        suggestionsTableViewController.tableView.userInteractionEnabled = false
+        
+        UIView.animateWithDuration(0.15, animations: {
+            self.view.layoutIfNeeded()
+        }) { (completed: Bool) in
+            if completed {
+                self.suggestionsTableViewController.tableView.userInteractionEnabled = true
+                self.performSegueWithIdentifier("ShowSearchSegue", sender: self)
+            }
+        }
+    }
+}
+
+extension HomeViewController: UITableViewDelegate {
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        updateHeaderConstraints()
     }
 }

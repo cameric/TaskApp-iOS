@@ -114,9 +114,11 @@ class IncrementalLoadingTableViewController: UITableViewController, IncrementalQ
     }
     
     /**
-        Returns a cell that indicates an error.
+        Returns a cell that indicates an error has occured.
      
-        - Returns: A cell that indicates an error.
+        When clicked, this cell will retry loading the most recent set of results.
+     
+        - Returns: A cell that indicates an error has occurred.
      */
     func errorCell() -> UITableViewCell {
         let cell = UITableViewCell(style: .Default, reuseIdentifier: nil)

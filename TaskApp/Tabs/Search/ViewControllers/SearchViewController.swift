@@ -27,7 +27,7 @@ class SearchViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        searchBar.showsCancelButton = true
+        // TODO: How do I animate this?
         searchBar.becomeFirstResponder()
     }
     
