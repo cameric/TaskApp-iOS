@@ -44,7 +44,7 @@ class SearchResultsViewController: UIViewController {
     @IBAction func searchBarOverlayButtonPressed(sender: UIButton) {
         if (sender == searchBarOverlayButton) {
             // Close self
-            presentingViewController?.dismissViewControllerAnimated(false, completion: nil)
+            navigationController?.popViewControllerAnimated(false)
         }
     }
 }

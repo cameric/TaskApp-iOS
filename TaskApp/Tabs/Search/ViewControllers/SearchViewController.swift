@@ -58,7 +58,7 @@ extension SearchViewController: UISearchBarDelegate {
         searchBar.setShowsCancelButton(false, animated: true)
         
         // Close self
-        presentingViewController?.dismissViewControllerAnimated(false, completion: nil)
+        navigationController?.popViewControllerAnimated(false)
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {

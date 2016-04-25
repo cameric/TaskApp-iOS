@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MZo-qs-8zv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vZU-Gw-gWj">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--发现-->
+        <scene sceneID="O30-oO-pub">
+            <objects>
+                <navigationController title="发现" navigationBarHidden="YES" id="vZU-Gw-gWj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KI5-m5-iZk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <outlet property="delegate" destination="mcv-jj-tt4" id="Svm-gM-rmV"/>
+                        <segue destination="MZo-qs-8zv" kind="relationship" relationship="rootViewController" id="Ih7-Yf-JQ8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g9k-Sq-a04" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="mcv-jj-tt4" customClass="FadeInNavigationControllerDelegate" customModule="TaskApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="1113"/>
+        </scene>
         <!--Home-->
         <scene sceneID="EAg-hy-4KM">
             <objects>
-                <viewController title="发现" id="MZo-qs-8zv" userLabel="Home" customClass="HomeViewController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MZo-qs-8zv" userLabel="Home" customClass="HomeViewController" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Wo-Rh-QTn"/>
                         <viewControllerLayoutGuide type="bottom" id="P8I-xU-Nx1"/>
@@ -23,39 +41,53 @@
                                     <segue destination="QRC-is-Dbj" kind="embed" identifier="EmbedFeedTableSegue" id="oLz-wR-hK8"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKT-qL-FJD" userLabel="Header">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKT-qL-FJD" userLabel="Header">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="160"/>
                                 <subviews>
-                                    <searchBar userInteractionEnabled="NO" contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="kFe-Ao-DyE" userLabel="Search Bar (fake)">
-                                        <rect key="frame" x="0.0" y="76" width="600" height="44"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" image="header-background" translatesAutoresizingMaskIntoConstraints="NO" id="Tug-ee-DHH">
+                                        <rect key="frame" x="-70" y="0.0" width="740" height="160"/>
+                                    </imageView>
+                                    <searchBar userInteractionEnabled="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="kFe-Ao-DyE" userLabel="Search Bar (fake)">
+                                        <rect key="frame" x="0.0" y="116" width="600" height="44"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2a0-vP-1fn" userLabel="Search Bar Overlay Button">
-                                        <rect key="frame" x="0.0" y="76" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="116" width="600" height="44"/>
                                         <connections>
                                             <action selector="searchButtonTapped:" destination="MZo-qs-8zv" eventType="touchUpInside" id="81B-T4-FTc"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" text="寻找理想工作!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09G-3u-YX8">
-                                        <rect key="frame" x="199" y="37" width="201" height="39"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" text="寻找理想工作" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09G-3u-YX8">
+                                        <rect key="frame" x="204" y="77" width="192" height="39"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                        <color key="textColor" red="0.76722756410000004" green="0.45326632519999999" blue="0.0012546657030000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="0.4549019608" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.69706108320000004" blue="0.0001922522367" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="2a0-vP-1fn" firstAttribute="width" secondItem="kFe-Ao-DyE" secondAttribute="width" id="1vX-1b-ZtK"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tug-ee-DHH" secondAttribute="trailing" constant="-70" id="366-N2-WDB"/>
                                     <constraint firstItem="2a0-vP-1fn" firstAttribute="centerX" secondItem="kFe-Ao-DyE" secondAttribute="centerX" id="3sJ-iX-sZJ"/>
+                                    <constraint firstItem="Tug-ee-DHH" firstAttribute="centerX" secondItem="WKT-qL-FJD" secondAttribute="centerX" id="9gF-xX-JDO"/>
                                     <constraint firstItem="2a0-vP-1fn" firstAttribute="centerY" secondItem="kFe-Ao-DyE" secondAttribute="centerY" id="B3I-a7-VMp"/>
                                     <constraint firstItem="kFe-Ao-DyE" firstAttribute="centerX" secondItem="WKT-qL-FJD" secondAttribute="centerX" id="Cqg-TB-Ny5"/>
-                                    <constraint firstAttribute="height" priority="750" constant="120" id="KDF-Op-wvw"/>
+                                    <constraint firstAttribute="height" priority="750" constant="160" id="KDF-Op-wvw"/>
                                     <constraint firstAttribute="bottom" secondItem="kFe-Ao-DyE" secondAttribute="bottom" id="N4p-uJ-sfF"/>
                                     <constraint firstItem="09G-3u-YX8" firstAttribute="centerX" secondItem="WKT-qL-FJD" secondAttribute="centerX" id="O9f-ps-VSt"/>
                                     <constraint firstItem="kFe-Ao-DyE" firstAttribute="width" secondItem="WKT-qL-FJD" secondAttribute="width" id="OLs-UZ-feH"/>
+                                    <constraint firstItem="Tug-ee-DHH" firstAttribute="height" secondItem="WKT-qL-FJD" secondAttribute="height" id="UNO-ln-tJc"/>
+                                    <constraint firstItem="Tug-ee-DHH" firstAttribute="width" secondItem="WKT-qL-FJD" secondAttribute="width" constant="1" id="VDt-6A-rR9"/>
                                     <constraint firstItem="2a0-vP-1fn" firstAttribute="height" secondItem="kFe-Ao-DyE" secondAttribute="height" id="YV5-4m-vL8"/>
+                                    <constraint firstItem="Tug-ee-DHH" firstAttribute="leading" secondItem="WKT-qL-FJD" secondAttribute="leading" constant="-70" id="p1c-BG-naM"/>
                                     <constraint firstItem="kFe-Ao-DyE" firstAttribute="top" secondItem="09G-3u-YX8" secondAttribute="bottom" id="pqo-xH-18x"/>
+                                    <constraint firstAttribute="bottom" secondItem="Tug-ee-DHH" secondAttribute="bottom" id="z2J-p4-69H"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="VDt-6A-rR9"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dU6-hK-xJl" userLabel="Statusbar blur">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
@@ -84,9 +116,11 @@
                             <constraint firstItem="FIG-hc-7dc" firstAttribute="top" secondItem="7Wo-Rh-QTn" secondAttribute="bottom" constant="44" id="y9K-vp-LkG"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="fE1-Yt-A9e"/>
                     <connections>
+                        <outlet property="searchBar" destination="kFe-Ao-DyE" id="XWy-Oq-9IL"/>
                         <outlet property="searchHeaderHeightConstraint" destination="KDF-Op-wvw" id="L0g-TD-DEU"/>
-                        <segue destination="N2e-SK-zDQ" kind="presentation" identifier="ShowSearchSegue" animates="NO" id="tDJ-XQ-A46"/>
+                        <segue destination="N2e-SK-zDQ" kind="show" identifier="ShowSearchSegue" id="j8e-hC-exq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLI-yO-YY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -102,13 +136,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="kBp-b2-Zdd" userLabel="Header Placeholder">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="96"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="P6N-ah-Fqt">
-                                <rect key="frame" x="0.0" y="84" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="124" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P6N-ah-Fqt" id="zlc-J3-EhU">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -175,7 +209,7 @@
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="Iqr-EH-iYE" id="bWl-To-3XL"/>
-                        <segue destination="af5-8n-Wxr" kind="presentation" identifier="ShowSearchResultsSegue" animates="NO" id="qYa-cM-DIm"/>
+                        <segue destination="af5-8n-Wxr" kind="show" identifier="ShowSearchResultsSegue" animates="NO" id="57E-hn-fJL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aO8-5t-YVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -323,4 +357,7 @@
             <point key="canvasLocation" x="3042" y="1814"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="header-background" width="4500" height="3000"/>
+    </resources>
 </document>
