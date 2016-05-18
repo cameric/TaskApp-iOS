@@ -18,6 +18,8 @@
 		0920DA561C96007B0032EB9C /* TaskAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920DA551C96007B0032EB9C /* TaskAppTests.swift */; };
 		093AD4451CCB02E000FF26D3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093AD4441CCB02E000FF26D3 /* HomeViewController.swift */; };
 		093AD4471CCB13BE00FF26D3 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093AD4461CCB13BE00FF26D3 /* SearchResultsViewController.swift */; };
+		094428FD1CECED1E002745CE /* TagBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094428FC1CECED1E002745CE /* TagBar.swift */; };
+		094428FF1CECF442002745CE /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094428FE1CECF442002745CE /* Tree.swift */; };
 		0953E2331C9A6730006E6FF0 /* IncrementalQueryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953E2321C9A6730006E6FF0 /* IncrementalQueryProtocol.swift */; };
 		0960F8E61C9E5AA70051AA06 /* TabbedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960F8E51C9E5AA70051AA06 /* TabbedPageViewController.swift */; };
 		0965E12D1CAA4D49003866D0 /* MultiTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965E12C1CAA4D49003866D0 /* MultiTextFieldViewController.swift */; };
@@ -25,6 +27,7 @@
 		09D14BD61C968C89003E0791 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D14BD81C968C89003E0791 /* Search.storyboard */; };
 		09D14BE21C96917D003E0791 /* MessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BE11C96917D003E0791 /* MessagingViewController.swift */; };
 		09D14BE61C96918F003E0791 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14BE51C96918F003E0791 /* SocialViewController.swift */; };
+		09E710511CECE04000DA655B /* TagBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E710501CECE04000DA655B /* TagBarController.swift */; };
 		09F714041C9CF9DD0057C530 /* IncrementalLoadingSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F714031C9CF9DD0057C530 /* IncrementalLoadingSearchResultsViewController.swift */; };
 		09F9D93F1CCEB84C00521892 /* TouchPassingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F9D93E1CCEB84C00521892 /* TouchPassingView.swift */; };
 		09FAC6961C9607DA0041DE5E /* Social.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAC6981C9607DA0041DE5E /* Social.storyboard */; };
@@ -88,6 +91,8 @@
 		093F9A741CCCA61700854DA4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Personal.strings"; sourceTree = "<group>"; };
 		093F9A761CCCA61C00854DA4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Search.strings"; sourceTree = "<group>"; };
 		093F9A781CCCA62800854DA4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		094428FC1CECED1E002745CE /* TagBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagBar.swift; sourceTree = "<group>"; };
+		094428FE1CECF442002745CE /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		0953E2321C9A6730006E6FF0 /* IncrementalQueryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncrementalQueryProtocol.swift; sourceTree = "<group>"; };
 		0960F8E51C9E5AA70051AA06 /* TabbedPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbedPageViewController.swift; sourceTree = "<group>"; };
 		0965E12C1CAA4D49003866D0 /* MultiTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiTextFieldViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +101,7 @@
 		09D14BD71C968C89003E0791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Search.storyboard; sourceTree = "<group>"; };
 		09D14BE11C96917D003E0791 /* MessagingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingViewController.swift; sourceTree = "<group>"; };
 		09D14BE51C96918F003E0791 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
+		09E710501CECE04000DA655B /* TagBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagBarController.swift; sourceTree = "<group>"; };
 		09F714031C9CF9DD0057C530 /* IncrementalLoadingSearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncrementalLoadingSearchResultsViewController.swift; sourceTree = "<group>"; };
 		09F9D93E1CCEB84C00521892 /* TouchPassingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchPassingView.swift; path = ViewControllers/TouchPassingView.swift; sourceTree = "<group>"; };
 		09FAC6971C9607DA0041DE5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Social.storyboard; sourceTree = "<group>"; };
@@ -277,6 +283,8 @@
 				0964360F1C9B3A3500AB71CC /* ViewControllers */,
 				09F9D9401CCEB9B500521892 /* Views */,
 				09D14BD81C968C89003E0791 /* Search.storyboard */,
+				09E710501CECE04000DA655B /* TagBarController.swift */,
+				094428FC1CECED1E002745CE /* TagBar.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -310,6 +318,7 @@
 				251FED671CA684CE00B992BF /* Profile */,
 				090F48681CA9DF010028E656 /* Views */,
 				0960F8E51C9E5AA70051AA06 /* TabbedPageViewController.swift */,
+				094428FE1CECF442002745CE /* Tree.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -598,8 +607,10 @@
 				25DDBCC51CCAEE70005F534E /* ProfileContainerViewController.swift in Sources */,
 				25DDBCC31CCA18C6005F534E /* ProfileContentViewController.swift in Sources */,
 				25A9BFBD1CA14E9E00634A63 /* LoginViewController.swift in Sources */,
+				09E710511CECE04000DA655B /* TagBarController.swift in Sources */,
 				09D14BD31C96675C003E0791 /* SearchViewController.swift in Sources */,
 				09F714041C9CF9DD0057C530 /* IncrementalLoadingSearchResultsViewController.swift in Sources */,
+				094428FF1CECF442002745CE /* Tree.swift in Sources */,
 				320F01C01CAD1D0500DF9287 /* ConversationTableViewController.swift in Sources */,
 				093AD4471CCB13BE00FF26D3 /* SearchResultsViewController.swift in Sources */,
 				328415BB1CA12F3900FF8DF0 /* MessagingTableViewController.swift in Sources */,
@@ -618,6 +629,7 @@
 				09D14BE61C96918F003E0791 /* SocialViewController.swift in Sources */,
 				0920DA3F1C96007A0032EB9C /* AppDelegate.swift in Sources */,
 				328415BD1CA1329800FF8DF0 /* MessagingTableViewCell.swift in Sources */,
+				094428FD1CECED1E002745CE /* TagBar.swift in Sources */,
 				25EBFBC31CA3D47E00CCE557 /* APIKeys.swift in Sources */,
 				09033C9D1CC9F93B00C644F4 /* MessageModelController.swift in Sources */,
 				25A9BFBC1CA14E9E00634A63 /* ForgotPasswordViewController.swift in Sources */,

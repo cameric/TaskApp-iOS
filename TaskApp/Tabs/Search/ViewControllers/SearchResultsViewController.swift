@@ -11,14 +11,14 @@ import UIKit
 class SearchResultsViewController: UIViewController {
     // MARK: Properties
     @IBOutlet private var searchBar: UISearchBar! {
-        didSet {
-            searchBar.backgroundImage = UIImage() // White background
-        }
+        didSet { searchBar.backgroundImage = UIImage() } // White background
     }
+    @IBOutlet private var tagBarController: TagBarController!
     
     var keyword: String = ""
     
     // TODO:
+    //var resultsDataSource: SearchResultsDataSourceProtocol! = nil
     var resultsDataSource: IncrementalQueryTableViewDataSourceProtocol! = nil
     
     private var resultsTableViewController: UITableViewController! {
@@ -32,6 +32,16 @@ class SearchResultsViewController: UIViewController {
         super.viewDidLoad()
         
         searchBar.text = keyword
+        
+        // TODO: Temporary tag tree test
+        var tree = Tree<String>(value: "root")
+        var ios = Tree<String>(value: "ios")
+        ios.children.append(Tree<String>(value: "swift"))
+        ios.children.append(Tree<String>(value: "objc"))
+        tree.children.append(ios)
+        tree.children.append(Tree<String>(value: "android"))
+        tree.children.append(Tree<String>(value: "windows"))
+        tagBarController.tagTree = tree
     }
 
     override func didReceiveMemoryWarning() {
